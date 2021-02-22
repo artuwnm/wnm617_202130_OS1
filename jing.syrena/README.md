@@ -4,8 +4,9 @@
 
 ### Important Links
 
-- https://syrenajing.com
-- https://syrenajing.com/aau/wnm617/jing.syrena
+- http://syrenajing.com
+- http://syrenajing.com/aau/wnm617/jing.syrena
+- http://syrenajing.com/aau/wnm617/jing.syrena/initializr/index.html
 
 ### Git notes
 - git status
