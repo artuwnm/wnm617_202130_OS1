@@ -1,0 +1,9 @@
+.wrapper {
+   max-width:1000px;
+   margin-right:auto;
+   margin-left:auto;
+}
+
+nav li:first-child a {
+   color:red;
+}

@@ -1,8 +1,15 @@
-# Hamilton Cline
+# Jane Wei
 
 ## Animal Tracker
 
 ### Important Links
 
-- https://Jannnne.co
-- https://Jannnne.co/aau/wnm617/Jane.Z.Wei
+- http://Jannnne.co
+- http://www.jannnne.co/wordpress/
+- http://Jannnne.co/aau/wnm617/Jane.Z.Wei
+
+Git Notes
+- git status
+- git add .
+- git commit -m "[MEANINGFUL MESSAGE]"
+- git push origin main
