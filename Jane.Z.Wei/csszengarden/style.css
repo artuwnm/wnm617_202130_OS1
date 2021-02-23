@@ -1,0 +1,345 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+	--color-neutral-light:#F2F2F2;
+	--color-neutral-medium:#0468BF;
+	--color-neutral-dark:#0455BF;
+
+	--header-height:3rem;
+	--gap-size: 1rem;
+	--contianer-width: 1000px;
+
+	--font-serif: "MS Serif", "New York", Serif;
+	--font-sans: Helvetica, Lato, sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: var(--color-neutral-light);
+}
+
+a:hover {
+  background-color: #04BF68;
+}
+
+body{
+	margin: 0;
+    font-size: 100%;
+    font-family: var(--font-sans);
+    color: var(--color-neutral-light);
+    background-color: var(--color-neutral-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+   font-family: var(--font-serif);
+}
+
+
+p { 
+	line-height:1.5em;
+	margin-top: 0; 
+	text-align: left;
+	}
+
+/* basic elements */
+
+
+h3 { 
+	font: Regular 400 italic 1.4em Lato, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #F2F2F2;
+	}
+a:link { 
+	display: inline-block;
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+	}
+a:visited { 
+	font-weight: Bold 700; 
+	text-decoration: none; 
+	color: #059885;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #34E48A;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+.page-wrapper { 
+	background: url() no-repeat top left; 
+	padding: 0 270px 0 40px;  
+	margin: 0; 
+	position: relative;
+	}
+
+.intro { 
+	min-width: 470px;
+	width: 90%;
+	}
+
+header h1 { 	
+	margin-top: 30px;
+	margin-left: 0px;
+	display: block;
+	font-size: 40px;
+	text-align: center;
+	color: #F2F2F2;
+	}
+header h2 { 	
+	margin-top: 0; 
+	margin-bottom: 100px; 
+	margin-left: 0;
+	display: block;
+	font-size: 40px;
+	text-align: center; 
+	height: 18px; 
+	color: #F24405;
+	}
+header {
+	padding-top: 20px;
+	height: all;
+}
+
+.summary {
+	clear: both; 
+	margin: 20px 20px 20px 10px; 
+	width: 100%; 
+	float: left;
+	}
+
+.summary p {
+	font: bold 2em/1.8 "Playfair Display"; 
+	text-align: left;
+	padding: 5%;
+	}
+
+.preamble {
+	clear: right; 
+	padding: 0px 10px 0 50px;
+	}
+.preample p {
+	margin-bottom: 3em;
+}
+.supporting {	
+	padding-left: 50px; 
+	padding-right: 10px;
+	margin-bottom: 3em;
+	}
+
+footer {
+  display: flex;
+  background-color: #0468BF;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  padding: 1.5rem;
+  width: 100%;
+  height: 5rem;
+  grid-area: footer;
+}
+
+footer a {
+  margin: 3%;
+  text-decoration: none;
+  color: white;
+}
+.sidebar {
+	position: absolute; 
+	top: 70px; 
+	right: 0;
+	padding: 55px;
+	max-height: 100%;
+	background-color: #30bbed;
+	}
+.sidebar .wrapper { 
+	font: 10px Lato, sans-serif; 
+	background: transparent url() top left repeat-y; 
+	padding: 10px; 
+	margin-top: 150px; 
+	width: 100%; 
+	}
+.sidebar h3.select { 
+	background: transparent url() no-repeat top left; 
+	margin: 10px 0 5px 0; 
+	width: 97px; 
+	height: 16px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.archives { 
+	background: transparent url() no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:57px; 
+	height: 14px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.resources { 
+	background: transparent url() no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:63px; 
+	height: 10px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	}
+.sidebar li {
+	line-height: 1.4em; 
+	background: transparent url() no-repeat top center; 
+	display: block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+.sidebar li a:link {
+	color: #fff;
+	}
+.sidebar li a:visited {
+	color: #059885;
+	}
+
+aside.sidebar {
+	background-color: #F24405;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 30%;
+    padding: 1em;
+    margin-right: 1em;
+}
+
+
+.extra1 {
+	background: transparent url() top left no-repeat; 
+	position: absolute; 
+	top: 40px; 
+	right: 0; 
+	width: 148px; 
+	height: 110px;
+	}
+
+
+/* MEDIA QUERY */
+
+@media (max-width:1200px) {
+	aside.sidebar {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 30%;
+}
+	.intro .preamble p:last-child{
+	font-size: 1.5em;
+	font-weight: 800;
+	background-color: #04BF68;
+	padding:1em;
+	position: absolute;
+	right:1em;
+	width: 50%;
+	top: 35em;
+}
+	.main .participation p:last-child{
+	font-size: 1em;
+    font-weight: 800;
+    background-color: #04BF68;
+    padding: 1em;
+    position: absolute;
+    left: -22em;
+    width: 70%;
+    top: -5em;
+}
+	footer{
+	text-align: center;
+	position: absolute;
+	top: 193em;
+    padding: 1em;
+}
+}
+
+@media (max-width:850px) {
+	aside.sidebar {
+    position: inherit;
+    /* bottom: 0; */
+    width: 100%;
+}
+	.intro{
+		width: 100%;
+	}
+	.preamble {
+    background-color: #4ab3a380;
+    /*width: 100%;*/
+    margin:0 1em;
+    padding: 1em;
+}
+	.intro .preamble p:last-child{
+	 position: inherit;
+	 width: 100%;
+	 background-color: transparent;
+	 padding:0;
+}
+	.explanation{
+		position: inherit;
+		margin: 0 1em;
+	}
+	.participation{
+		position: inherit;
+		margin-top: 0;
+	}
+	.main .participation p:last-child{
+	position: inherit;
+	 width: 100%;
+	 background-color: transparent;
+	 padding:0;
+}
+	.requirements{
+		position: inherit;
+		margin: 0 1em;
+	}
+	.benefits{
+		position: inherit;
+		margin:0 1em;
+	}
+	footer{
+		position: inherit;
+	}
+}
+
+@media (max-width:500px) {
+	
+}
+
