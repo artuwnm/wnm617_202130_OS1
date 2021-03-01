@@ -133,7 +133,6 @@ header {
 .summary p {
 	font: bold 2em/1.8 "Playfair Display"; 
 	text-align: left;
-	box-shadow:1px 1px 3px 3px rgb(242, 68, 5);
 	padding: 5%;
 	}
 

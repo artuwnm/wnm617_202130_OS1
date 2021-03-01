@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Remembering Jquery</title>
+	 <link rel="stylesheet" href="../css/style.css">
+	 <base href="/auu/wnm617/Jane.Z.Wei/">
+<!-- basic jquery for accordion -->
+	 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script>
+        $(()=>{
+            
+
+            $(".accordion dt").on("click",function(e){
+                // $(this).next().show()
+                // $(this).next().toggle()
+                // $(this).next().slideToggle()
+                $(this).next().slideDown()
+                .siblings("dd").slideUp()
+
+            });
+
+            $(".tabgroup .tab").on("click",function(e){
+                let index = $(this).index();
+
+                $(this).addClass("active")
+                .siblings("dd").removeClass("active");
+                $(this).closest(".tabgroup")
+                .find(".content").eq(index).addClass("active").siblings().removeClass("active")
+            })
+
+
+
+
+        })
+         
+     </script>
+</head>
+<body>
+	
+	<header class="container">
+		<h1>Remembering Jquery</h1>
+	</header>
+<!-- basic structure of accordion -->
+    <div class="container">
+    	<h2>Accordion</h2>
+
+    	<dl class="accordion">
+    		<!-- (dt+dd)*4 -->
+    		<dt>Bear</dt>
+    		<dd>Lives in the woods</dd>
+    		<dt>Eagle</dt>
+    		<dd>Lives in the sky</dd>
+    		<dt>Shark</dt>
+    		<dd>Lives in the ocean</dd>
+    		<dt>Honey Badger</dt>
+    		<dd>Don't give a crap</dd>
+
+    	</dl>
+    </div>
+
+    <div class="container">
+        <h2>Tap group</h2>
+
+        <!-- basic structure of tabgroup -->
+        <div class="tabgroup">
+            <!-- .tabs>.tab*4{Tab $} -->
+            <div class="tabs">
+                <div class="tab" active>Tab 1</div>
+                <div class="tab">Tab 2</div>
+                <div class="tab">Tab 3</div>
+                <div class="tab">Tab 4</div>
+            </div>
+            <!-- .contents>.content*4>h3{content $}+div>p*4>lorem50 -->
+            <div class="contents">
+                <div class="content active">
+                    <h3>content 1</h3>
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Explicabo ad, delectus. Provident asperiores mollitia quas optio alias quod veritatis. Dignissimos fugiat esse qui recusandae, sed architecto explicabo magnam incidunt ad in, vel quam, sit consequatur atque deserunt maxime porro temporibus reprehenderit harum, quia iure. Rerum odit voluptatibus excepturi possimus cumque?</p>
+                        <p>Inventore, nemo, ea ut aspernatur, assumenda iste nam odit accusantium, deserunt architecto consectetur asperiores labore. Labore beatae illum ullam, veniam numquam vero dolore sit. Quaerat ipsam fugit eaque. Nam quibusdam asperiores veniam labore, odit fugiat ab temporibus nulla quod odio pariatur ad sit recusandae necessitatibus numquam laboriosam assumenda ex nostrum!</p>
+                        <p>Necessitatibus cum distinctio, autem ducimus, quibusdam unde optio? Beatae corrupti sed esse! Pariatur quo at modi atque mollitia cum fugiat accusantium quas provident illum fugit non minus dignissimos reprehenderit consequuntur, iure ab magnam voluptas neque quasi sit corrupti? Mollitia culpa dolor voluptatibus nostrum! Ipsam, facilis quidem iure molestias praesentium sit.</p>
+                        <p>Nihil dicta illo, possimus voluptatum fugiat aut non incidunt vitae ratione suscipit, minima, commodi adipisci eius nobis quis vero, consectetur repellendus tempore! Saepe perspiciatis rem, repellat architecto corrupti. Repellat mollitia incidunt magnam reiciendis natus odit officiis eveniet ad veritatis consequatur. Deleniti ullam sint, dignissimos commodi animi illum enim laboriosam, deserunt.</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>content 2</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis eos cupiditate cumque molestiae harum, officiis blanditiis. Voluptatum placeat error maiores, deserunt explicabo quidem? Voluptate, iusto porro commodi similique tempore aperiam natus dolores quo. Cupiditate amet consequatur tenetur laborum voluptate aliquid aperiam, sed eligendi porro voluptas ipsam ratione possimus vel.</p>
+                        <p>Provident numquam ducimus quod fugiat adipisci sint, ex praesentium quae in deleniti dignissimos error suscipit mollitia odit, libero? Illum placeat voluptates optio vero architecto cumque quibusdam deserunt sit, ratione, veritatis maiores labore magnam explicabo consequatur officia expedita inventore, impedit non sequi. Quos iste sit error pariatur cum dolorum repellendus molestias.</p>
+                        <p>Dolores ipsa cumque quibusdam ipsum laboriosam minus labore nisi minima illo, vero enim ullam commodi earum tenetur illum facilis! Veniam, illo architecto eius molestias accusantium fugit velit cupiditate quod quos minima mollitia odio, eaque delectus quae nesciunt sit deleniti non quia facere corporis aperiam modi. Accusamus eos dolor ipsa. Maiores.</p>
+                        <p>Harum, consectetur non. Reprehenderit, molestias vitae tenetur doloremque. Deleniti ducimus soluta velit labore magni voluptatibus rem ut veritatis aliquid explicabo. Repellendus laudantium autem quasi, repudiandae commodi, consequuntur itaque dolore voluptas suscipit debitis, voluptatibus nesciunt iusto doloremque nemo iure. Autem maxime inventore ratione ipsum praesentium dolor dolores, delectus unde odit, laborum.</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>content 3</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatem maiores unde cupiditate tempore, illo assumenda neque itaque facere, velit ex a nobis est mollitia suscipit, totam in? Dolores voluptates accusantium excepturi repellat nam expedita nihil qui aspernatur blanditiis delectus quasi suscipit quam architecto, vero laboriosam eaque itaque exercitationem quidem!</p>
+                        <p>Necessitatibus dicta, aut ratione? Itaque fuga exercitationem iure voluptatibus consectetur at rerum provident voluptas ipsum error assumenda blanditiis animi repudiandae, corporis consequatur maxime placeat aliquam aperiam vel voluptatem soluta. Sit rem distinctio cumque ratione nostrum ea expedita et eveniet facere aperiam quae, eius? Unde delectus expedita est deserunt minima in!</p>
+                        <p>Culpa sunt in cum vero similique tempore voluptatem magnam velit accusamus deleniti, sapiente minus! Facilis debitis doloribus, provident quisquam illum itaque, tempora dolorem! Fugiat perspiciatis dicta, est? Laboriosam quos animi quidem inventore ipsam molestiae qui dolores, hic incidunt, autem, sapiente modi ipsum sint maxime totam quo dolor? Ratione, sequi, odit!</p>
+                        <p>Doloremque voluptatem officia ipsa aliquam, possimus assumenda facere laboriosam in culpa, temporibus eaque amet excepturi quos pariatur porro incidunt repellat vitae consectetur, atque explicabo animi nobis, iure totam? Sapiente omnis quia distinctio quam perferendis, nisi voluptatem natus cupiditate expedita alias fugiat incidunt consectetur repudiandae ex similique itaque vero unde porro.</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>content 4</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut animi delectus cumque tenetur rem laudantium autem amet eaque vel ipsa cum velit illo debitis porro, quia! Ea harum nihil quisquam libero, magnam earum quod aliquam aut blanditiis consectetur, laudantium id qui sit quidem perferendis accusantium ab optio itaque iste, odio.</p>
+                        <p>Accusantium quos repellendus excepturi reprehenderit, libero rerum, iusto, nisi dolore, temporibus dolores ducimus. Deserunt, exercitationem animi corporis quis sint eaque harum. Saepe officia, beatae ipsa provident excepturi quod eveniet ex, exercitationem, maiores et nostrum amet aspernatur ratione obcaecati porro expedita ipsam atque tenetur eaque corporis voluptas ipsum at. Fugit, beatae.</p>
+                        <p>Incidunt dolores, expedita quia similique optio. Minima accusamus rerum unde vitae ipsam rem maiores hic quidem aliquam neque sed consequuntur voluptas quod veritatis tenetur, earum explicabo eveniet doloremque est asperiores praesentium iure. Dolorum vero, placeat voluptatem commodi repellendus hic ullam, suscipit pariatur dolores, quos amet optio corrupti ea provident deleniti.</p>
+                        <p>Reiciendis hic minus asperiores id eum, officiis doloribus neque, ea! Dolore, illo qui eveniet incidunt animi excepturi perferendis quod, explicabo maiores in. Expedita sunt ratione ipsa vel impedit asperiores, fugit. Delectus sint odio blanditiis fugiat harum aperiam quo! Molestiae obcaecati temporibus impedit modi illum rem error ducimus tempora adipisci qui!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
