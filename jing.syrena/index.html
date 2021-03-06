@@ -1,25 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mobile App</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cat Tracker</title>
+
+   <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+   <link rel="stylesheet" href="css/app.css">
+
+   <script src="lib/js/jquery-2.2.4.min.js"></script>
+
+   <script src="js/app.js"></script>
+
+   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-	<header>
-		<h1>Mobile App</h1>
-		<p>What a mobile app</p>
-	</header>
-	<!-- nav.nav>ul>li*4>a[href=#]>{Link $} -->
-	<nav class="nav">
-		<ul>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 2</a></li>
-			<li><a href="#">Link 3</a></li>
-			<li><a href="#">Link 4</a></li>
-		</ul>
-	</nav>
-	.container>
-	article#article$.
+
+
+   <section data-role="page" id="signin-page">
+      <div data-role="main">
+         <form id="signin-form">
+            <div class="signinImage">
+               
+            </div>
+            <input type="text" id="signin-username">
+            <input type="password" id="signin-password">
+            <div>
+               <button>
+                  <a href="#recent-page">Sign In</a>
+               </button>
+            </div>
+         </form>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="recent-page">
+      <div data-role="main">
+         MAP!
+         <img src="img/img.png" alt="">
+      </div>
+      <footer data-role="footer">
+         <a href="#recent-page">
+            <div class="navBar">
+               <img src="img/recent.png">
+            </div>
+         </a>
+         <a href="#list-page">
+            <div class="navBar">
+               <img src="img/list.png">
+            </div>
+         </a>
+         <a href="#user-profile-page">
+            <div class="navBar">
+               <img src="img/profile.png">
+            </div>
+         </a>
+      </footer>
+   </section>
+
+
+   <section data-role="page" id="list-page">
+      <header data-role="header">
+         <h1>Cat List</h1>
+      </header>
+      <div data-role="main">
+         <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
+         <ul>
+            <li>
+               <div class="listImg">
+                  <img src="" alt="">
+                  <div class="listText">
+                     <a href="#animal-profile-page">Animal 1</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="listImg">
+                  <img src="" alt="">
+                  <div class="listText">
+                     <a href="#animal-profile-page">Animal 2</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="listImg">
+                  <img src="" alt="">
+                  <div class="listText">
+                     <a href="#animal-profile-page">Animal 3</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="listImg">
+                  <img src="" alt="">
+                  <div class="listText">
+                     <a href="#animal-profile-page">Animal 4</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="listImg">
+                  <img src="" alt="">
+                  <div class="listText">
+                     <a href="#animal-profile-page">Animal 5</a>
+                  </div>
+               </div>
+            </li>
+            <!-- <li><a href="#animal-profile-page">Animal 2</a></li>
+            <li><a href="#animal-profile-page">Animal 3</a></li>
+            <li><a href="#animal-profile-page">Animal 4</a></li>
+            <li><a href="#animal-profile-page">Animal 5</a></li>
+            <li><a href="#animal-profile-page">Animal 6</a></li>
+            <li><a href="#animal-profile-page">Animal 7</a></li>
+            <li><a href="#animal-profile-page">Animal 8</a></li>
+            <li><a href="#animal-profile-page">Animal 9</a></li>
+            <li><a href="#animal-profile-page">Animal 10</a></li> -->
+         </ul>
+      </div>
+      <footer data-role="footer">
+         <a href="#recent-page">
+            <div class="navBar">
+               <img src="img/recent.png">
+            </div>
+         </a>
+         <a href="#list-page">
+            <div class="navBar">
+               <img src="img/list.png">
+            </div>
+         </a>
+         <a href="#user-profile-page">
+            <div class="navBar">
+               <img src="img/profile.png">
+            </div>
+         </a>
+      </footer>
+   </section>
+
+
+   <section data-role="page" id="user-profile-page">
+      <div data-role="main">
+         Profile
+         <div>
+            
+         </div>
+         <button>
+            <a href="#signin-page">Sign Out</a>
+         </button>
+      </div>
+      <footer data-role="footer">
+         <a href="#recent-page">
+            <div class="navBar">
+               <img src="img/recent.png">
+            </div>
+         </a>
+         <a href="#list-page">
+            <div class="navBar">
+               <img src="img/list.png">
+            </div>
+         </a>
+         <a href="#user-profile-page">
+            <div class="navBar">
+               <img src="img/profile.png">
+            </div>
+         </a>
+      </footer>
+   </section>
+
+
+   <section data-role="page" id="animal-profile-page">
+      <header data-role="header">
+         <h1>Cat Profile</h1>
+         <a href="#" data-rel="back">Back</a>
+      </header>
+      <div data-role="main" class="CatFileImg">
+         Animal Profile
+         <!-- <div class="CatFileImg">
+            <img src="" alt="">
+         </div> -->
+         <label for="fname">Name:</label><br>
+         <input class="catp" type="text" id="name" value="Leader"> <br>
+            
+         </form>
+      </div>
+   </section>
+
 </body>
 </html>
