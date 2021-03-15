@@ -18,9 +18,142 @@
 <body>
 
 
-   <section data-role="page" id="signin-page">
+
+	<!-- SIGNUP PAGE -->
+	<section data-role="page" id="signup-page">	
+		<div data-role="main" class="display-flex flex-column">
+
+			<div class="flex-stretch"></div>
+
+			<div class="flex-none" style="text-align:center">
+				<img src="img/logo-01.png" alt="" class="signin-logo">				
+			</div>
+			<div class="flex-none" style="text-align:center">
+				<p class="signin-title">Create Account</p>			
+			</div>
+			
+			<form id="signup-form" data-ajax="false">				
+				<div class="form-control">
+					<!-- <label for="signup-username" class="form-label">Username</label> -->
+					<input type="text" class="form-input" id="signup-username" placeholder="User Name*" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<!-- <label for="signup-email" class="form-label">Username</label> -->
+					<input type="email" class="form-input" id="signup-email" placeholder="Email*" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<!-- <label for="signup-password" class="form-label">Password</label> -->
+					<input type="password" class="form-input" id="signup-password" placeholder="Password*" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<!-- <label for="signup-confirm-password" class="form-label">Password</label> -->
+					<input type="password" class="form-input" id="signup-confirm-password" placeholder="Confirm Password*" data-role="none">
+				</div>
+
+
+				<div class="signin-text2">
+					Already have account? <a href="#signin-page" class="signup-link">signin</a>
+				</div>
+				<div class="form-control">
+					<input type="submit" class="form-button" value="Registered" data-role="none">
+					
+				</div>
+			</form>
+			<div class="flex-stretch"></div>
+		</div>
+
+	</section>
+
+	<!-- SIGNIN PAGE -->
+	 <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
+         <div class="flex-none">
+            <div class="logo">
+               <img src="img/logo.png" alt="logo">
+            </div>
+            <p class="signin-title">Howdy!</p>
+			<!-- <p class="signin-text1">sign into your Account</p> -->
+            <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Username</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-password" class="form-label">Password</label>
+                  <input class="form-input" type="password" id="signin-password" data-role="none">
+               </div>
+               <div class="signin-text2">
+						Don’t have an account? <a href="#signup-page" class="signin-link">Register Now</a>
+				</div>
+               <div class="form-control">
+                  <input type="submit" class="form-button" value="Sign In" data-role="none">
+               </div>
+            </form>
+         </div>
+         <!-- <div class="flex-stretch" id="tips" >opps,the User Name or Password is not right~</div> -->
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
+
+
+	<!-- SIGNIN PAGE -->
+<!-- 	<section data-role="page" id="signin-page">
+		<div data-role="main" class="display-flex flex-column">
+			<div class="flex-stretch"></div> -->
+			
+			<!-- <div class="flex-none">
+				<div class="logo">
+               		<img src="img/logo.png" alt="">
+            	</div>
+				<p class="signin-title">Hello</p>
+				<p class="signin-text1">sign into your Account</p>				
+			</div> -->
+			<!-- <div class="flex-none" style="padding:1em">
+				<div class="logo">
+               		<img src="img/logo.png" alt="">
+            	</div>
+				<p class="signin-title">Hello</p>
+				<p class="signin-text1">sign into your Account</p>
+				<form id="signin-form" data-ajax="false">					
+					<div class="form-control"> -->
+						<!-- <label for="signin-username" class="form-label">Username</label> -->
+						<!-- <input type="text" class="form-input" id="signin-username" placeholder="User Name*" data-role="none">
+					</div>
+
+					<div class="form-control"> -->
+						<!-- <label for="signin-password" class="form-label">Password</label> -->
+						<!-- <input type="password" class="form-input" id="signin-password" placeholder="Password*" data-role="none">
+					</div>
+					<div class="signin-text2">
+						Don’t have an account? <a href="#signup-page" class="signin-link">Register Now</a>
+					</div>
+					<div class="form-control">
+						<input type="submit" class="form-button" value="signin" data-role="none">
+						<br>
+					</div>
+				</form>
+			</div>
+			<div class="flex-stretch" id="tips" >opps,the User Name or Password is not right~</div>
+
+			<div class="flex-stretch"></div>
+		</div>
+	</section> -->
+
+
+
+
+
+
+   <!-- <section data-role="page" id="signin-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <div class="flex-none" style="text-align:center">
+				<img src="img/logo-01.png" alt="" class="signin-logo">				
+			</div>
          <div class="flex-none">
             <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
@@ -37,13 +170,91 @@
             </form>
          </div>
       </div>
+   </section> -->
+
+
+
+
+
+
+
+
+   <section data-role="page" id="onboarding-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <div class="flex-none" style="text-align:center">
+				<img src="img/logo-01.png" alt="" class="signin-logo">				
+			</div>
+         <div class="flex-none">
+            
+         </div>
+      </div>
    </section>
+
+
+
+
+
+
+
+
+
+
 
 
    <section data-role="page" id="recent-page">
-      <div data-role="main"></div>
+   	<header data-role="header">
+         <h1>Search</h1>
+         <ul>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-list-add-emotio"
+               data-activate="#list-add-modal">&plus;</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+      	
+      </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
+
+
+
+
+
+
+
+   <section data-role="page" id="physical-impact-page">
+   	  <header data-role="header">
+         <h1>Physical Impact</h1>
+         <ul>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-list-add-emotion"
+               data-activate="#list-add-page">&plus;</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+      
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+
+
+
+
+   <section data-role="page" id="emotion-add-page">
+   	  <header data-role="header">
+         <h1>Add Emotional</h1>
+         
+      </header>
+      <div data-role="main">
+      
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+
+
 
 
    <section data-role="page" id="list-page">
@@ -51,7 +262,7 @@
          <h1>Search</h1>
          <ul>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-list-add-animal"
+            <li><a href="#" class="js-list-add-emotio"
                data-activate="#list-add-modal">&plus;</a></li>
          </ul>
       </header>
@@ -158,26 +369,89 @@
    <!-- USER DATA SECTION -->
 
    <section data-role="page" id="user-profile-page">
+   	<header data-role="header">
+         <h1>Profile</h1>
+         <ul>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a></li>
+         </ul>
+      </header>
+      
       <div data-role="main">
-         Profile
-         <p>
-            <a href="#" class="js-logout">Sign Out</a>
-         </p>
+      	<div class="container">
+        <h2>Tap group</h2>
+
+        <!-- basic structure of tabgroup -->
+        <div class="tabgroup"><div class="overscroll">
+            <!-- .tabs>.tab*4{Tab $} -->
+            <div class="tabs">
+                <div class="tab" active>Tab 1</div>
+                <div class="tab">Tab 2</div>
+                <div class="tab">Tab 3</div>
+                <div class="tab">Tab 4</div>
+            </div>
+            <!-- .contents>.content*4>h3{content $}+div>p*4>lorem50 -->
+            <div class="contents">
+                <div class="content active">
+                    <h3>content 1</h3>
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Explicabo ad, delectus. Provident asperiores mollitia quas optio alias quod veritatis. Dignissimos fugiat esse qui recusandae, sed architecto explicabo magnam incidunt ad in, vel quam, sit consequatur atque deserunt maxime porro temporibus reprehenderit harum, quia iure. Rerum odit voluptatibus excepturi possimus cumque?</p>
+                        <p>Inventore, nemo, ea ut aspernatur, assumenda iste nam odit accusantium, deserunt architecto consectetur asperiores labore. Labore beatae illum ullam, veniam numquam vero dolore sit. Quaerat ipsam fugit eaque. Nam quibusdam asperiores veniam labore, odit fugiat ab temporibus nulla quod odio pariatur ad sit recusandae necessitatibus numquam laboriosam assumenda ex nostrum!</p>
+                        <p>Necessitatibus cum distinctio, autem ducimus, quibusdam unde optio? Beatae corrupti sed esse! Pariatur quo at modi atque mollitia cum fugiat accusantium quas provident illum fugit non minus dignissimos reprehenderit consequuntur, iure ab magnam voluptas neque quasi sit corrupti? Mollitia culpa dolor voluptatibus nostrum! Ipsam, facilis quidem iure molestias praesentium sit.</p>
+                        <p>Nihil dicta illo, possimus voluptatum fugiat aut non incidunt vitae ratione suscipit, minima, commodi adipisci eius nobis quis vero, consectetur repellendus tempore! Saepe perspiciatis rem, repellat architecto corrupti. Repellat mollitia incidunt magnam reiciendis natus odit officiis eveniet ad veritatis consequatur. Deleniti ullam sint, dignissimos commodi animi illum enim laboriosam, deserunt.</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>content 2</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis eos cupiditate cumque molestiae harum, officiis blanditiis. Voluptatum placeat error maiores, deserunt explicabo quidem? Voluptate, iusto porro commodi similique tempore aperiam natus dolores quo. Cupiditate amet consequatur tenetur laborum voluptate aliquid aperiam, sed eligendi porro voluptas ipsam ratione possimus vel.</p>
+                        <p>Provident numquam ducimus quod fugiat adipisci sint, ex praesentium quae in deleniti dignissimos error suscipit mollitia odit, libero? Illum placeat voluptates optio vero architecto cumque quibusdam deserunt sit, ratione, veritatis maiores labore magnam explicabo consequatur officia expedita inventore, impedit non sequi. Quos iste sit error pariatur cum dolorum repellendus molestias.</p>
+                        <p>Dolores ipsa cumque quibusdam ipsum laboriosam minus labore nisi minima illo, vero enim ullam commodi earum tenetur illum facilis! Veniam, illo architecto eius molestias accusantium fugit velit cupiditate quod quos minima mollitia odio, eaque delectus quae nesciunt sit deleniti non quia facere corporis aperiam modi. Accusamus eos dolor ipsa. Maiores.</p>
+                        <p>Harum, consectetur non. Reprehenderit, molestias vitae tenetur doloremque. Deleniti ducimus soluta velit labore magni voluptatibus rem ut veritatis aliquid explicabo. Repellendus laudantium autem quasi, repudiandae commodi, consequuntur itaque dolore voluptas suscipit debitis, voluptatibus nesciunt iusto doloremque nemo iure. Autem maxime inventore ratione ipsum praesentium dolor dolores, delectus unde odit, laborum.</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>content 3</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatem maiores unde cupiditate tempore, illo assumenda neque itaque facere, velit ex a nobis est mollitia suscipit, totam in? Dolores voluptates accusantium excepturi repellat nam expedita nihil qui aspernatur blanditiis delectus quasi suscipit quam architecto, vero laboriosam eaque itaque exercitationem quidem!</p>
+                        <p>Necessitatibus dicta, aut ratione? Itaque fuga exercitationem iure voluptatibus consectetur at rerum provident voluptas ipsum error assumenda blanditiis animi repudiandae, corporis consequatur maxime placeat aliquam aperiam vel voluptatem soluta. Sit rem distinctio cumque ratione nostrum ea expedita et eveniet facere aperiam quae, eius? Unde delectus expedita est deserunt minima in!</p>
+                        <p>Culpa sunt in cum vero similique tempore voluptatem magnam velit accusamus deleniti, sapiente minus! Facilis debitis doloribus, provident quisquam illum itaque, tempora dolorem! Fugiat perspiciatis dicta, est? Laboriosam quos animi quidem inventore ipsam molestiae qui dolores, hic incidunt, autem, sapiente modi ipsum sint maxime totam quo dolor? Ratione, sequi, odit!</p>
+                        <p>Doloremque voluptatem officia ipsa aliquam, possimus assumenda facere laboriosam in culpa, temporibus eaque amet excepturi quos pariatur porro incidunt repellat vitae consectetur, atque explicabo animi nobis, iure totam? Sapiente omnis quia distinctio quam perferendis, nisi voluptatem natus cupiditate expedita alias fugiat incidunt consectetur repudiandae ex similique itaque vero unde porro.</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>content 4</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut animi delectus cumque tenetur rem laudantium autem amet eaque vel ipsa cum velit illo debitis porro, quia! Ea harum nihil quisquam libero, magnam earum quod aliquam aut blanditiis consectetur, laudantium id qui sit quidem perferendis accusantium ab optio itaque iste, odio.</p>
+                        <p>Accusantium quos repellendus excepturi reprehenderit, libero rerum, iusto, nisi dolore, temporibus dolores ducimus. Deserunt, exercitationem animi corporis quis sint eaque harum. Saepe officia, beatae ipsa provident excepturi quod eveniet ex, exercitationem, maiores et nostrum amet aspernatur ratione obcaecati porro expedita ipsam atque tenetur eaque corporis voluptas ipsum at. Fugit, beatae.</p>
+                        <p>Incidunt dolores, expedita quia similique optio. Minima accusamus rerum unde vitae ipsam rem maiores hic quidem aliquam neque sed consequuntur voluptas quod veritatis tenetur, earum explicabo eveniet doloremque est asperiores praesentium iure. Dolorum vero, placeat voluptatem commodi repellendus hic ullam, suscipit pariatur dolores, quos amet optio corrupti ea provident deleniti.</p>
+                        <p>Reiciendis hic minus asperiores id eum, officiis doloribus neque, ea! Dolore, illo qui eveniet incidunt animi excepturi perferendis quod, explicabo maiores in. Expedita sunt ratione ipsa vel impedit asperiores, fugit. Delectus sint odio blanditiis fugiat harum aperiam quo! Molestiae obcaecati temporibus impedit modi illum rem error ducimus tempora adipisci qui!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+         
+         
 
          <div class="floater top right">
-            <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a>
+            
          </div>
 
 
          <div class="modal" id="user-settings-modal">
             <div class="modal-drawer right">
-               <div class="modal-head display-flex">
+                <div class="modal-head display-flex">
                   <div class="flex-none">Head</div>
                   <div class="flex-stretch"></div>
                   <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
-               </div>
-               <div class="modal-body"><div class="overscroll">
-               </div>
+                  </div>
+                <div class="modal-body"><div class="overscroll">
+               		<p>
+            			<a href="#" class="js-logout">Sign Out</a>
+                	</p>
+                </div>
                </div>
             </div>
          </div>
@@ -219,13 +493,14 @@
    <script type="text/template" id="footer-template">
    <ul>
       <li><a href="#recent-page">Recent</a></li>
+      <li><a href="#physical-impact-page">Body</a></li>
       <li><a href="#list-page">List</a></li>
       <li><a href="#user-profile-page">Profile</a></li>
    </ul>
    </script>
 
    <script type="text/template" id="animal-link-template">
-   this is an animal link
+   this is an emotion case link
    </script>
 
 </body>

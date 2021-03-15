@@ -1,3 +1,4 @@
+
 // Document Ready
 $(()=>{
 
@@ -33,3 +34,19 @@ $(()=>{
       let target = $(this).data("toggle");
       $(target).toggleClass("active");
    })
+
+
+
+
+
+
+
+
+
+   $("[data-template]").each(function(){
+      let id = $(this).data("template");
+      let template = $(id).html();
+      $(this).html(template);
+   })
+
+});

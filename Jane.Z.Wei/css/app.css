@@ -5,28 +5,40 @@
 }
 
 :root {
-   --font-sans:Helvetica, Arial, sans-serif;
-   --font-serif:Cambria, Georgia, serif;
+  --color-neutral-light: #eaeeef;
+  --color-neutral-medium: #9aa2a4;
+  --color-neutral-dark: #363c3e;
 
+  --color-green-light: #9BBFAB;
+  --color-green-medium:#1A736A;
+  --color-green-dark:#09403A;
 
-   --color-neutral-light:#ede9e9;
-   --color-neutral-medium:#999191;
-   --color-neutral-dark:#343030;
+  --color-red-light: #F2E4DC;
+  --color-red-medium:#F2887E;
+  --color-red-dark:#FF5A43;
 
-   --color-main-light:#e5f1f2;
-   --color-main-medium:#4ba0a8;
-   --color-main-dark:#0a4349;
+  --color-header:#9BBFAB;
+  --color-footer:#1A736A;
 
-   --color-white:#fff;
-   --color-black:#111;
+  --color-white: #fff;
+  --color-black: #000;
 
-   --header-height:3rem;
+  --header-height:3rem;
+  --gap-size:1rem;
+  --container-width:1000px;
+
+  --font-serif:Georgia, "Times New Roman", serif;
+  --font-sans:Helvetica, arial, sans-serif;
+  --font-segoeui:Segoe UI;
 }
 
+
 body {
-   margin:0;
-   font-size:100%;
-   font-family:var(--font-sans);
+  margin:0;
+  font-size:100%;
+  font-family:var(--font-segoeui);
+  background-color: var(--color-green-dark);
+  color: var(--color-red-light);
 }
 
 h1,
@@ -35,16 +47,16 @@ h3,
 h4,
 h5,
 h6 {
-   font-family:var(--font-sans);
+  font-family:var(--font-segoeui);
+  color:white;
+  font-weight: bold;
 }
 
 a {
-   color:inherit;
-   text-decoration:none;
-   font-weight:bold;
-}
-a:hover {
-   text-decoration: underline;
+  display:inline-block;
+  color:inherit;
+  font-weight:bold;
+  text-decoration:none;
 }
 
 
@@ -96,16 +108,28 @@ a:hover {
    overflow:hidden;
    position:relative;
 }
-[data-role="footer"],
-[data-role="header"] {
+
+[data-role="header"]{
    flex: none;
    height: var(--header-height);
    line-height: var(--header-height);
    border-width:0;
-   background-color: var(--color-white);
+   background-color: var(--color-green-light);
    box-shadow:0 0 5px rgba(0,0,0,0.2);
    position:relative;
    overflow:hidden;
+}
+
+[data-role="footer"] {
+   flex: none;
+   height: var(--header-height);
+   line-height: var(--header-height);
+   border-width:0;
+   background-color: var(--color-green-medium);
+   box-shadow:0 0 5px rgba(0,0,0,0.2);
+   position:relative;
+   overflow:hidden;
+   color: var(--color-red-light);
 }
 
 .ui-header .ui-title {
@@ -118,6 +142,7 @@ a:hover {
    margin:0;
    font-size:1rem;
    padding:0;
+   color: white;
 }
 
 
@@ -178,17 +203,19 @@ a:hover {
     padding: 0.5em 1em;
     border-radius: 0.3em;
     border-width:0;
-    background-color:var(--color-neutral-light);
+    background-color:var(--color-red-medium);
     outline: 0;
     width: 100%;
     display: inline-block;
     font:inherit;
     text-align:center;
     cursor:pointer;
+    color: white;
+    font-weight: bold;
 }
 .form-button:hover {
    text-decoration:none;
-   background-color:var(--color-neutral-medium);
+   background-color:var(--color-red-dark);
 }
 
 
@@ -319,11 +346,144 @@ a:hover {
 }
 
 
+a img{
+  height: 1.5rem;
+  padding-top:0.2rem;
+}
+
+
+/* Signin & Signup page */
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px;
+
+}
+#signin-page [data-role="main"],#signup-page [data-role="main"] {
 
 
 
 
+}
 
+.signin-title {
+  text-align: center;
+  font-weight: bold;
+  font-size:2rem;
+  line-height: 1rem;
+  font-family:var(--font-segoeui);
+  color: var(--color-red-light);  
+}
+
+/*.signin-text1{
+  text-align: center;
+  font-size:1rem;
+  line-height: 0.5rem
+  color: var(--color-red-light); 
+}*/
+
+.signin-text2{
+    
+    text-align: center;
+    font-size:0.8rem;
+    color: var(--color-red-light); 
+
+}
+
+
+
+/*
+
+
+#signin-page [data-role="main"],#signup-page [data-role="main"] {
+  background-color: var(--color-green-dark);
+  background-position:center;
+  background-size:cover;
+}
+
+
+
+.form-control {
+    margin: 0.1rem 0;
+}
+
+
+
+#signin-form,#signup-form{
+  width: 75%;
+  text-align: center;
+  margin:auto;
+}
+
+.form-input {
+    display: inline-block;
+    width: 100%;
+    border-width: 0;
+    border-radius: 50px;
+    padding: 0.8rem;   
+    color: #F8F7FC;
+    font-size: 1rem 0.9rem; 
+    background:white;
+    margin: 0.4rem auto;
+    
+    outline: 0
+} 
+
+.form-input:focus {
+  border-bottom-color:var(--color-main-light);
+}
+
+
+
+.form-button{
+  text-align: center;    
+    background-color:var(--color-red-medium);        
+    display: inline-block;
+    width: 70%;
+    border-width: 0;
+    border-radius: 50px;
+    padding: 0.7rem;   
+    color: white;
+    font-size: 1rem;    
+    margin: 1rem auto;
+    box-sizing: border-box;
+    font-weight: bold;
+    outline: 0;
+    cursor: pointer;    
+}
+
+.form-button:active
+{
+  background-color:var(--color-red-medium);
+
+
+
+
+.signin-link,.signup-link{
+  color:white;
+  font-weight: normal;
+}
+
+
+
+#tips {
+  
+  margin:auto;
+  text-align:center;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events:none;
+  color:white;
+  font-size:0.8rem
+}
+
+#tips.active {
+  opacity:1;
+  pointer-events:initial;
+  color: red;
+}*/
 
 
 /* remove this later */
@@ -332,3 +492,37 @@ a:hover {
   background-position:center;
   background-size:cover;
 }
+
+
+
+
+
+
+
+/* remove this later */
+#physical-impact-page [data-role='main'] {
+  background-image: url('../img/body.png');
+  background-position:center;
+  background-size:cover;
+}
+
+
+
+/* remove this later */
+#list-page [data-role='main'] {
+  background-image: url('');
+  background-position:center;
+  background-size:cover;
+}
+
+
+
+
+
+/* remove this later */
+#user-profile-page [data-role='main'] {
+  background-image: url('');
+  background-position:center;
+  background-size:cover;
+}
+
