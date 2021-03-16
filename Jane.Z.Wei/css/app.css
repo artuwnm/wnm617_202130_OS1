@@ -358,8 +358,8 @@ a img{
   margin-left: auto;
   margin-right: auto;
   padding: 100px;
-
 }
+
 #signin-page [data-role="main"],#signup-page [data-role="main"] {
 
 
@@ -368,6 +368,15 @@ a img{
 }
 
 .signin-title {
+  text-align: center;
+  font-weight: bold;
+  font-size:2rem;
+  
+  font-family:var(--font-segoeui);
+  color: var(--color-red-light);  
+}
+.signup-title {
+
   text-align: center;
   font-weight: bold;
   font-size:2rem;
@@ -384,6 +393,13 @@ a img{
 }*/
 
 .signin-text2{
+    
+    text-align: center;
+    font-size:0.8rem;
+    color: var(--color-red-light); 
+
+}
+.signup-text2{
     
     text-align: center;
     font-size:0.8rem;

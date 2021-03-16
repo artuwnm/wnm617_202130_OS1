@@ -20,7 +20,7 @@
 
 
 	<!-- SIGNUP PAGE -->
-	<section data-role="page" id="signup-page">	
+	<!-- <section data-role="page" id="signup-page">	
 		<div data-role="main" class="display-flex flex-column">
 
 			<div class="flex-stretch"></div>
@@ -34,22 +34,22 @@
 			
 			<form id="signup-form" data-ajax="false">				
 				<div class="form-control">
-					<!-- <label for="signup-username" class="form-label">Username</label> -->
+					<label for="signup-username" class="form-label">Username</label>
 					<input type="text" class="form-input" id="signup-username" placeholder="User Name*" data-role="none">
 				</div>
 
 				<div class="form-control">
-					<!-- <label for="signup-email" class="form-label">Username</label> -->
+					<label for="signup-email" class="form-label">Username</label>
 					<input type="email" class="form-input" id="signup-email" placeholder="Email*" data-role="none">
 				</div>
 
 				<div class="form-control">
-					<!-- <label for="signup-password" class="form-label">Password</label> -->
+					<label for="signup-password" class="form-label">Password</label>
 					<input type="password" class="form-input" id="signup-password" placeholder="Password*" data-role="none">
 				</div>
 
 				<div class="form-control">
-					<!-- <label for="signup-confirm-password" class="form-label">Password</label> -->
+					<label for="signup-confirm-password" class="form-label">Password</label>
 					<input type="password" class="form-input" id="signup-confirm-password" placeholder="Confirm Password*" data-role="none">
 				</div>
 
@@ -63,9 +63,50 @@
 				</div>
 			</form>
 			<div class="flex-stretch"></div>
-		</div>
+		</div> -->
 
 	</section>
+	<section data-role="page" id="signup-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <div class="flex-none">
+            <div class="logo">
+               <img src="img/logo.png" alt="logo" style="align-content:center;">
+            </div>
+            <p class="signup-title">Create Account</p>
+			<!-- <p class="signin-text1">sign into your Account</p> -->
+            <form class="form" id="signup-form" data-ajax="false" style="padding:0.5em">
+               <div class="form-control">
+					<!-- <label for="signup-username" class="form-label">Username</label> -->
+					<input type="text" class="form-input" id="signup-username" placeholder="User Name*" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<!-- <label for="signup-email" class="form-label">Email</label> -->
+					<input type="email" class="form-input" id="signup-email" placeholder="Email*" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<!-- <label for="signup-password" class="form-label">Password</label> -->
+					<input type="password" class="form-input" id="signup-password" placeholder="Password*" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<!-- <label for="signup-confirm-password" class="form-label">Comfirm Password</label> -->
+					<input type="password" class="form-input" id="signup-confirm-password" placeholder="Confirm Password*" data-role="none">
+				</div>
+               <div class="signup-text2">
+						Already have account? <a href="#signin-page" class="signin-link">Sign In</a>
+				</div>
+               <div class="form-control">
+                  <input type="submit" class="form-button" value="Signup" data-role="none">
+               </div>
+            </form>
+         </div>
+         
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
 
 	<!-- SIGNIN PAGE -->
 	 <section data-role="page" id="signin-page">
@@ -79,15 +120,15 @@
 			<!-- <p class="signin-text1">sign into your Account</p> -->
             <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
-                  <label for="signin-username" class="form-label">Username</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
+                  <!-- <label for="signin-username" class="form-label">Username</label> -->
+                  <input class="form-input" type="text" id="signin-username"  placeholder="User Name*" data-role="none">
                </div>
                <div class="form-control">
-                  <label for="signin-password" class="form-label">Password</label>
-                  <input class="form-input" type="password" id="signin-password" data-role="none">
+                  <!-- <label for="signin-password" class="form-label">Password</label> -->
+                  <input class="form-input" type="password" id="signin-password" placeholder="Password*" data-role="none">
                </div>
                <div class="signin-text2">
-						Don’t have an account? <a href="#signup-page" class="signin-link">Register Now</a>
+						Don’t have an account? <a href="#signup-page" class="signin-link">Sign Up Now</a>
 				</div>
                <div class="form-control">
                   <input type="submit" class="form-button" value="Sign In" data-role="none">
@@ -100,77 +141,14 @@
    </section>
 
 
-	<!-- SIGNIN PAGE -->
-<!-- 	<section data-role="page" id="signin-page">
-		<div data-role="main" class="display-flex flex-column">
-			<div class="flex-stretch"></div> -->
-			
-			<!-- <div class="flex-none">
-				<div class="logo">
-               		<img src="img/logo.png" alt="">
-            	</div>
-				<p class="signin-title">Hello</p>
-				<p class="signin-text1">sign into your Account</p>				
-			</div> -->
-			<!-- <div class="flex-none" style="padding:1em">
-				<div class="logo">
-               		<img src="img/logo.png" alt="">
-            	</div>
-				<p class="signin-title">Hello</p>
-				<p class="signin-text1">sign into your Account</p>
-				<form id="signin-form" data-ajax="false">					
-					<div class="form-control"> -->
-						<!-- <label for="signin-username" class="form-label">Username</label> -->
-						<!-- <input type="text" class="form-input" id="signin-username" placeholder="User Name*" data-role="none">
-					</div>
-
-					<div class="form-control"> -->
-						<!-- <label for="signin-password" class="form-label">Password</label> -->
-						<!-- <input type="password" class="form-input" id="signin-password" placeholder="Password*" data-role="none">
-					</div>
-					<div class="signin-text2">
-						Don’t have an account? <a href="#signup-page" class="signin-link">Register Now</a>
-					</div>
-					<div class="form-control">
-						<input type="submit" class="form-button" value="signin" data-role="none">
-						<br>
-					</div>
-				</form>
-			</div>
-			<div class="flex-stretch" id="tips" >opps,the User Name or Password is not right~</div>
-
-			<div class="flex-stretch"></div>
-		</div>
-	</section> -->
+	
 
 
 
 
 
 
-   <!-- <section data-role="page" id="signin-page">
-      <div data-role="main" class="display-flex flex-vertical">
-         <div class="flex-stretch"></div>
-         <div class="flex-none" style="text-align:center">
-				<img src="img/logo-01.png" alt="" class="signin-logo">				
-			</div>
-         <div class="flex-none">
-            <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
-               <div class="form-control">
-                  <label for="signin-username" class="form-label">Username</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="signin-password" class="form-label">Password</label>
-                  <input class="form-input" type="password" id="signin-password" data-role="none">
-               </div>
-               <div class="form-control">
-                  <input type="submit" class="form-button" value="Sign In" data-role="none">
-               </div>
-            </form>
-         </div>
-      </div>
-   </section> -->
+   
 
 
 
