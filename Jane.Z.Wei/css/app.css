@@ -169,6 +169,17 @@ a {
   text-align:center;
   flex: 1 1 auto;
 }
+[data-role="footer"] a {
+  display: block;
+  margin: 0;
+  padding: 7px 1em;
+  text-align: center;
+}
+
+[data-role="footer"] img {
+  height: 2em;
+}
+
 
 [data-role="header"] a {
   padding: 0 1em;
@@ -303,11 +314,11 @@ a {
 
 .modal-head,
 .modal-foot {
-  background-color:var(--color-neutral-light);
+  background-color:var(--color-green-dark);
   padding:0.5em 1em;
 }
 .modal-body {
-  background-color:var(--color-white);
+  background-color:var(--color-green-medium);
   flex: 1 1 100%;
   padding:0.5em 1em;
   position:relative;
@@ -325,8 +336,7 @@ a {
 /* ICONS */
 .icon svg,
 .icon img {
-  width:1em;
-  height:1em;
+  
   vertical-align: text-bottom;
 }
 
@@ -346,18 +356,19 @@ a {
 }
 
 
-a img{
-  height: 1.5rem;
-  padding-top:0.2rem;
-}
 
 
 /* Signin & Signup page */
 
-.logo {
+.logo img{
   margin-left: auto;
   margin-right: auto;
-  padding: 100px;
+  margin-top: 10px;
+  
+  border-radius:50%;
+  max-width:20vmax;
+  position: relative;
+  display:flex;
 }
 
 #signin-page [data-role="main"],#signup-page [data-role="main"] {
@@ -371,7 +382,8 @@ a img{
   text-align: center;
   font-weight: bold;
   font-size:2rem;
-  
+  line-height: 1rem;
+  padding-top: 20px;
   font-family:var(--font-segoeui);
   color: var(--color-red-light);  
 }
@@ -381,6 +393,7 @@ a img{
   font-weight: bold;
   font-size:2rem;
   line-height: 1rem;
+  padding-top: 20px;
   font-family:var(--font-segoeui);
   color: var(--color-red-light);  
 }
@@ -502,11 +515,25 @@ a img{
 }*/
 
 
-/* remove this later */
+/* remove this later - Map */
 #recent-page [data-role='main'] {
   background-image: url('../img/map.png');
   background-position:center;
+  background-color: var(--color-green-dark);
   background-size:cover;
+}
+.map-icon-test {
+  position: absolute; 
+  left: 20vh; 
+  top: 45vh; 
+  size: 24px 28px;
+}
+.js-add-emotio-icon {
+  position: absolute; 
+  bottom: 3%;
+  right: 5%;
+  size: 32px 32px;
+
 }
 
 

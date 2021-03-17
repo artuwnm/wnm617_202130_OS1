@@ -19,51 +19,53 @@
 
 
 
-	<!-- SIGNUP PAGE -->
-	<!-- <section data-role="page" id="signup-page">	
-		<div data-role="main" class="display-flex flex-column">
-
-			<div class="flex-stretch"></div>
-
-			<div class="flex-none" style="text-align:center">
+	<!-- LAUNCH PAGE -->
+   <section data-role="page" id="launch-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <div class="flex-none" style="text-align:center">
 				<img src="img/logo-01.png" alt="" class="signin-logo">				
 			</div>
-			<div class="flex-none" style="text-align:center">
-				<p class="signin-title">Create Account</p>			
+         <!-- <div class="flex-none">
+            
+            <div class="logo">
+               <img src="img/logo.png" alt="logo">
+            </div>
+          </div> -->
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+	<!-- ONBOARDING PAGE -->
+   <section data-role="page" id="onboarding-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <div class="flex-none" style="text-align:center">
+				<img src="img/logo-01.png" alt="" class="signin-logo">				
 			</div>
-			
-			<form id="signup-form" data-ajax="false">				
-				<div class="form-control">
-					<label for="signup-username" class="form-label">Username</label>
-					<input type="text" class="form-input" id="signup-username" placeholder="User Name*" data-role="none">
-				</div>
-
-				<div class="form-control">
-					<label for="signup-email" class="form-label">Username</label>
-					<input type="email" class="form-input" id="signup-email" placeholder="Email*" data-role="none">
-				</div>
-
-				<div class="form-control">
-					<label for="signup-password" class="form-label">Password</label>
-					<input type="password" class="form-input" id="signup-password" placeholder="Password*" data-role="none">
-				</div>
-
-				<div class="form-control">
-					<label for="signup-confirm-password" class="form-label">Password</label>
-					<input type="password" class="form-input" id="signup-confirm-password" placeholder="Confirm Password*" data-role="none">
-				</div>
+         <div class="flex-none">
+            
+         </div>
+      </div>
+   </section>
 
 
-				<div class="signin-text2">
-					Already have account? <a href="#signin-page" class="signup-link">signin</a>
-				</div>
-				<div class="form-control">
-					<input type="submit" class="form-button" value="Registered" data-role="none">
-					
-				</div>
-			</form>
-			<div class="flex-stretch"></div>
-		</div> -->
+
+
+
+
+
+
+
+
+	<!-- SIGNUP PAGE -->
 
 	</section>
 	<section data-role="page" id="signup-page">
@@ -71,7 +73,7 @@
          <div class="flex-stretch"></div>
          <div class="flex-none">
             <div class="logo">
-               <img src="img/logo.png" alt="logo" style="align-content:center;">
+               <img src="img/logo.png" alt="logo">
             </div>
             <p class="signup-title">Create Account</p>
 			<!-- <p class="signin-text1">sign into your Account</p> -->
@@ -108,7 +110,13 @@
       </div>
    </section>
 
+
+
+
+
+
 	<!-- SIGNIN PAGE -->
+
 	 <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
@@ -149,25 +157,7 @@
 
 
    
-
-
-
-
-
-
-
-
-   <section data-role="page" id="onboarding-page">
-      <div data-role="main" class="display-flex flex-vertical">
-         <div class="flex-stretch"></div>
-         <div class="flex-none" style="text-align:center">
-				<img src="img/logo-01.png" alt="" class="signin-logo">				
-			</div>
-         <div class="flex-none">
-            
-         </div>
-      </div>
-   </section>
+   
 
 
 
@@ -181,16 +171,100 @@
 
 
    <section data-role="page" id="recent-page">
-   	<header data-role="header">
-         <h1>Search</h1>
+   	<!-- <header data-role="header">
+         <h1>MAP</h1>
          <ul>
             <li class="flex-stretch"></li>
             <li><a href="#" class="js-list-add-emotio"
                data-activate="#list-add-modal">&plus;</a></li>
          </ul>
-      </header>
+      </header> -->
       <div data-role="main">
-      	
+      	<ul>
+				
+				<li>
+					<a href="#add-new-emotion-page">
+						<img src="img/add@2x.png" class="js-add-emotio-icon" data-activate="#add-new-emotion-page" alt="add emotion">
+					</a>
+				</li>
+			</ul>
+      	<div class="map-icon-test icon"  data-activate="#recent-test-modal">
+ 			<img src="img/Pin.png" alt="Pin">
+ 		</div>
+
+ 		<div class="modal" id="recent-test-modal">
+ 					<div class="modal-popup small" data-deactivate="#recent-test-modal">
+ 						 <div class="modal-head">date:3/16/2021</div>
+            <div class="modal-body">
+               I feel a breath rising from my chest to my neck.
+                  
+               </div>
+               <div class="modal-foot">
+               motion guess: #Angry, #nervous, #excited
+                  
+               </div>
+               
+               </div>
+            </div>
+ 					</div>
+ 				</div>
+
+
+ 		<!-- <div class="modal" id="recent-test-modal">
+ 			<div class="modal-popup small" data-deactivate="#recent-test-modal">
+ 				<form class="modal-popup" data-ajax="false" id="recent-test-modal">
+            <div class="modal-head">Head</div>
+            <div class="modal-body">
+               <div class="form-control">
+                  <label for="list-add-name" class="form-label">Name</label>
+                  <input class="form-input" type="text" id="list-add-name" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-type" class="form-label">Type</label>
+                  <input class="form-input" type="text" id="list-add-type" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-breed" class="form-label">Breed</label>
+                  <input class="form-input" type="text" id="list-add-breed" data-role="none">
+               </div>
+            </div>
+            <div class="modal-foot display-flex">
+               <div class="flex-stretch"></div>
+               <div class="flex-none">
+                  <a href="#" data-deactivate="#list-add-modal">Submit</a>
+               </div>
+            </div>
+         </form>
+ 			</div>
+ 		</div>
+
+ 		<div class="modal" id="list-add-modal">
+         <div class="modal-back" data-deactivate="#list-add-modal"></div>
+
+         <form class="modal-popup" data-ajax="false" id="list-add-form">
+            <div class="modal-head">Head</div>
+            <div class="modal-body">
+               <div class="form-control">
+                  <label for="list-add-name" class="form-label">Name</label>
+                  <input class="form-input" type="text" id="list-add-name" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-type" class="form-label">Type</label>
+                  <input class="form-input" type="text" id="list-add-type" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-breed" class="form-label">Breed</label>
+                  <input class="form-input" type="text" id="list-add-breed" data-role="none">
+               </div>
+            </div>
+            <div class="modal-foot display-flex">
+               <div class="flex-stretch"></div>
+               <div class="flex-none">
+                  <a href="#" data-deactivate="#list-add-modal">Submit</a>
+               </div>
+            </div>
+         </form>
+      </div> -->
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
@@ -206,12 +280,18 @@
          <h1>Physical Impact</h1>
          <ul>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-list-add-emotion"
-               data-activate="#list-add-page">&plus;</a></li>
+            <li></li>
          </ul>
       </header>
       <div data-role="main">
-      
+      <ul>
+				
+				<li>
+					<a href="#add-new-emotion-page">
+						<img src="img/add@2x.png" class="js-add-emotio-icon" data-activate="#add-new-emotion-page" alt="add emotion">
+					</a>
+				</li>
+			</ul>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
@@ -239,100 +319,166 @@
       <header data-role="header">
          <h1>Search</h1>
          <ul>
+         	<li><a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-list-add-emotio"
-               data-activate="#list-add-modal">&plus;</a></li>
+            <li><a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a></li>
          </ul>
       </header>
-      <div data-role="main"><div class="overscroll">
+      <div data-role="main" class="display-flex flex-vertical">
+      	
          <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
+         <div class="middle-title" style="height: 14vh;">
+				<div class="search">
+					<form>
+						<input type="search" placeholder="Search">
+					</form>
+
+				<!-- Question: display sort and filter -->
+					<div class="sort">
+						
+						<select>
+							<option value="1">Emotion Name</option>
+							<option value="2">Type</option>
+							<option value="3">Location</option>
+						</select>
+					</div>
+				</div>
+	 			<hr>
+ 			</div>
+ 			<div class="down-section" style="margin-top: 4vh;">
+		 		<div class="overscroll">
+					<ul>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+						<li>
+							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
+								<img src="img/logo-c.png">
+								<div class="list-item-text">
+									<h3>Model:</h3>
+									<p>Type:</p>
+									<p>Location:</p>
+								</div>
+								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+							</a>
+						</li>
+					</ul>
+	 			</div>
+	 		</div>
+ 		</div>
          <ul>
-            <li><a href="#animal-profile-page">Animal 1</a></li>
-            <li><a href="#animal-profile-page">Animal 2</a></li>
-            <li><a href="#animal-profile-page">Animal 3</a></li>
-            <li><a href="#animal-profile-page">Animal 4</a></li>
-            <li><a href="#animal-profile-page">Animal 5</a></li>
-            <li><a href="#animal-profile-page">Animal 6</a></li>
-            <li><a href="#animal-profile-page">Animal 7</a></li>
-            <li><a href="#animal-profile-page">Animal 8</a></li>
-            <li><a href="#animal-profile-page">Animal 9</a></li>
-            <li><a href="#animal-profile-page">Animal 10</a></li>
-            <li><a href="#animal-profile-page">Animal 1</a></li>
-            <li><a href="#animal-profile-page">Animal 2</a></li>
-            <li><a href="#animal-profile-page">Animal 3</a></li>
-            <li><a href="#animal-profile-page">Animal 4</a></li>
-            <li><a href="#animal-profile-page">Animal 5</a></li>
-            <li><a href="#animal-profile-page">Animal 6</a></li>
-            <li><a href="#animal-profile-page">Animal 7</a></li>
-            <li><a href="#animal-profile-page">Animal 8</a></li>
-            <li><a href="#animal-profile-page">Animal 9</a></li>
-            <li><a href="#animal-profile-page">Animal 10</a></li>
-            <li><a href="#animal-profile-page">Animal 1</a></li>
-            <li><a href="#animal-profile-page">Animal 2</a></li>
-            <li><a href="#animal-profile-page">Animal 3</a></li>
-            <li><a href="#animal-profile-page">Animal 4</a></li>
-            <li><a href="#animal-profile-page">Animal 5</a></li>
-            <li><a href="#animal-profile-page">Animal 6</a></li>
-            <li><a href="#animal-profile-page">Animal 7</a></li>
-            <li><a href="#animal-profile-page">Animal 8</a></li>
-            <li><a href="#animal-profile-page">Animal 9</a></li>
-            <li><a href="#animal-profile-page">Animal 10</a></li>
-            <li><a href="#animal-profile-page">Animal 1</a></li>
-            <li><a href="#animal-profile-page">Animal 2</a></li>
-            <li><a href="#animal-profile-page">Animal 3</a></li>
-            <li><a href="#animal-profile-page">Animal 4</a></li>
-            <li><a href="#animal-profile-page">Animal 5</a></li>
-            <li><a href="#animal-profile-page">Animal 6</a></li>
-            <li><a href="#animal-profile-page">Animal 7</a></li>
-            <li><a href="#animal-profile-page">Animal 8</a></li>
-            <li><a href="#animal-profile-page">Animal 9</a></li>
-            <li><a href="#animal-profile-page">Animal 10</a></li>
-            <li><a href="#animal-profile-page">Animal 1</a></li>
-            <li><a href="#animal-profile-page">Animal 2</a></li>
-            <li><a href="#animal-profile-page">Animal 3</a></li>
-            <li><a href="#animal-profile-page">Animal 4</a></li>
-            <li><a href="#animal-profile-page">Animal 5</a></li>
-            <li><a href="#animal-profile-page">Animal 6</a></li>
-            <li><a href="#animal-profile-page">Animal 7</a></li>
-            <li><a href="#animal-profile-page">Animal 8</a></li>
-            <li><a href="#animal-profile-page">Animal 9</a></li>
             <li data-template="#animal-link-template"></li>
             <li data-template="#animal-link-template"></li>
             <li data-template="#animal-link-template"></li>
             <li data-template="#animal-link-template"></li>
          </ul>
+         
+ 			
+
+ 			
       </div></div>
       <footer data-role="footer" data-template="#footer-template"></footer>
 
 
 
 
-      <div class="modal" id="list-add-modal">
-         <div class="modal-back" data-deactivate="#list-add-modal"></div>
-         <form class="modal-popup" data-ajax="false" id="list-add-form">
-            <div class="modal-head">Head</div>
-            <div class="modal-body">
-               <div class="form-control">
-                  <label for="list-add-name" class="form-label">Name</label>
-                  <input class="form-input" type="text" id="list-add-name" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-type" class="form-label">Type</label>
-                  <input class="form-input" type="text" id="list-add-type" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-breed" class="form-label">Breed</label>
-                  <input class="form-input" type="text" id="list-add-breed" data-role="none">
-               </div>
-            </div>
-            <div class="modal-foot display-flex">
-               <div class="flex-stretch"></div>
-               <div class="flex-none">
-                  <a href="#" data-deactivate="#list-add-modal">Submit</a>
-               </div>
-            </div>
-         </form>
-      </div>
+      
    </section>
 
 
@@ -355,18 +501,35 @@
          </ul>
       </header>
       
-      <div data-role="main">
-      	<div class="container">
-        <h2>Tap group</h2>
+      <div data-role="main" class="display-flex flex-vertical">
+
+ 			<div class="middle-title">
+				<div class="profile-username">Username</div>
+				<hr>
+			</div>
+
+			<div class="down-section">
+	 			<div class="overscroll">
+	 				<div class="display-data">
+		 				<div class="display-number">
+		 					<p>230</p>
+		 					<p>50</p>
+		 				</div>
+		 				<div class="display-text">
+		 					<p>Vehicle</p>
+		 					<p>Likes</p>
+		 				</div>
+	 				</div>
+      	
 
         <!-- basic structure of tabgroup -->
-        <div class="tabgroup"><div class="overscroll">
+        <div class="tabgroup">
             <!-- .tabs>.tab*4{Tab $} -->
             <div class="tabs">
                 <div class="tab" active>Tab 1</div>
                 <div class="tab">Tab 2</div>
                 <div class="tab">Tab 3</div>
-                <div class="tab">Tab 4</div>
+                
             </div>
             <!-- .contents>.content*4>h3{content $}+div>p*4>lorem50 -->
             <div class="contents">
@@ -397,14 +560,6 @@
                         <p>Doloremque voluptatem officia ipsa aliquam, possimus assumenda facere laboriosam in culpa, temporibus eaque amet excepturi quos pariatur porro incidunt repellat vitae consectetur, atque explicabo animi nobis, iure totam? Sapiente omnis quia distinctio quam perferendis, nisi voluptatem natus cupiditate expedita alias fugiat incidunt consectetur repudiandae ex similique itaque vero unde porro.</p>
                     </div>
                 </div>
-                <div class="content">
-                    <h3>content 4</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut animi delectus cumque tenetur rem laudantium autem amet eaque vel ipsa cum velit illo debitis porro, quia! Ea harum nihil quisquam libero, magnam earum quod aliquam aut blanditiis consectetur, laudantium id qui sit quidem perferendis accusantium ab optio itaque iste, odio.</p>
-                        <p>Accusantium quos repellendus excepturi reprehenderit, libero rerum, iusto, nisi dolore, temporibus dolores ducimus. Deserunt, exercitationem animi corporis quis sint eaque harum. Saepe officia, beatae ipsa provident excepturi quod eveniet ex, exercitationem, maiores et nostrum amet aspernatur ratione obcaecati porro expedita ipsam atque tenetur eaque corporis voluptas ipsum at. Fugit, beatae.</p>
-                        <p>Incidunt dolores, expedita quia similique optio. Minima accusamus rerum unde vitae ipsam rem maiores hic quidem aliquam neque sed consequuntur voluptas quod veritatis tenetur, earum explicabo eveniet doloremque est asperiores praesentium iure. Dolorum vero, placeat voluptatem commodi repellendus hic ullam, suscipit pariatur dolores, quos amet optio corrupti ea provident deleniti.</p>
-                        <p>Reiciendis hic minus asperiores id eum, officiis doloribus neque, ea! Dolore, illo qui eveniet incidunt animi excepturi perferendis quod, explicabo maiores in. Expedita sunt ratione ipsa vel impedit asperiores, fugit. Delectus sint odio blanditiis fugiat harum aperiam quo! Molestiae obcaecati temporibus impedit modi illum rem error ducimus tempora adipisci qui!</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -470,12 +625,42 @@
 
    <script type="text/template" id="footer-template">
    <ul>
-      <li><a href="#recent-page">Recent</a></li>
-      <li><a href="#physical-impact-page">Body</a></li>
-      <li><a href="#list-page">List</a></li>
-      <li><a href="#user-profile-page">Profile</a></li>
+      <li>
+      	<a href="#recent-page">
+			<span class="icon">
+				<img src="img/recent_navi@2x.png" alt="recent">
+			</span>
+			<span>Recent</span>
+		</a>
+      </li>
+      <li>
+      	<a href="#physical-impact-page">
+      		<span class="icon">
+				<img src="img/body_navi@2x.png" alt="body">
+			</span>
+			<span>Body</span>
+      	</a>
+      </li>
+      <li>
+      	<a href="#list-page">
+      		<span class="icon">
+				<img src="img/mood_navi@2x.png" alt="mood">
+			</span>
+			<span>Moods</span>
+      	</a>
+      </li>
+      <li>
+      	<a href="#user-profile-page">
+      		<span class="icon">
+				<img src="img/profile_navi@2x.png" alt="profile">
+			</span>
+			<span>Profile</span>
+      	</a>
+      </li>
    </ul>
    </script>
+
+   			
 
    <script type="text/template" id="animal-link-template">
    this is an emotion case link
