@@ -23,7 +23,7 @@
          <div class="flex-stretch"></div>
          <div class="flex-none">
             <div class="logo">
-               <img src="img/logo.png" alt="">
+               <img src="img/logo2.png" alt="">
             </div>
             <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
@@ -43,43 +43,39 @@
    </section>
 
 
-   <!-- <section data-role="page" id="recent-page">
-      <div data-role="main">
-         MAP!
-         <img src="img/img.png" alt="">
-      </div>
-      <footer class="footer">
-         <a href="#recent-page">
-            <div class="navBar">
-               <img src="img/recent.png">
-            </div>
-         </a>
-         <a href="#list-page">
-            <div class="navBar">
-               <img src="img/list.png">
-            </div>
-         </a>
-         <a href="#user-profile-page">
-            <div class="navBar">
-               <img src="img/profile.png">
-            </div>
-         </a>
-      </footer>
-   </section> -->
 
-   <section data-role="page" id="recent-page">
-      <div data-role="main"></div>
+<section data-role="page" id="recent-page">
+      <div data-role="main">
+         <div class="map-icon-test icon" style="position:absolute;left:20vw;top:40vh;font-size:2em" data-activate="#recent-test-modal">
+            <img src="img/icon/marker.png" alt="">
+         </div>
+
+
+         <div class="modal1" id="recent-test-modal">
+            <div class="modal-popup small" data-deactivate="#recent-test-modal">
+               <div class="modal1-body">Cat 1</div>
+            </div>
+         </div>
+      </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
+   <!-- <section data-role="page" id="recent-page">
+      <div data-role="main"></div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+ -->
 
    <section data-role="page" id="list-page">
       <header data-role="header">
+         <!-- <form>
+               <input type="search" placeholder="Search">
+            </form> -->
          <h1>Cat List</h1>
          <ul>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-list-add-animal"
-               data-activate="#list-add-modal"><img src="img/add.png"></a></li>
+            <li><a href="#" class="js-list-add-animal icon"
+               data-activate="#list-add-modal"><img src="img/icon/add.png"></a></li>
          </ul>
       </header>
       <div data-role="main"><div class="overscroll">
@@ -137,29 +133,13 @@
          </ul>
       </div>
    </div>
-      <!-- <footer class="footer">
-         <a href="#recent-page">
-            <div class="navBar">
-               <img src="img/recent.png">
-            </div>
-         </a>
-         <a href="#list-page">
-            <div class="navBar">
-               <img src="img/list.png">
-            </div>
-         </a>
-         <a href="#user-profile-page">
-            <div class="navBar">
-               <img src="img/profile.png">
-            </div>
-         </a>
-      </footer> -->
-      <footer data-role="footer" data-template="#footer-template"></footer>
-      <div class="modal" id="list-add-modal">
-         <div class="modal-back" data-deactivate="#list-add-modal"></div>
-         <form class="modal-popup" data-ajax="false" id="list-add-form">
-            <div class="modal-head">Head</div>
-            <div class="modal-body">
+   <footer data-role="footer" data-template="#footer-template"></footer>
+
+      <div class="modal1" id="list-add-modal">
+         <div class="modal1-back" data-deactivate="#list-add-modal"></div>
+         <form class="modal1-popup" data-ajax="false" id="list-add-form">
+            <div class="modal1-head">Head</div>
+            <div class="modal1-body">
                <div class="form-control">
                   <label for="list-add-name" class="form-label">Name</label>
                   <input class="form-input" type="text" id="list-add-name" data-role="none">
@@ -173,7 +153,7 @@
                   <input class="form-input" type="text" id="list-add-breed" data-role="none">
                </div>
             </div>
-            <div class="modal-foot display-flex">
+            <div class="modal1-foot display-flex">
                <div class="flex-stretch"></div>
                <div class="flex-none">
                   <a href="#" data-deactivate="#list-add-modal">Submit</a>
@@ -185,51 +165,36 @@
 
 
    <section data-role="page" id="user-profile-page">
-      <!-- <div data-role="main">
-         Profile
-         <div>
-            
-         </div>
-         <button>
-            <a href="#signin-page">Sign Out</a>
-         </button>
-      </div>
-      <footer class="footer">
-         <a href="#recent-page">
-            <div class="navBar">
-               <img src="img/recent.png">
-            </div>
-         </a>
-         <a href="#list-page">
-            <div class="navBar">
-               <img src="img/list.png">
-            </div>
-         </a>
-         <a href="#user-profile-page">
-            <div class="navBar">
-               <img src="img/profile.png">
-            </div>
-         </a>
-      </footer> -->
+
       <div data-role="main">
-         Profile
-         <p>
-            <a href="#" class="js-logout">Sign Out</a>
-         </p>
+         <div class="profile-head">
+            <div class="head-img">
+               <img src="img/profileimg.png" alt="">
+            </div>
+            <div class="profile-body">
+               <h1>Name:Alice</h1>
+               <h1>Age:18</h1>
+               <h1>gender:Female</h1>
+            </div>
+         </div>
 
          <div class="floater top right">
-            <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/edit.png" alt=""></a>
+            <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/add.png" alt=""></a>
          </div>
-
 
          <div class="modal" id="user-settings-modal">
             <div class="modal-drawer right">
                <div class="modal-head display-flex">
-                  <div class="flex-none">Head</div>
+                  <div class="flex-none">Settings</div>
                   <div class="flex-stretch"></div>
                   <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
                </div>
                <div class="modal-body"><div class="overscroll">
+                  <ul>
+                     <li>Change Name</li>
+                     <li>Change Password</li>
+                     <li><a href="#" class="js-logout">Sign Out</a></li>
+                  </ul>
                </div>
                </div>
             </div>
@@ -238,53 +203,52 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
+         
+   <!--  ANIMAL DATA SECTION -->
 
-   <!-- <section data-role="page" id="animal-profile-page">
-      <header data-role="header">
-         <h1>Cat Profile</h1>
-         <a href="#" data-rel="back">Back</a>
-      </header>
-      <div data-role="main" class="CatFileImg">
-         Animal Profile
-         <label for="fname">Name:</label><br>
-         <input class="catp" type="text" id="name" value="Leader"> <br>
-            
-         </form>
-      </div>
-   </section> -->
-    <!--  ANIMAL DATA SECTION -->
-
-
-<!-- animal data section -->
    <section data-role="page" id="animal-profile-page">
-      <header data-role="header">
-         <h1>Search</h1>
-         <ul>
-            <li><a href="#" data-rel="back"><img src="img/back.png" alt=""></a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-         Animal Profile
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="animal-top">
+
+            <div class="floater top left header no-touch">
+               <ul>
+                  <li class="flex-none do-touch icon"><a href="#" data-rel="back"><img src="img/icon/back.png"></a></li>
+                  <li class="flex-stretch"></li>
+                  <li class="flex-none do-touch icon"><a href="#"><img src="img/icon/edit.png"></a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="header">
+            <ul>
+               <li class="flex-stretch"><a href="#">map</a></li>
+               <li class="flex-stretch"><a href="#">info</a></li>
+            </ul>
+         </div>
+         <div class="animal-bottom">
+            <div class="overscroll">
+               <p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam qui officia aliquam inventore odit ipsa blanditiis unde officiis ullam, reprehenderit perferendis quasi animi explicabo incidunt rerum labore nisi optio ducimus, veniam voluptatibus omnis numquam quaerat eligendi beatae quisquam. Fugit nisi fugiat porro, quasi possimus, quis iure magnam? Architecto, nulla, quo.</p>
+               <p>Doloremque at laudantium vero, fugit culpa, ut. Perferendis eum porro dicta ad unde excepturi consequatur est sequi alias, consectetur ipsum perspiciatis soluta enim ullam, harum suscipit dolorem deserunt sunt deleniti accusantium optio quidem a. Laboriosam, consectetur quae temporibus aperiam necessitatibus excepturi ipsa, consequuntur eaque quia explicabo expedita minima enim ipsum!</p>
+               <p>Itaque sunt qui recusandae cumque natus, ea iusto! Quaerat odio optio ipsa quia veniam est deleniti labore perferendis error magnam obcaecati harum sunt nobis impedit temporibus dolore, dolorum magni ut saepe ducimus aspernatur libero ab dolorem at laboriosam. Suscipit et, voluptatem veniam doloribus quaerat aut obcaecati, fugiat deleniti quis repellat.</p>
+               <p>Cumque ut amet magnam ipsa repellat suscipit fuga eum minima dolorem eaque, veritatis voluptatibus nam facilis recusandae quas, laborum placeat ad nihil numquam eos voluptates odio, vel odit cupiditate. Corporis iste maiores atque velit saepe. Unde asperiores blanditiis eaque pariatur expedita atque, autem, hic ab, esse laboriosam quos, corporis sequi?</p>
+            </div>
+         </div>
       </div>
    </section>
 
     <script type="text/template" id="footer-template">
-   <ul>
-      <li>
-         <a href="#recent-page">
-            <img src="img/recent.png">
-         </a>
-      </li>
-      <li>
-         <a href="#list-page">
-            <img src="img/list.png">
-         </a>
-      </li>
-      <li>
-         <a href="#user-profile-page">
-            <img src="img/profile.png">
-         </a>
-      </li>
+   <ul class="title-icons">
+      <li><a href="#recent-page">
+         <span class="icon"><img src="img/icon/recent.png" alt=""></span>
+         <span class="title">Recent</span>
+      </a></li>
+      <li><a href="#list-page">
+         <span class="icon"><img src="img/icon/list.png" alt=""></span>
+         <span class="title">List</span>
+      </a></li>
+      <li><a href="#user-profile-page">
+         <span class="icon"><img src="img/icon/profile.png" alt=""></span>
+         <span class="title">Profile</span>
+      </a></li>
    </ul>
    </script>
 
