@@ -315,7 +315,7 @@
 			</ul>
 		</header>
       <div data-role="main">
-      	<div class="overscroll">
+      	<div class="overscroll emotional-sheet">
 	 			<form action="" id="profile-form" data-ajax="false" class="form">
 	 				<!-- https://www.w3schools.com/html/html_form_input_types.asp -->
 					<div class="form-control">
@@ -325,7 +325,7 @@
 					<div class="form-control">
 						<label for="make" class="form-label">Body Feeling</label>
 						<!-- https://www.w3schools.com/html/html_form_elements.asp -->
-							<textarea name="message" rows="10" cols="30" id="make" data-role="none" placeholder="Body feeling*">
+							<textarea name="message" rows="10" cols="30" id="make" data-role="none" placeholder="Body feeling*" style="margin-left: 20px; height:auto; width:auto;">
 								
 							</textarea>
 							<!-- https://codepen.io/SteveJRobertson/pen/emGWaR -->
@@ -449,17 +449,41 @@
       <div data-role="main">
          <div class="overscroll">
          	<!-- https://codepen.io/ntsummers1/pen/qpOOgJ -->
-         	<div class="selfie">
-         		<h3>Date:3/29/2021</h3>
-         		<img src="" alt="myface">
-         	</div>
+         	<h3 class="selfie-title">Date:3/29/2021</h3>
+         	<div class="selfie"></div>
          	<div class="description">
-         		<ul class="Type">
+         		<ul class="type">
         			<li>Happy</li>
         			<li>Playful</li>
         			<li>Excited</li>
       			</ul>
-         		
+      			<h3>Body Feeling</h3>
+         		<img src="img/body_happy.png" alt="bodyfeeling">
+         			<div class="row">
+      					<div class="col s6">
+        					<label>Rate</label>
+        					<p class="range-field">
+          						<input type="range" id="rate" min="1" max="10" value="1" />
+        					</p>
+     					</div>
+					</div>
+         		<p class="about">
+        			Bacon ipsum dolor amet boudin pig doner prosciutto flank, drumstick brisket tail pork chop. Cupim jerky pastrami, meatball filet mignon venison chuck short loin. Hamburger tongue porchetta pancetta
+      			</p>
+      			
+      			<h3>Story</h3>
+      				<label>Location</label>
+      				<img src="img/location.png" alt="location">
+      				<label>Secnario</label>
+         			<p class="about">
+        				Bacon ipsum dolor amet boudin pig doner prosciutto flank, drumstick brisket tail pork chop. Cupim jerky pastrami, meatball filet mignon venison chuck short loin. Hamburger tongue porchetta pancetta
+      				</p>
+      			<h3>My Reaction</h3>
+      				<highlight>How I take care of my body</highlight>
+         			<p class="about">
+        				Bacon ipsum dolor amet boudin pig doner prosciutto flank, drumstick brisket tail pork chop. Cupim jerky pastrami, meatball filet mignon venison chuck short loin. Hamburger tongue porchetta pancetta
+      				</p>
+
          	</div>
          </div>	
       </div>
