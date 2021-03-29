@@ -448,7 +448,49 @@
 			</ul>
          
       </header>
-      <div data-role="main" data-template="#emotion-link-template"></div>
+      <div data-role="main" data-template="#emotion-link-template">
+      	<div class="main">
+      	<div class="overscroll">
+         	<!-- https://codepen.io/ntsummers1/pen/qpOOgJ -->
+         	<h3 class="selfie-title">Date:3/29/2021</h3>
+         	<div class="selfie"><img src="img/selfie_happy.png" alt="bodyfeeling"></div>
+         	<div class="description">
+         		<ul class="type">
+        			<li>Happy</li>
+        			<li>Playful</li>
+        			<li>Excited</li>
+      			</ul>
+      			<h3>Body Feeling</h3>
+         		<img src="img/body_happy.png" alt="bodyfeeling">
+         			<div class="row">
+      					<div class="col s6">
+        					<label>Rate</label>
+        					<p class="range-field">
+          						<input type="range" id="rate" min="1" max="10" value="1" />
+        					</p>
+     					</div>
+					</div>
+         		<p class="about">
+        			Bacon ipsum dolor amet boudin pig doner prosciutto flank, drumstick brisket tail pork chop. Cupim jerky pastrami, meatball filet mignon venison chuck short loin. Hamburger tongue porchetta pancetta
+      			</p>
+      			
+      			<h3>Story</h3>
+      				<label>Location</label>
+      				<img src="img/location.png" alt="location">
+      				<label>Secnario</label>
+         			<p class="about">
+        				Bacon ipsum dolor amet boudin pig doner prosciutto flank, drumstick brisket tail pork chop. Cupim jerky pastrami, meatball filet mignon venison chuck short loin. Hamburger tongue porchetta pancetta
+      				</p>
+      			<h3>My Reaction</h3>
+      				<highlight>How I take care of my body</highlight>
+         			<p class="about">
+        				Bacon ipsum dolor amet boudin pig doner prosciutto flank, drumstick brisket tail pork chop. Cupim jerky pastrami, meatball filet mignon venison chuck short loin. Hamburger tongue porchetta pancetta
+      				</p>
+
+         	</div>
+         </div>	
+      </div>
+      </div>
    </section>
       
 
@@ -463,8 +505,8 @@
 				</li>
 				<li class="flex-stretch"></li>
 				<li class="flex-none">
-					<a href="#add-new-page">
-						<img src="img/add.png" alt="">
+					<a href="#add-new-emotion-page">
+						<img src="img/add.png" class="js-add-emotio-icon" data-activate="#add-new-emotion-page" alt="add emotion">
 					</a>
 				</li>
 			</ul>
@@ -949,7 +991,7 @@
    	<div class="overscroll">
          	<!-- https://codepen.io/ntsummers1/pen/qpOOgJ -->
          	<h3 class="selfie-title">Date:3/29/2021</h3>
-         	<div class="selfie"></div>
+         	<div class="selfie"><img src="img/selfie_happy.png" alt="bodyfeeling"></div>
          	<div class="description">
          		<ul class="type">
         			<li>Happy</li>
