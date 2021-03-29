@@ -7,6 +7,7 @@
 - http://syrenajing.com
 - http://syrenajing.com/aau/wnm617/jing.syrena
 - http://syrenajing.com/aau/wnm617/jing.syrena/initializr/index.html
+- http://www.syrenajing.com/aau/wnm617/jing.syrena/midterm/index.html
 
 ### Git notes
 - git status
