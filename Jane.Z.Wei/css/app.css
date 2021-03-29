@@ -238,6 +238,7 @@ a {
 
 .hotdog-button,
 .hotdog {
+  margin-left: 20px;
     display: inline-flex;
     width: 100%;
     background-color: var(--color-neutral-light);
@@ -263,8 +264,8 @@ a {
 
 
 header .hotdog {
-   line-height:1.5em;
-   margin:0.2em;
+   line-height:20px;
+   margin-left: 20px;
 }
 .hotdog input {
     border-width: 0;
@@ -686,6 +687,8 @@ header .hotdog {
   margin-top: 10px;
   align-items: center;
 }
+ 
+
 
 .card-title {
   font-weight: bold;
@@ -700,6 +703,19 @@ header .hotdog {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
+
+.card-body img{
+
+  display: inline-flex;
+   padding-right: 10px;
+   width: auto;
+   height: auto;
+   position: relative;
+
+ 
+
+}
+
 
 #expanded-container {
   position: fixed;
@@ -957,6 +973,15 @@ header .hotdog {
   background-size:cover;
 
 }
+
+
+
+
+
+
+
+
+
 .selfie-title {
   position: relative;
     
@@ -1085,6 +1110,59 @@ img .profile-card {
   border-radius: : 50px;
 }
 
+
+.wrapper {
+  padding: 0 10px;
+}
+.heading-picture-container {
+  background-image: url('img/profile-background.jpg');
+  height: 20%;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-cover: cover;
+  background-position: center;
+}
+.profile-picture-container {
+  background-image: url('img/potrait.jpg');
+  width: 100px;
+  height: 100px;
+  background-size: 100%;
+  border-radius: 50%;
+  background-position: center;
+  border: 6px solid white;
+}
+
+.personal-container {
+  margin: -50px 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.location {
+  position: relative;
+  color: #222;
+  display: grid;
+  grid-template-areas:
+    'image text';
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+}
+.location-text {
+  grid-area: text;
+}
+.location-image {
+  grid-area: image;
+}
+
+.about-section {
+  position: relative;
+  color: #777;
+}
 
 /*https://codepen.io/peanav/pen/ulkof*/
 /*calendar*/
