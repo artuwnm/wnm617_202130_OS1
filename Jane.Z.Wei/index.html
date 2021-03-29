@@ -7,11 +7,13 @@
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
 
    <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
+   <script src="js/addphoto.js"></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
@@ -275,7 +277,7 @@
 
 
 
-   <section data-role="page" id="physical-impact-page">
+   <!-- <section data-role="page" id="physical-impact-page">
    	  <header data-role="header">
          <h1>Physical Impact</h1>
          <ul>
@@ -295,193 +297,382 @@
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
+ -->
 
 
 
 
-
-   <section data-role="page" id="emotion-add-page">
+   <section data-role="page" id="add-new-emotion-page">
    	  <header data-role="header">
-         <h1>Add Emotional</h1>
+			<h1>Add Emotion</h1>
+			<ul>
+				<li>
+					<a href="#" data-rel="back">
+						<img src="img/leftarrow.png" alt="back">
+					</a>
+				</li>
+				<li class="flex-stretch"></li>
+			</ul>
+		</header>
+      <div data-role="main">
+      	<div class="overscroll">
+	 			<form action="" id="profile-form" data-ajax="false" class="form">
+	 				<!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+					<div class="form-control">
+						<label for="model" class="form-label">Date</label>
+						<input class="form-input" type="datetime-local" name="Date" id="model" data-role="none">
+					</div>
+					<div class="form-control">
+						<label for="make" class="form-label">Body Feeling</label>
+						<!-- https://www.w3schools.com/html/html_form_elements.asp -->
+							<textarea name="message" rows="10" cols="30" id="make" data-role="none" placeholder="Body feeling*">
+								
+							</textarea>
+							<!-- https://codepen.io/SteveJRobertson/pen/emGWaR -->
+    						<div class="row">
+      							<div class="col s6">
+        						<label>Rate</label>
+        						<p class="range-field">
+          							<input type="range" id="rate" min="1" max="10" value="1" />
+        						</p>
+     							 </div>
+							</div>
+					</div>
+					<div class="form-control">
+						
+						<label for="make" class="form-label">Face Image</label>
+						<!-- https://codepen.io/Tiko/pen/OMEomY -->
+						<div class="profile">
+      						<div class="profile__photo">
+        						<div class="profile__photo__add" id="click-add-photo">
+          							<span class="glyphicon glyphicon-camera"></span>
+        						</div>
+      						</div>
+      						<div class="add-photo">
+      							<div class="add-photo__choose">
+        							
+        							<div class="form-button" value="Choose from library" data-role="none">
+          								Choose from library
+        							</div>
+        							<div class="form-button" value="Take photo" data-role="none">
+         								Take photo
+        							</div>
+        							<div class="form-button" value="Cancel" id="cancel" data-role="none">
+          								Cancel
+        							</div>
+      							</div>
+    						</div>
+
+  						</div>
+
+						<!-- <input class="form-input" type="image" id="make" data-role="none"> -->
+					</div>
+					<div class="form-control">
+						<label for="make" class="form-label">Situation</label>
+						<!-- https://www.w3schools.com/html/html_form_elements.asp -->
+							<textarea name="message" rows="10" cols="30" id="make" data-role="none" placeholder="Situation">
+								
+							</textarea>
+					</div>
+					<div >
+						<label for="emotion-type" class="form-label">Emotion type</label>
+						<select type="checkbox" id="emotion-type" data-role="none">
+							<input type="checkbox" id="emotion1" name="emotion1" value="Happy">
+  							<label for="emotion1"> Happy</label><br>
+  							<input type="checkbox" id="emotion2" name="emotion2" value="Sad">
+  							<label for="emotion2"> Sad</label><br>
+  							<input type="checkbox" id="emotion3" name="emotion3" value="Disgusted">
+  							<label for="emotion3"> Disgusted</label>
+  							<input type="checkbox" id="emotion4" name="emotion4" value="Angry">
+  							<label for="emotion4"> Angry</label><br>
+  							<input type="checkbox" id="emotion5" name="emotion5" value="Fearful">
+  							<label for="emotion5"> Fearful</label><br>
+  							<input type="checkbox" id="emotion6" name="emotion6" value="Bad">
+  							<label for="emotion6"> Bad</label>
+  							<input type="checkbox" id="emotion7" name="emotion7" value="Surprised">
+  							<label for="emotion7"> Surprised</label>
+							
+						</select>
+					</div>
+					<!-- <div class="form-control">
+						<label for="sub-emotion-type" class="form-label">Emotion type</label>
+						<select class="form-input" type="text" id="sub-emotion-type" data-role="none">
+							<option value="1">Happy</option>
+							<option value="2">Sad</option>
+							<option value="3">Disgusted</option>
+							<option value="4">Angry</option>
+							<option value="5">Fearful</option>
+							<option value="6">Bad</option>
+							<option value="7">suprised</option>
+						</select>
+					</div> -->
+					<div class="form-control">
+						<label for="Reaction" class="form-label">My Reaction</label>
+						<!-- https://www.w3schools.com/html/html_form_elements.asp -->
+							<textarea name="message" rows="10" cols="30" id="make" data-role="none" placeholder="Situation">
+								
+							</textarea>
+					</div>
+				
+	 				<div class="form-control">
+		 				<a href="#emotion-profile-page" class="form-button signin-button js-edit-emotio-icon" data-activate="#emotion-profile-page" alt="add emotion">Done</a>
+		 			</div>
+		 		</form>
+		 	</div>
+ 		</div>
+ 	</section>
+
+
+
+
+
+ 	<!--  Emotion DATA SECTION -->
+
+   <section data-role="page" id="emotion-profile-page">
+      <header data-role="header">
+         <h1>Emotion Profile</h1>
+			<ul>
+				<li>
+					<a href="#" data-rel="back">
+						<img src="img/leftarrow.png" alt="back">
+					</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#edit-emotion-page">
+						<img src="img/edit@2x.png" class="js-edit-emotio-icon" data-activate="#edit-emotion-page" alt="edit">
+					</a>
+				</li>
+			</ul>
          
       </header>
       <div data-role="main">
-      
+         <div class="overscroll">
+         	<!-- https://codepen.io/ntsummers1/pen/qpOOgJ -->
+         	<div class="selfie">
+         		<h3>Date:3/29/2021</h3>
+         		<img src="" alt="myface">
+         	</div>
+         	<div class="description">
+         		<ul class="Type">
+        			<li>Happy</li>
+        			<li>Playful</li>
+        			<li>Excited</li>
+      			</ul>
+         		
+         	</div>
+         </div>	
       </div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
-
-
-
+      
 
 
    <section data-role="page" id="list-page">
-      <header data-role="header">
-         <h1>Search</h1>
-         <ul>
-         	<li><a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a></li>
-         </ul>
-      </header>
-      <div data-role="main" class="display-flex flex-vertical">
-      	
-         <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
-         <div class="middle-title" style="height: 14vh;">
-				<div class="search">
-					<form>
-						<input type="search" placeholder="Search">
+		<header data-role="header">
+			<ul>
+				<li class="flex-stretch">
+					<form id="list-search" class="hotdog" data-ajax="false">
+						<input type="search" data-role="none" class="search" placeholder="Search For Emotion">
 					</form>
-
-				<!-- Question: display sort and filter -->
-					<div class="sort">
-						
-						<select>
-							<option value="1">Emotion Name</option>
-							<option value="2">Type</option>
-							<option value="3">Location</option>
-						</select>
-					</div>
+				</li>
+				<li class="flex-none">
+					<a href="#add-new-page">
+						<img src="img/add.png" alt="">
+					</a>
+				</li>
+			</ul>
+		</header>
+		<header data-role="header rakki-flash">
+			<div class="scrollable-x list-filters">
+				<!-- https://codepen.io/GreenSock/pen/abZJqYg -->
+				<div class="cards-row">
+  
+				    <div class="card-container">
+				      <div class="card">
+				        
+				        <div class="card-body"><img src="img/Happy.png" alt=""></div>
+				        <div class="card-title">Happy</div>
+				        <button type="button" class="close-card">X</button>
+				      </div>      
+				    </div> 
+				    
+				    <div class="card-container">
+				      <div class="card">
+				      	<div class="card-body"><img src="img/Happy.png" alt=""></div>
+				        <div class="card-title">Sad</div>
+				   
+				        <button type="button" class="close-card">X</button>
+				      </div>
+				    </div>
+				    
+				    <div class="card-container">
+				      <div class="card">
+				      	<div class="card-body"><img src="img/Happy.png" alt=""></div>
+				        <div class="card-title">Disgusted</div>
+				        
+				        <button type="button" class="close-card">X</button>
+				      </div>
+				    </div>
+				    
+				    <div class="card-container">
+				      <div class="card">
+				      	<div class="card-body"><img src="img/Happy.png" alt=""></div>
+				        <div class="card-title">Angry</div>
+				        
+				        <button type="button" class="close-card">X</button>
+				      </div>
+				    </div>
+				    
+				    <div class="card-container">
+				      <div class="card">
+				      	<div class="card-body"><img src="img/Happy.png" alt=""></div>
+				        <div class="card-title">Fearful</div>
+				        
+				        <button type="button" class="close-card">X</button>
+				      </div>
+				    </div>
+				    
+				    <div class="card-container">
+				      <div class="card">
+				      	<div class="card-body"><img src="img/Happy.png" alt=""></div>
+				        <div class="card-title">Bad</div>
+				        
+				        <button type="button" class="close-card">X</button>
+				      </div>
+				    </div>  
+				    <div class="card-container">
+				      <div class="card">
+				      	<div class="card-body"><img src="img/Happy.png" alt=""></div>
+				        <div class="card-title">Surprised</div>
+				        
+				        <button type="button" class="close-card">X</button>
+				      </div>
+				    </div>  
+				  
+				  </div> 
+				
+			</div>
+		</header>
+		<div data-role="main">
+			<div class="overscroll">
+				
+				<div class="card-container">
+					<a href="#emotion-profile-page" class="sub-card" data-activate="#emotion-profile-page" alt="" style="padding:50px;">
+				   
+				        
+				    	
+				    		<span class="card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+				    </a>     
 				</div>
-	 			<hr>
- 			</div>
- 			<div class="down-section" style="margin-top: 4vh;">
-		 		<div class="overscroll">
-					<ul>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-						<li>
-							<a href="#vehicle-profile-page" style="display: flex; position: relative;">
-								<img src="img/logo-c.png">
-								<div class="list-item-text">
-									<h3>Model:</h3>
-									<p>Type:</p>
-									<p>Location:</p>
-								</div>
-								<img src="img/like.png" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-							</a>
-						</li>
-					</ul>
-	 			</div>
-	 		</div>
- 		</div>
-         <ul>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-         </ul>
-         
- 			
+				<div class="card-container">
+					<a href="#emotion-profile-page" class="sub-card" data-activate="#emotion-profile-page" alt="" style="padding:50px;">
+				   
+				        
+				    	
+				    		<span class="card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+				    </a>     
+				</div>
+				<div class="card-container">
+					<a href="#emotion-profile-page" class="sub-card" data-activate="#emotion-profile-page" alt="" style="padding:50px;">
+				   
+				        
+				    	
+				    		<span class="card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+				    </a>     
+				</div>
+				<div class="card-container">
+					<a href="#emotion-profile-page" class="sub-card" data-activate="#emotion-profile-page" alt="" style="padding:50px;">
+				   
+				        
+				    	
+				    		<span class="card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+				    </a>     
+				</div>
+				<div class="card-container">
+					<a href="#emotion-profile-page" class="sub-card" data-activate="#emotion-profile-page" alt="" style="padding:50px;">
+				   
+				        
+				    	
+				    		<span class="card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+				    </a>     
+				</div>
+				<div class="card-container">
+					<a href="#emotion-profile-page" class="sub-card" data-activate="#emotion-profile-page" alt="" style="padding:50px;">
+				   
+				        
+				    	
+				    		<span class="card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+				    </a>     
+				</div>
+				<div class="card-container">
+					<a href="#emotion-profile-page" class="sub-card" data-activate="#emotion-profile-page" alt="" style="padding:50px;">
+				   
+				        
+				    	
+				    		<span class="card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+				    </a>     
+				</div>
+				<div class="card-container">
+					<a href="#emotion-profile-page" class="sub-card" data-activate="#emotion-profile-page" alt="" style="padding:50px;">
+				   
+				        
+				    	
+				    		<span class="card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+				    </a>     
+				</div>
+				
+				<ul class="sub-card-container">
+				    <li class="sub-card">
+				    	<a href="#emotion-profile-page" class="" data-activate="#emotion-profile-page" alt="">
+				    		<span class="sub-card-body">
+				    			<img src="img/Happy.png" alt="">
+				    		</span>
+				        	<span class="sub-card-title">Playful</span>
+				        	<button type="button" class="close-card">X</button>
+						</a>
+				    </li>      
+				</ul>
+			</div>
+		</div>
 
- 			
-      </div></div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
+		<footer data-role="footer" data-template="#footer-template"></footer>
+
+	</section>
 
 
-
-
-      
-   </section>
-
-
+   
 
 
 
@@ -503,7 +694,54 @@
       
       <div data-role="main" class="display-flex flex-vertical">
 
- 			<div class="middle-title">
+      	<div class="profile-card">
+  			<img src="img/potrait.jpg" alt="Jane" style="width:100% ">
+  			<h1>Jane Doe</h1>
+  			<p class="title">International Student</p>
+  			<p>Academy of Art University</p>
+  			<a href="#"><i class="fa fa-dribbble"></i></a>
+  			<a href="#"><i class="fa fa-twitter"></i></a>
+  			<a href="#"><i class="fa fa-linkedin"></i></a>
+  			<a href="#"><i class="fa fa-facebook"></i></a>
+  		</div>
+  			<form action="" id="profile-form" data-ajax="false" class="form">
+  				
+  				<div class="form-control">
+		 				<a href="#emotion-journal-page" class="form-button signin-button js-edit-emotio-icon" data-activate="#emotion-journal-page" alt="emotion journal">Journal</a>
+		 		</div>
+		 	</form>
+
+  			<div class="modal" id="user-settings-modal">
+            <div class="modal-drawer right">
+                <div class="modal-head display-flex">
+                  <div class="flex-none">Head</div>
+                  <div class="flex-stretch"></div>
+                  <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
+                  </div>
+                <div class="modal-body"><div class="overscroll">
+               		<div>
+            			<ul class="settings-list">
+							<li>
+								<a href="#" class="js-logout">Logout</a>
+							</li>
+							<li>
+								<a href="#settings-password-page">Change Password</a>
+							</li>
+							<li>
+								<a href="#settings-profile-page">Change Profile Info</a>
+							</li>
+						</ul>
+                	</div>
+                </div>
+               
+            </div>
+         </div>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+		
+
+ 			<!-- <div class="middle-title">
 				<div class="profile-username">Username</div>
 				<hr>
 			</div>
@@ -519,78 +757,139 @@
 		 					<p>Vehicle</p>
 		 					<p>Likes</p>
 		 				</div>
-	 				</div>
-      	
-
-        <!-- basic structure of tabgroup -->
-        <div class="tabgroup">
-            <!-- .tabs>.tab*4{Tab $} -->
-            <div class="tabs">
-                <div class="tab" active>Tab 1</div>
-                <div class="tab">Tab 2</div>
-                <div class="tab">Tab 3</div>
-                
-            </div>
-            <!-- .contents>.content*4>h3{content $}+div>p*4>lorem50 -->
-            <div class="contents">
-                <div class="content active">
-                    <h3>content 1</h3>
-                    <div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Explicabo ad, delectus. Provident asperiores mollitia quas optio alias quod veritatis. Dignissimos fugiat esse qui recusandae, sed architecto explicabo magnam incidunt ad in, vel quam, sit consequatur atque deserunt maxime porro temporibus reprehenderit harum, quia iure. Rerum odit voluptatibus excepturi possimus cumque?</p>
-                        <p>Inventore, nemo, ea ut aspernatur, assumenda iste nam odit accusantium, deserunt architecto consectetur asperiores labore. Labore beatae illum ullam, veniam numquam vero dolore sit. Quaerat ipsam fugit eaque. Nam quibusdam asperiores veniam labore, odit fugiat ab temporibus nulla quod odio pariatur ad sit recusandae necessitatibus numquam laboriosam assumenda ex nostrum!</p>
-                        <p>Necessitatibus cum distinctio, autem ducimus, quibusdam unde optio? Beatae corrupti sed esse! Pariatur quo at modi atque mollitia cum fugiat accusantium quas provident illum fugit non minus dignissimos reprehenderit consequuntur, iure ab magnam voluptas neque quasi sit corrupti? Mollitia culpa dolor voluptatibus nostrum! Ipsam, facilis quidem iure molestias praesentium sit.</p>
-                        <p>Nihil dicta illo, possimus voluptatum fugiat aut non incidunt vitae ratione suscipit, minima, commodi adipisci eius nobis quis vero, consectetur repellendus tempore! Saepe perspiciatis rem, repellat architecto corrupti. Repellat mollitia incidunt magnam reiciendis natus odit officiis eveniet ad veritatis consequatur. Deleniti ullam sint, dignissimos commodi animi illum enim laboriosam, deserunt.</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>content 2</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis eos cupiditate cumque molestiae harum, officiis blanditiis. Voluptatum placeat error maiores, deserunt explicabo quidem? Voluptate, iusto porro commodi similique tempore aperiam natus dolores quo. Cupiditate amet consequatur tenetur laborum voluptate aliquid aperiam, sed eligendi porro voluptas ipsam ratione possimus vel.</p>
-                        <p>Provident numquam ducimus quod fugiat adipisci sint, ex praesentium quae in deleniti dignissimos error suscipit mollitia odit, libero? Illum placeat voluptates optio vero architecto cumque quibusdam deserunt sit, ratione, veritatis maiores labore magnam explicabo consequatur officia expedita inventore, impedit non sequi. Quos iste sit error pariatur cum dolorum repellendus molestias.</p>
-                        <p>Dolores ipsa cumque quibusdam ipsum laboriosam minus labore nisi minima illo, vero enim ullam commodi earum tenetur illum facilis! Veniam, illo architecto eius molestias accusantium fugit velit cupiditate quod quos minima mollitia odio, eaque delectus quae nesciunt sit deleniti non quia facere corporis aperiam modi. Accusamus eos dolor ipsa. Maiores.</p>
-                        <p>Harum, consectetur non. Reprehenderit, molestias vitae tenetur doloremque. Deleniti ducimus soluta velit labore magni voluptatibus rem ut veritatis aliquid explicabo. Repellendus laudantium autem quasi, repudiandae commodi, consequuntur itaque dolore voluptas suscipit debitis, voluptatibus nesciunt iusto doloremque nemo iure. Autem maxime inventore ratione ipsum praesentium dolor dolores, delectus unde odit, laborum.</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>content 3</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatem maiores unde cupiditate tempore, illo assumenda neque itaque facere, velit ex a nobis est mollitia suscipit, totam in? Dolores voluptates accusantium excepturi repellat nam expedita nihil qui aspernatur blanditiis delectus quasi suscipit quam architecto, vero laboriosam eaque itaque exercitationem quidem!</p>
-                        <p>Necessitatibus dicta, aut ratione? Itaque fuga exercitationem iure voluptatibus consectetur at rerum provident voluptas ipsum error assumenda blanditiis animi repudiandae, corporis consequatur maxime placeat aliquam aperiam vel voluptatem soluta. Sit rem distinctio cumque ratione nostrum ea expedita et eveniet facere aperiam quae, eius? Unde delectus expedita est deserunt minima in!</p>
-                        <p>Culpa sunt in cum vero similique tempore voluptatem magnam velit accusamus deleniti, sapiente minus! Facilis debitis doloribus, provident quisquam illum itaque, tempora dolorem! Fugiat perspiciatis dicta, est? Laboriosam quos animi quidem inventore ipsam molestiae qui dolores, hic incidunt, autem, sapiente modi ipsum sint maxime totam quo dolor? Ratione, sequi, odit!</p>
-                        <p>Doloremque voluptatem officia ipsa aliquam, possimus assumenda facere laboriosam in culpa, temporibus eaque amet excepturi quos pariatur porro incidunt repellat vitae consectetur, atque explicabo animi nobis, iure totam? Sapiente omnis quia distinctio quam perferendis, nisi voluptatem natus cupiditate expedita alias fugiat incidunt consectetur repudiandae ex similique itaque vero unde porro.</p>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-       </div>
-    </div>
-         
+	 				</div> -->
+	 <section data-role="page" id="emotion-journal-page">
+		<header data-role="header">
+			<h1>Calendar</h1>
+			<ul>
+				<li class="flex-stretch">
+					<a href="#user-profile-page">
+						<img src="img/leftarrow.png" alt="back">
+					</a>
+				</li>
+				<li class="flex-none">
+					
+				</li>
+			</ul>
+			<div class="header-weekdays">
+        		<span>sun</span>
+        		<span>mon</span>
+        		<span>tue</span>
+        		<span>wed</span>
+        		<span>thu</span>
+        		<span>fri</span>
+        		<span>sat</span>
+      		</div>
+      		<section>
+       
          
 
-         <div class="floater top right">
-            
-         </div>
 
 
-         <div class="modal" id="user-settings-modal">
-            <div class="modal-drawer right">
-                <div class="modal-head display-flex">
-                  <div class="flex-none">Head</div>
-                  <div class="flex-stretch"></div>
-                  <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
-                  </div>
-                <div class="modal-body"><div class="overscroll">
-               		<p>
-            			<a href="#" class="js-logout">Sign Out</a>
-                	</p>
-                </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
-   </section>
+<section data-role="page" id="settings-password-page">
+		<header data-role="header">
+			<h1>Change Password</h1>
+			<ul>
+				<li class="flex-none">
+					<a href="#" data-rel="back">Cancel</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#" data-rel="back">Commit</a>
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<div class="scrollable">
+				<form id="settings-password-form" data-ajax="false" class="form" style="padding:1em">
+					<div class="form-control">
+						<label for="settings-change-password-1" class="form-label">Old Password</label>
+						<input id="settings-change-password-1" type="password" class="form-input" data-role="none">
+					</div>
+					<div class="form-control">
+						<label for="settings-change-password-2" class="form-label">New Password</label>
+						<input id="settings-change-password-2" type="password" class="form-input" data-role="none">
+					</div>
+					<div class="form-control">
+						<label for="settings-change-password-3" class="form-label">Confirm New Password</label>
+						<input id="settings-change-password-3" type="password" class="form-input" data-role="none">
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+	<section data-role="page" id="settings-profile-page">
+		<header data-role="header">
+			<h1>Profile Info</h1>
+			<ul>
+				<li class="flex-none">
+					<a href="#" data-rel="back">Cancel</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#" class="js-submit-settings-profile">Save</a>
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<div class="scrollable">
+				<form id="settings-profile-form" data-ajax="false" class="form" style="padding:1em">
+					<input type="hidden" id="settings-profile-id">
+					<div class="inputs"></div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+	<section data-role="page" id="settings-animal-profile-page">
+		<header data-role="header">
+			<h1>Animal Info</h1>
+			<ul>
+				<li class="flex-none">
+					<a href="#" data-rel="back">Cancel</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#" class="js-submit-settings-animal-profile">Save</a>
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<div class="scrollable">
+				<form id="settings-animal-profile-form" data-ajax="false" class="form" style="padding:1em">
+					<input type="hidden" id="settings-animal-profile-id">
+					<div class="inputs"></div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+	<section data-role="page" id="settings-profile-upload-page">
+		<header data-role="header">
+			<h1>Animal Info</h1>
+			<ul>
+				<li class="flex-none">
+					<a href="#" data-rel="back">Cancel</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#" class="js-submit-settings-profile-upload">Save</a>
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<form id="settings-profile-upload-form" data-ajax="false" class="form">
+				<input type="hidden" id="settings-profile-src">
+				<label class="image-uploader full">
+					<input type="file" data-role="none" class="hidden">
+				</label>
+			</form>
+		</div>
+	</section>
 
 
 
@@ -598,23 +897,7 @@
 
 
 
-
-
-
-
-   <!--  ANIMAL DATA SECTION -->
-
-   <section data-role="page" id="animal-profile-page">
-      <header data-role="header">
-         <h1>Search</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-         Animal Profile
-      </div>
-   </section>
+   
 
 
 
@@ -633,14 +916,7 @@
 			<span>Recent</span>
 		</a>
       </li>
-      <li>
-      	<a href="#physical-impact-page">
-      		<span class="icon">
-				<img src="img/body_navi@2x.png" alt="body">
-			</span>
-			<span>Body</span>
-      	</a>
-      </li>
+     
       <li>
       	<a href="#list-page">
       		<span class="icon">

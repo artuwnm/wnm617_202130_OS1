@@ -49,4 +49,17 @@ $(()=>{
       $(this).html(template);
    })
 
+
+
+
+   // profile tabgroup
+   $(".tabgroup .tab").on("click",function(e){
+                let index = $(this).index();
+
+                $(this).addClass("active")
+                .siblings("dd").removeClass("active");
+                $(this).closest(".tabgroup")
+                .find(".content").eq(index).addClass("active").siblings().removeClass("active")
+            })
+
 });
