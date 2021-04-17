@@ -10,6 +10,9 @@
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
 
+   <script src="js/functions.js"></script>
+   <script src="js/pages.js"></script>
+   <script src="js/parts.js"></script>
    <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
 
@@ -60,17 +63,8 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
-   <!-- <section data-role="page" id="recent-page">
-      <div data-role="main"></div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
-   </section>
- -->
-
    <section data-role="page" id="list-page">
       <header data-role="header">
-         <!-- <form>
-               <input type="search" placeholder="Search">
-            </form> -->
          <h1>Cat List</h1>
          <ul>
             <li class="flex-stretch"></li>
@@ -79,8 +73,8 @@
          </ul>
       </header>
       <div data-role="main"><div class="overscroll">
-         <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
-         <ul>
+         <div class="animallist"></div>
+         <!-- <ul>
             <li>
                <div class="listImg">
                   <img src="" alt="">
@@ -121,16 +115,7 @@
                   </div>
                </div>
             </li>
-            <!-- <li><a href="#animal-profile-page">Animal 2</a></li>
-            <li><a href="#animal-profile-page">Animal 3</a></li>
-            <li><a href="#animal-profile-page">Animal 4</a></li>
-            <li><a href="#animal-profile-page">Animal 5</a></li>
-            <li><a href="#animal-profile-page">Animal 6</a></li>
-            <li><a href="#animal-profile-page">Animal 7</a></li>
-            <li><a href="#animal-profile-page">Animal 8</a></li>
-            <li><a href="#animal-profile-page">Animal 9</a></li>
-            <li><a href="#animal-profile-page">Animal 10</a></li> -->
-         </ul>
+         </ul> -->
       </div>
    </div>
    <footer data-role="footer" data-template="#footer-template"></footer>
@@ -209,31 +194,25 @@
    <section data-role="page" id="animal-profile-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="animal-top">
-
-            <div class="floater top left header no-touch">
+            <div class="floater top left header no-touch" style="background-image: linear-gradient(180deg, #ffffff96, #ffffff00);">
                <ul>
-                  <li class="flex-none do-touch icon"><a href="#" data-rel="back"><img src="img/icon/back.png"></a></li>
+                  <li class="flex-none do-touch"><a href="#" data-rel="back">Back</a></li>
                   <li class="flex-stretch"></li>
-                  <li class="flex-none do-touch icon"><a href="#"><img src="img/icon/edit.png"></a></li>
+                  <li class="flex-none do-touch"><a href="#">Edit</a></li>
                </ul>
             </div>
          </div>
-         <div class="header">
+         <div class="header animal-nav">
             <ul>
                <li class="flex-stretch"><a href="#">map</a></li>
                <li class="flex-stretch"><a href="#">info</a></li>
             </ul>
          </div>
          <div class="animal-bottom">
-            <div class="overscroll">
-               <p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam qui officia aliquam inventore odit ipsa blanditiis unde officiis ullam, reprehenderit perferendis quasi animi explicabo incidunt rerum labore nisi optio ducimus, veniam voluptatibus omnis numquam quaerat eligendi beatae quisquam. Fugit nisi fugiat porro, quasi possimus, quis iure magnam? Architecto, nulla, quo.</p>
-               <p>Doloremque at laudantium vero, fugit culpa, ut. Perferendis eum porro dicta ad unde excepturi consequatur est sequi alias, consectetur ipsum perspiciatis soluta enim ullam, harum suscipit dolorem deserunt sunt deleniti accusantium optio quidem a. Laboriosam, consectetur quae temporibus aperiam necessitatibus excepturi ipsa, consequuntur eaque quia explicabo expedita minima enim ipsum!</p>
-               <p>Itaque sunt qui recusandae cumque natus, ea iusto! Quaerat odio optio ipsa quia veniam est deleniti labore perferendis error magnam obcaecati harum sunt nobis impedit temporibus dolore, dolorum magni ut saepe ducimus aspernatur libero ab dolorem at laboriosam. Suscipit et, voluptatem veniam doloribus quaerat aut obcaecati, fugiat deleniti quis repellat.</p>
-               <p>Cumque ut amet magnam ipsa repellat suscipit fuga eum minima dolorem eaque, veritatis voluptatibus nam facilis recusandae quas, laborum placeat ad nihil numquam eos voluptates odio, vel odit cupiditate. Corporis iste maiores atque velit saepe. Unde asperiores blanditiis eaque pariatur expedita atque, autem, hic ab, esse laboriosam quos, corporis sequi?</p>
-            </div>
+            <div class="animal-bottom-section animal-map map"></div>
+            <div class="animal-bottom-section animal-info"></div>
          </div>
       </div>
-   </section>
 
     <script type="text/template" id="footer-template">
    <ul class="title-icons">
