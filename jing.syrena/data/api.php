@@ -54,11 +54,23 @@ function makeStatement($data) {
          return makeQuery($c,"SELECT * FROM `track_202130_locations`",$p);
 
 
+      case "user_by_id":
+         return makeQuery($c,"SELECT * FROM `track_202130_users` WHERE id=?",$p);
+      case "animal_by_id":
+         return makeQuery($c,"SELECT * FROM `track_202130_cats` WHERE id=?",$p);
+      case "location_by_id":
+         return makeQuery($c,"SELECT * FROM `track_202130_locations` WHERE id=?",$p);
+
+
       case "animals_by_user_id":
          return makeQuery($c,"SELECT * FROM `track_202130_cats` WHERE user_id=?",$p);
+      case "locations_by_animal_id":
+         return makeQuery($c,"SELECT * FROM `track_202130_locations` WHERE animal_id=?",$p);
 
 
-      case "check_signin":
+
+
+     case "check_signin":
          return makeQuery($c,"SELECT id FROM `track_202130_users` WHERE `username`=? AND `password`=md5(?)",$p);
 
 

@@ -230,7 +230,7 @@ li {
 
 }
 /* catlist 细节 catprofile */
-.CatFileImg {
+/*.CatFileImg {
    width: 100%;
    height:40%;
    background-color:var(--color-neutral-medium);
@@ -238,7 +238,7 @@ li {
 }
 input {
    border: none;
-}
+}*/
 
 /*signin*/
 #signin-page {
@@ -529,12 +529,11 @@ border-radius: 40px;
 
 
 /* remove this later */
-#recent-page [data-role='main'] {
-  background-image: url('../img/img.png');
-  background-position:center;
-  background-size:cover;
+.map, #recent-page [data-role='main'] {
+    background-image: url(../img/img.png);
+    background-position: center;
+    background-size: cover;
 }
-
 
 
 /* ANIMAL PROFILE PAGE */

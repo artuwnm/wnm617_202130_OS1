@@ -1,3 +1,30 @@
+//cats
+[
+  '{{repeat(50)}}',
+  {
+  id: '{{index(1)}}',
+    user_id: '{{integer(1,10)}}',
+    name: '{{company()}}',
+    type: '{{"cat"}}',
+    gender: '{{random("male", "female")}}',
+    eyeColor: '{{random("yellow", "blue", "brown")}}',
+    bodyColor: function(tags) {
+      var bodyColors = {
+        male:["yellow","blue","white"],
+        female:["yellow", "black", "sliver"]
+      };
+      var chosen_type = bodyColors[this.gender];
+      var chosen_index = tags.integer(0,chosen_type.length - 1);
+      return chosen_type[chosen_index];
+    },
+    description:'{{lorem(3,"sentences")}}',
+    img:function(tags) {
+      return 'https://via.placeholder.com/400/'+ tags.integer(700,999) + '/fff/?text=' + this.name;
+    },
+    date_create: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}'
+  }
+]
+
 //location data
 [
   '{{repeat(50)}}',
