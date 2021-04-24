@@ -1,5 +1,5 @@
 
-const makeMap = async (target,center={lat: 37.735078,lng: -122.436844}) => {
+const makeMap = async (target,center={lat: 37.37787,lng: -121.98538}) => {
    await checkData(()=>window.google);
 
    let map_el = $(target);

@@ -27,13 +27,13 @@
 
 //location data
 [
-  '{{repeat(50)}}',
+  '{{repeat(250)}}',
   {
   id: '{{index(1)}}',
     animal_id: '{{integer(1,10)}}',
     
-    lat:'{{floating(37.579636, -122.274455)}}',
-    lng:'{{floating(37.018796, -121.827697)}}',
+    lat:'{{floating(37.579636, 37.018796)}}',
+    lng:'{{floating(-122.274455, -121.827697)}}',
     
     description: '{{lorem(3,"sentences")}}',
     photo: 'https://via.placeholder.com/400/',
