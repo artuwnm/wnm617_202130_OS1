@@ -168,7 +168,7 @@ li {
 .logo {
   position: absolute;
   top: 20%;
-  left: 17%;
+  
 }
 
 
@@ -216,19 +216,19 @@ li {
 }
 
 /* list */
-.listImg { 
+/*.listImg { 
    width:150px;
    height:150px;
    background-color:var(--color-neutral-medium);
    border-radius: 100%;
    text-align: right;
    margin-bottom: 4rem; 
-}
+}*//*
 .listText {
    padding-top: 50%;
-   /*padding-left: 30%; */
+   padding-left: 30%; 
 
-}
+}*/
 /* catlist 细节 catprofile */
 /*.CatFileImg {
    width: 100%;
@@ -293,9 +293,9 @@ input {
 
 .modal-popup {
   position: absolute;
-  width:100%;
+  width:80%;
   top: 50%;
-  left: 30%;
+  left: 50%;
   transform: translate(-50%,calc(-50% + 5vh));
   border-radius:5px;
   overflow:hidden;
@@ -529,11 +529,14 @@ border-radius: 40px;
 
 
 /* remove this later */
-.map, #recent-page [data-role='main'] {
-    background-image: url(../img/img.png);
-    background-position: center;
-    background-size: cover;
+.map {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
+
 
 
 /* ANIMAL PROFILE PAGE */

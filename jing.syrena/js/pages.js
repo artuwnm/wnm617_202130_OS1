@@ -1,5 +1,20 @@
 
-const RecentPage = async () => {}
+const RecentPage = async () => {
+   let locations = await query({
+      type:'recent_locations',
+      params:[sessionStorage.userId]
+   });
+   console.log(locations)
+
+   let valid_animals = locations.result.reduce((r,o)=>{
+      o.icon = o.img;
+      if(o.lat && o.lng) r.push(o);
+      return r;
+   },[]);
+
+   let map_el = await makeMap("#recent-page .map");
+   makeMarkers(map_el,valid_animals);
+}
 
 const ListPage = async () => {
    let animals = await query({
@@ -27,21 +42,31 @@ const UserProfilePage = async () => {
 }
 
 const AnimalProfilePage = async () => {
-   let r = await query({
+   query({
       type:'animal_by_id',
       params:[sessionStorage.animalId]
+   }).then(r=>{
+      let animal = r.result[0];
+      console.log("ANIMAL DATA", animal)
+
+      if(!$("#animal-profile-page .active").length) {
+         $("#animal-profile-page .animal-nav li:first-child").addClass("active")
+         $("#animal-profile-page .animal-bottom-section:first-child").addClass("active")
+      }
+
+      $("#animal-profile-page .animal-top")
+         .css({backgroundImage:`url(${animal.img})`})
+      $("#animal-profile-page .animal-info")
+         .html(makeAnimalInfo(animal));
    });
-   let animal = r.result[0];
-   console.log(animal)
+   
 
-   if(!$("#animal-profile-page .active").length) {
-      $("#animal-profile-page .animal-nav li:first-child").addClass("active")
-      $("#animal-profile-page .animal-bottom-section:first-child").addClass("active")
-   }
-
-   $("#animal-profile-page .animal-top")
-      .css({backgroundImage:`url(${animal.img})`})
-   $("#animal-profile-page .animal-info")
-      .html(makeAnimalInfo(animal));
-
+   query({
+      type:'locations_by_animal_id',
+      params:[sessionStorage.animalId]
+   }).then(async (r)=>{
+      console.log("ANIMAL LOCATIONS", r.result)
+      let map_el = await makeMap("#animal-profile-page .map");
+      makeMarkers(map_el,r.result)
+   });
 }
