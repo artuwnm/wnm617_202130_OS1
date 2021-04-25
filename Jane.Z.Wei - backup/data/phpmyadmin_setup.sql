@@ -19,30 +19,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `track_202130_emotions`
+-- Table structure for table `track_202130_animals`
 --
 
--- CREATE TABLE `track_202130_emotions` (
---   `id` int(13) NOT NULL,
---   `user_id` int(13) NOT NULL,
---   `name` varchar(64) NOT NULL,
---   `type` varchar(16) NOT NULL,
---   `breed` varchar(64) NOT NULL,
---   `description` text NOT NULL,
---   `img` varchar(256) NOT NULL,
---   `date_create` datetime NOT NULL
--- ) 
-
-CREATE TABLE `track_202130_emotions` (
-`id` INT NULL,
-`user_id` INT NULL,
-`name` VARCHAR(MAX) NULL,
-`photo` VARCHAR(MAX) NULL,
-`type` VARCHAR(MAX) NULL,
-`breed` VARCHAR(MAX) NULL,
-`MyStory` VARCHAR(MAX) NULL,
-`My_reaction` VARCHAR(MAX) NULL,
-`date_create` VARCHAR(MAX) NULL
+CREATE TABLE `track_202130_animals` (
+  `id` int(13) NOT NULL,
+  `user_id` int(13) NOT NULL,
+  `name` varchar(64) NOT NULL,
+  `type` varchar(16) NOT NULL,
+  `breed` varchar(64) NOT NULL,
+  `description` text NOT NULL,
+  `img` varchar(256) NOT NULL,
+  `date_create` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -53,7 +41,7 @@ CREATE TABLE `track_202130_emotions` (
 
 CREATE TABLE `track_202130_locations` (
   `id` int(13) NOT NULL,
-  `emotion_id` int(13) NOT NULL,
+  `animal_id` int(13) NOT NULL,
   `lat` decimal(10,8) NOT NULL,
   `lng` decimal(11,8) NOT NULL,
   `description` text NOT NULL,
@@ -83,9 +71,9 @@ CREATE TABLE `track_202130_users` (
 --
 
 --
--- Indexes for table `track_202130_emotions`
+-- Indexes for table `track_202130_animals`
 --
-ALTER TABLE `track_202130_emotions`
+ALTER TABLE `track_202130_animals`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -105,9 +93,9 @@ ALTER TABLE `track_202130_users`
 --
 
 --
--- AUTO_INCREMENT for table `track_202130_emotions`
+-- AUTO_INCREMENT for table `track_202130_animals`
 --
-ALTER TABLE `track_202130_emotions`
+ALTER TABLE `track_202130_animals`
   MODIFY `id` int(13) NOT NULL AUTO_INCREMENT;
 
 --

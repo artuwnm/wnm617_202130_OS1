@@ -21,44 +21,74 @@
 
 // emotions template
 
+// [
+//   '{{repeat(50)}}',
+//   {
+//   id: '{{index(1)}}',
+//     user_id: '{{integer(1,10)}}',
+//     name: '{{company()}}',
+//     photo: function(tags) {
+//    return 'https://via.placeholder.com/400/'+
+//    tags.integer(700,999) + '/fff/?text=' +
+//     this.username;
+//   },
+    
+//     type: '{{random("Unknown","Happy", "Sad", "Disgusted", "Angry", "Fearful", "Bad", "Surprised")}}',
+//     breed: function(tags) {
+//       var breeds = {
+//         Unknown:[],
+//         Happy:["playful","content","interested","proud","accepted","powerful","peaceful","trusting","optimistic"],
+//         Sad:["lonely","vulnerable", "despair","guilty","depressed","hurt"],
+//         Disgusted:["repelled","Awful","disappointed","disapproving"],
+//         Angry:["let down","humilliated","bitter","mad","aggressive","frustrated","distant","critical"],
+//         Fearful:["scared","anxious","insecure","weak","rejected","threatened"],
+//         Bad:["bored","busy","stressed","tired"],
+//         Surprised:["startied","confused","amazed","excited"]
+//       };
+//       var chosen_type = breeds[this.type];
+//       var chosen_index = tags.integer(0,chosen_type.length-1);
+//       return chosen_type[chosen_index];
+//       },
+      
+//       MyStory: '{{lorem(3,"sentences")}}',
+//       My_reaction: '{{lorem(3,"sentences")}}',
+  
+      
+  
+//   date_create: '{{date(new Date(2020,0,1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
+    
+//   }
+  
+// ]
+
+// EMOTIONS DATA
 [
   '{{repeat(50)}}',
   {
-  id: '{{index(1)}}',
-    user_id: '{{integer(1,10}}',
-    name: '{{company()}}',
-    photo: function(tags) {
-   return 'https://via.placeholder.com/400/'+
-   tags.integer(700,999) + '/fff/?text=' +
-    this.username;
-  },
+    id: '{{index(1)}}',
+    user_id: '{{integer(1,10)}}',
     
-    type: '{{random("Unknown","Happy", "Sad", "Disgusted", "Angry", "Fearful", "Bad", "Surprised")}}',
+    name: '{{company()}}',
+    
+    type: '{{random("Happy","Surprised","Sad")}}',
     breed: function(tags) {
       var breeds = {
-        Unknown:[],
-        Happy:["playful","content","interested","proud","accepted","powerful","peaceful","trusting","optimistic"],
-        Sad:["lonely","vulnerable", "despair","guilty","depressed","hurt"],
-        Disgusted:["repelled","Awful","disappointed","disapproving"],
-        Angry:["let down","humilliated","bitter","mad","aggressive","frustrated","distant","critical"],
-        Fearful:["scared","anxious","insecure","weak","rejected","threatened"],
-        Bad:["bored","busy","stressed","tired"],
-        Surprised:["startied","confused","amazed","excited"]
+        Happy:["playful","Content","Interested"],
+        Surprised:["Startled","Confused","Amazed","Excited"],
+        Sad:["Lonely","Vulnerable","Despair"]
       };
       var chosen_type = breeds[this.type];
       var chosen_index = tags.integer(0,chosen_type.length-1);
       return chosen_type[chosen_index];
-      },
-      
-      MyStory: '{{lorem(3,"sentences")}}',
-      My_reaction: '{{lorem(3,"sentences")}}',
-  
-      
-  
-  date_create: '{{date(new Date(2020,0,1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
+    },
     
+    description: '{{lorem(3,"sentences")}}',
+    img:function(tags) {
+      return 'https://via.placeholder.com/400/'+
+        tags.integer(700,999) + '/fff/?text=' + this.name;
+    },
+    date_create: '{{date(new Date(2020, 0, 1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
   }
-  
 ]
 
 

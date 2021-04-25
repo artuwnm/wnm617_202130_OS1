@@ -48,35 +48,35 @@ function makeStatement($data) {
    switch($t) {
       case "users_all":
          return makeQuery($c,"SELECT * FROM `track_202130_users`",$p);
-      case "emotions_all":
-         return makeQuery($c,"SELECT * FROM `track_202130_emotions`",$p);
+      case "animals_all":
+         return makeQuery($c,"SELECT * FROM `track_202130_animals`",$p);
       case "locations_all":
          return makeQuery($c,"SELECT * FROM `track_202130_locations`",$p);
 
 
       case "user_by_id":
          return makeQuery($c,"SELECT * FROM `track_202130_users` WHERE id=?",$p);
-      case "emotion_by_id":
-         return makeQuery($c,"SELECT * FROM `track_202130_emotions` WHERE id=?",$p);
+      case "animal_by_id":
+         return makeQuery($c,"SELECT * FROM `track_202130_animals` WHERE id=?",$p);
       case "location_by_id":
          return makeQuery($c,"SELECT * FROM `track_202130_locations` WHERE id=?",$p);
 
 
-      case "emotions_by_user_id":
-         return makeQuery($c,"SELECT * FROM `track_202130_emotions` WHERE user_id=?",$p);
-      case "locations_by_emotion_id":
-         return makeQuery($c,"SELECT * FROM `track_202130_locations` WHERE emotion_id=?",$p);
+      case "animals_by_user_id":
+         return makeQuery($c,"SELECT * FROM `track_202130_animals` WHERE user_id=?",$p);
+      case "locations_by_animal_id":
+         return makeQuery($c,"SELECT * FROM `track_202130_locations` WHERE animal_id=?",$p);
 
       case "recent_locations":
          return makeQuery($c,"SELECT *
-            FROM `track_202130_emotions` a
+            FROM `track_202130_animals` a
             RIGHT JOIN (
                SELECT * FROM `track_202130_locations`
                ORDER BY `date_create` DESC
             ) l
-            ON e.id = l.emotion_id
-            WHERE e.user_id=?
-            GROUP BY l.emotion_id
+            ON a.id = l.animal_id
+            WHERE a.user_id=?
+            GROUP BY l.animal_id
             ",$p);
 
 
