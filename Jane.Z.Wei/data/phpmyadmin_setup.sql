@@ -22,27 +22,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `track_202130_emotions`
 --
 
--- CREATE TABLE `track_202130_emotions` (
---   `id` int(13) NOT NULL,
---   `user_id` int(13) NOT NULL,
---   `name` varchar(64) NOT NULL,
---   `type` varchar(16) NOT NULL,
---   `breed` varchar(64) NOT NULL,
---   `description` text NOT NULL,
---   `img` varchar(256) NOT NULL,
---   `date_create` datetime NOT NULL
--- ) 
-
 CREATE TABLE `track_202130_emotions` (
-`id` INT NULL,
-`user_id` INT NULL,
-`name` VARCHAR(MAX) NULL,
-`photo` VARCHAR(MAX) NULL,
-`type` VARCHAR(MAX) NULL,
-`breed` VARCHAR(MAX) NULL,
-`MyStory` VARCHAR(MAX) NULL,
-`My_reaction` VARCHAR(MAX) NULL,
-`date_create` VARCHAR(MAX) NULL
+  `id` int(13) NOT NULL,
+  `user_id` int(13) NOT NULL,
+  `name` varchar(64) NOT NULL,
+  `type` varchar(16) NOT NULL,
+  `breed` varchar(64) NOT NULL,
+  `description` text NOT NULL,
+  `img` varchar(256) NOT NULL,
+  `date_create` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
