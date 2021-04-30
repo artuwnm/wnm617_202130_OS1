@@ -69,7 +69,7 @@ function makeStatement($data) {
 
       case "recent_locations":
          return makeQuery($c,"SELECT *
-            FROM `track_202130_emotions` a
+            FROM `track_202130_emotions` e
             RIGHT JOIN (
                SELECT * FROM `track_202130_locations`
                ORDER BY `date_create` DESC

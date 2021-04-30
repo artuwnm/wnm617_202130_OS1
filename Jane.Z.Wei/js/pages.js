@@ -14,7 +14,34 @@ const RecentPage = async () => {
 
    let map_el = await makeMap("#recent-page .map");
    makeMarkers(map_el,valid_emotions);
+
+   map_el.data("markers").forEach((o,i)=>{
+      o.addListener("click",function(){
+
+         /* SIMPLE EXAMPLE */
+         /*sessionStorage.emotionId = valid_emotions[i].emotion_id;
+         $.mobile.navigate("#emotion-profile-page");*/
+
+         /* INFOWINDOW EXAMPLE */
+         /*map_el.data("infoWindow")
+            .open(map_el.data("map"),o)
+         map_el.data("infoWindow")
+            .setContent(makeEmotionPopup(valid_emotions[i]))*/
+
+         /* ACTIVATE EXAMPLE */
+         $("#recent-drawer")
+            .addClass("active")
+            .find(".modal-body")
+            .html(makeEmotionPopup(valid_emotions[i]))
+      })
+   })
 }
+
+
+
+
+
+
 
 const ListPage = async () => {
    let emotions = await query({
@@ -31,6 +58,12 @@ const ListPage = async () => {
    $("#list-page .emotionlist").html(emotion_template);
 }
 
+
+
+
+
+
+
 const UserProfilePage = async () => {
    let user = await query({
       type:'user_by_id',
@@ -40,6 +73,32 @@ const UserProfilePage = async () => {
    $("#user-profile-page .profile")
       .html(makeUserProfile(user.result[0]));
 }
+
+const UserEditPage = async () => {
+   let user = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#user-edit-form")
+         .html(makeUserProfileUpdateForm(user.result[0]));
+}
+
+const UserPasswordPage = async () => {
+   let user = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#user-password-form")
+         .html(makeUserPasswordUpdateForm(user.result[0]));
+}
+
+
+
+
+
+
 
 const EmotionProfilePage = async () => {
    query({
@@ -69,4 +128,23 @@ const EmotionProfilePage = async () => {
       let map_el = await makeMap("#emotion-profile-page .map");
       makeMarkers(map_el,r.result)
    });
+}
+
+const EmotionEditPage = async () => {
+   let emotion = await query({
+      type:'emotion_by_id',
+      params:[sessionStorage.emotionId]
+   });
+
+   $("#emotion-edit-form")
+         .html(makeEmotionProfileUpdateForm(emotion.result[0]));
+}
+
+
+
+
+
+const ChooseLocationPage = async () => {
+   let map_el = await makeMap("#choose-location-page .map");
+   makeMarkers(map_el,[])
 }
