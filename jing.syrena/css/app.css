@@ -346,6 +346,15 @@ input {
   pointer-events:initial;
 }
 
+.modal-drawer.modal-card {
+  padding:1em;
+  box-shadow:none;
+}
+.modal-card .modal-body {
+  box-shadow:0 0 5px rgba(0,0,0,0.3);
+  border-radius:1em;
+}
+
 
 
 .modal-head,
@@ -508,6 +517,18 @@ border-radius: 40px;
   display:block;
 }
 
+.circle-button {
+  display:inline-block;
+  vertical-align:middle;
+  background-color:white;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+  border-radius:50%;
+  height:var(--header-height);
+  line-height:var(--header-height);
+  width:var(--header-height);
+  text-align:center;
+  font-size:2em;
+}
 
 
 /*profile*/
@@ -605,6 +626,22 @@ border-radius: 40px;
 }
 
 
+
+
+.animal-image-thumb img {
+  width:6em;
+  height:6em;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+.animal-jump * {
+  pointer-events:none;
+}
 
 
 

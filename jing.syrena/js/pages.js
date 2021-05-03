@@ -14,7 +14,34 @@ const RecentPage = async () => {
 
    let map_el = await makeMap("#recent-page .map");
    makeMarkers(map_el,valid_animals);
+
+   map_el.data("markers").forEach((o,i)=>{
+      o.addListener("click",function(){
+
+         /* SIMPLE EXAMPLE */
+         /*sessionStorage.animalId = valid_animals[i].animal_id;
+         $.mobile.navigate("#animal-profile-page");*/
+
+         /* INFOWINDOW EXAMPLE */
+         /*map_el.data("infoWindow")
+            .open(map_el.data("map"),o)
+         map_el.data("infoWindow")
+            .setContent(makeAnimalPopup(valid_animals[i]))*/
+
+         /* ACTIVATE EXAMPLE */
+         $("#recent-drawer")
+            .addClass("active")
+            .find(".modal-body")
+            .html(makeAnimalPopup(valid_animals[i]))
+      })
+   })
 }
+
+
+
+
+
+
 
 const ListPage = async () => {
    let animals = await query({
@@ -31,6 +58,12 @@ const ListPage = async () => {
    $("#list-page .animallist").html(animal_template);
 }
 
+
+
+
+
+
+
 const UserProfilePage = async () => {
    let user = await query({
       type:'user_by_id',
@@ -40,6 +73,32 @@ const UserProfilePage = async () => {
    $("#user-profile-page .profile")
       .html(makeUserProfile(user.result[0]));
 }
+
+const UserEditPage = async () => {
+   let user = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#user-edit-form")
+         .html(makeUserProfileUpdateForm(user.result[0]));
+}
+
+const UserPasswordPage = async () => {
+   let user = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#user-password-form")
+         .html(makeUserPasswordUpdateForm(user.result[0]));
+}
+
+
+
+
+
+
 
 const AnimalProfilePage = async () => {
    query({
@@ -69,4 +128,23 @@ const AnimalProfilePage = async () => {
       let map_el = await makeMap("#animal-profile-page .map");
       makeMarkers(map_el,r.result)
    });
+}
+
+const AnimalEditPage = async () => {
+   let animal = await query({
+      type:'animal_by_id',
+      params:[sessionStorage.animalId]
+   });
+
+   $("#animal-edit-form")
+         .html(makeAnimalProfileUpdateForm(animal.result[0]));
+}
+
+
+
+
+
+const ChooseLocationPage = async () => {
+   let map_el = await makeMap("#choose-location-page .map");
+   makeMarkers(map_el,[])
 }

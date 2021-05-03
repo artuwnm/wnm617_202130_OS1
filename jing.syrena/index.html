@@ -26,8 +26,7 @@
 </head>
 <body>
 
-
-    <section data-role="page" id="signin-page">
+   <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
          <div class="flex-none">
@@ -46,20 +45,85 @@
                <div class="form-control">
                   <input type="submit" class="form-button" value="Sign In" data-role="none">
                </div>
+               <div class="form-control" style="text-align:center">
+                  Don't have an account? <a href="#signup-page">Sign Up</a>
+               </div>
             </form>
          </div>
       </div>
    </section>
 
+   <section data-role="page" id="signup-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <div class="flex-none">
+            <form class="form" id="signup-form" data-ajax="false" style="padding:1em">
+               <div class="form-control">
+                  <label for="signup-email" class="form-label">Email</label>
+                  <input class="form-input" type="email" id="signup-email" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signup-password" class="form-label">Password</label>
+                  <input class="form-input" type="password" id="signup-password" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signup-confirm" class="form-label">Confirm Password</label>
+                  <input class="form-input" type="password" id="signup-confirm" data-role="none">
+               </div>
+               <div class="form-control">
+                  <input type="submit" class="form-button" value="Sign Up" data-role="none">
+               </div>
+               <div class="form-control" style="text-align:center">
+                  Already have an account? <a href="#signin-page">Sign In</a>
+               </div>
+            </form>
+         </div>
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
+
+   <section data-role="page" id="signup-second-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <div class="flex-none">
+            <form class="form" id="signup-second-form" data-ajax="false" style="padding:1em">
+               <div class="form-control">
+                  <label for="signup-second-username" class="form-label">User Name</label>
+                  <input class="form-input" type="text" id="signup-second-username" data-role="none" placeholder="Choose a User Name">
+               </div>
+               <div class="form-control">
+                  <label for="signup-second-name" class="form-label">Name</label>
+                  <input class="form-input" type="text" id="signup-second-name" data-role="none" placeholder="What is Your Real Name?">
+               </div>
+               <div class="form-control">
+                  <input type="submit" class="form-button" value="Finish Up" data-role="none">
+               </div>
+            </form>
+         </div>
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
 
 
 
-   <section data-role="page" id="recent-page">
+
+
+     <section data-role="page" id="recent-page">
       <div data-role="main">
          <div class="map"></div>
+         <div class="floater bottom right" style="padding:1em">
+            <a href="#choose-animal-page" class="circle-button">&plus;</a>
+         </div>
+<!-- 记得改css -->
+         <div class="modal" id="recent-drawer">
+            <div class="modal1-drawer modal-card top">
+               <div class="modal-body"></div>
+            </div>
+         </div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
+
 
 
    <section data-role="page" id="list-page">
@@ -109,13 +173,14 @@
    </section>
 
  <!-- USER DATA SECTION -->
-   <section data-role="page" id="user-profile-page">
+    <section data-role="page" id="user-profile-page">
       <div data-role="main">
          <div class="profile"></div>
 
          <div class="floater top right">
             <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/add.png" alt=""></a>
          </div>
+
 
          <div class="modal" id="user-settings-modal">
             <div class="modal-drawer right">
@@ -126,8 +191,8 @@
                </div>
                <div class="modal-body"><div class="overscroll">
                   <ul>
-                     <li>Change Name</li>
-                     <li>Change Password</li>
+                     <li><a href="#user-edit-page">Change Your Info</a></li>
+                     <li><a href="#user-password-page">Change Password</a></li>
                      <li><a href="#" class="js-logout">Sign Out</a></li>
                   </ul>
                </div>
@@ -138,17 +203,50 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
+   <section data-role="page" id="user-edit-page">
+      <header data-role="header">
+         <h1>Edit Your Info</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form id="user-edit-form" data-ajax="false" style="padding:1em"></form>
+         </div>
+      </div>
+   </section>
+
+   <section data-role="page" id="user-password-page">
+      <header data-role="header">
+         <h1>Edit Your Password</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form id="user-password-form" data-ajax="false" style="padding:1em"></form>
+         </div>
+      </div>
+   </section>
+
+
          
    <!--  ANIMAL DATA SECTION -->
 
-    <section data-role="page" id="animal-profile-page">
+     <section data-role="page" id="animal-profile-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="animal-top">
             <div class="floater top left header no-touch" style="background-image: linear-gradient(180deg, #ffffff96, #ffffff00);">
                <ul>
                   <li class="flex-none do-touch"><a href="#" data-rel="back">Back</a></li>
                   <li class="flex-stretch"></li>
-                  <li class="flex-none do-touch"><a href="#">Edit</a></li>
+                  <li class="flex-none do-touch"><a href="#animal-edit-page">Edit</a></li>
                </ul>
             </div>
          </div>
@@ -159,11 +257,107 @@
             </ul>
          </div>
          <div class="animal-bottom">
-            <div class="animal-bottom-section animal-map map"></div>
+            <div class="animal-bottom-section animal-map">
+               <div class="map"></div>
+               <div class="floater bottom right" style="padding:1em">
+                  <a href="#choose-location-page" class="circle-button">&plus;</a>
+               </div>
+            </div>
             <div class="animal-bottom-section animal-info"></div>
          </div>
       </div>
    </section>
+
+   <section data-role="page" id="animal-edit-page">
+      <header data-role="header">
+         <h1>Edit Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form>
+               <div class="form-control">
+                  <label for="animal-edit-name" class="form-label">Name</label>
+                  <input class="form-input" type="text" id="animal-edit-name" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="animal-edit-type" class="form-label">Type</label>
+                  <input class="form-input" type="text" id="animal-edit-type" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="animal-edit-breed" class="form-label">Breed</label>
+                  <input class="form-input" type="text" id="animal-edit-breed" data-role="none">
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+
+   <section data-role="page" id="choose-animal-page">
+      <header data-role="header">
+         <h1>Choose Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-location-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form>
+               <div>Create New Animal</div>
+               <div>Choose Animal</div>
+            </form>
+         </div>
+      </div>
+   </section>
+
+   <section data-role="page" id="choose-location-page">
+      <header data-role="header">
+         <h1>Choose Location</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#location-description-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="map"></div>
+      </div>
+   </section>
+
+   <section data-role="page" id="location-description-page">
+      <header data-role="header">
+         <h1>Describe Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-add-location">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form>
+               <div class="form-control">
+                  <textarea name="location-description" id="location-description" rows="10" class="form-input"></textarea>
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
+
 
 
     <script type="text/template" id="footer-template">
