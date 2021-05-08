@@ -5,22 +5,31 @@
 }
 
 :root {
-   --font-sans:Helvetica, Arial, sans-serif;
-   --font-serif:Cambria, Georgia, serif;
+   --color-neutral-light: #eaeeef;
+  --color-neutral-medium: #9aa2a4;
+  --color-neutral-dark: #363c3e;
 
+  --color-green-light: #9BBFAB;
+  --color-green-medium:#1A736A;
+  --color-green-dark:#09403A;
 
-   --color-neutral-light:#ede9e9;
-   --color-neutral-medium:#999191;
-   --color-neutral-dark:#343030;
+  --color-red-light: #F2E4DC;
+  --color-red-medium:#F2887E;
+  --color-red-dark:#FF5A43;
 
-   --color-main-light:#e5f1f2;
-   --color-main-medium:#4ba0a8;
-   --color-main-dark:#0a4349;
+  --color-header:#9BBFAB;
+  --color-footer:#1A736A;
 
-   --color-white:#fff;
-   --color-black:#111;
+  --color-white: #fff;
+  --color-black: #000;
 
-   --header-height:3rem;
+  --header-height:3rem;
+  --gap-size:1rem;
+  --container-width:1000px;
+
+  --font-serif:Georgia, "Times New Roman", serif;
+  --font-sans:Helvetica, arial, sans-serif;
+  --font-segoeui:Segoe UI;
 }
 
 body {
@@ -202,6 +211,34 @@ a:hover {
    background-color:var(--color-neutral-medium);
 }
 
+
+.form-select {
+   position: relative;
+}
+.form-select>select {
+   display:inline-block;
+   width:100%;
+   border-width:0;
+   background-color:var(--color-neutral-light);
+   padding:0.5em 2em 0.5em 1em;
+   border-radius:0.3em;
+   font:inherit;
+   outline:0;
+   position:relative;
+   overflow:hidden;
+   -webkit-appearance:none;
+}
+.form-select::after {
+   position:absolute;
+   top:50%;
+   right:0.5em;
+   content:'▼';
+   font-family:arial;
+   font-size:0.9em;
+   color:var(--color-neutral-dark);
+   pointer-events:none;
+   transform: translateY(-50%);
+}
 
 
 

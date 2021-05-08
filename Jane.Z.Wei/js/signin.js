@@ -40,3 +40,5 @@ const checkUserId = () => {
          $.mobile.navigate("#recent-page");
    }
 }
+
+

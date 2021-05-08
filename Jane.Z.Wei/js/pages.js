@@ -137,14 +137,49 @@ const EmotionEditPage = async () => {
    });
 
    $("#emotion-edit-form")
-         .html(makeEmotionProfileUpdateForm(emotion.result[0]));
+      .html(
+         makeEmotionProfileUpdateForm(emotion.result[0])
+      );
+}
+
+const EmotionAddPage = async () => {
+
+   $("#emotion-add-form .form-elements")
+      .html(
+         makeEmotionProfileUpdateForm({
+            name:"",
+            type:"",
+            breed:"",
+            description:""
+         },"emotion-add")
+      );
 }
 
 
 
 
 
+const ChooseEmotionPage = async () => {
+   let d = await query({
+      type:'emotions_by_user_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#location-choose-emotion")
+      .html(FormSelectOptions(d.result))
+}
 const ChooseLocationPage = async () => {
    let map_el = await makeMap("#choose-location-page .map");
    makeMarkers(map_el,[])
+
+   map_el.data("map").addListener("click",function(e){
+      console.log(e)
+      $("#location-lat").val(e.latLng.lat())
+      $("#location-lng").val(e.latLng.lng())
+      makeMarkers(map_el,[{
+         lat:e.latLng.lat(),
+         lng:e.latLng.lng(),
+         // icon:
+      }])
+   })
 }

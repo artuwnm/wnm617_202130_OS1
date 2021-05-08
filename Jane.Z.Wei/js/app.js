@@ -23,6 +23,8 @@ $(()=>{
          case "user-password-page": UserPasswordPage(); break;
          case "emotion-profile-page": EmotionProfilePage(); break;
          case "emotion-edit-page": EmotionEditPage(); break;
+         case "emotion-add-page": EmotionAddPage(); break;
+         case "choose-emotion-page": ChooseEmotionPage(); break;
          case "choose-location-page": ChooseLocationPage(); break;
       }
    })
@@ -35,11 +37,11 @@ $(()=>{
    })
    .on("submit","#signup-form",function(e){
       e.preventDefault();
-      $.mobile.navigate("#signup-second-page");
+      checkSignupForm();
    })
    .on("submit","#signup-second-form",function(e){
       e.preventDefault();
-      $.mobile.navigate("#recent-page");
+      checkSignupSecondForm();
    })
 
 
@@ -62,6 +64,29 @@ $(()=>{
          .closest(".emotion-nav").next().children().eq(id)
          .addClass("active")
          .siblings().removeClass("active")
+   })
+   .on("click",".js-choose-emotion",function(e){
+      $("#location-choose-emotion")
+         .html(FormSelectOptions([{id:sessionStorage.emotionId,name:"chosen"}]))
+      $("#location-redirect").val(-2);
+   })
+   .on("click",".js-add-from-recent",function(e){
+      $("#location-redirect").val(-3);
+   })
+   .on("click",".emotion-add-submit",function(e){
+      checkEmotionAddForm();
+   })
+   .on("click",".emotion-edit-submit",function(e){
+      checkEmotionEditForm();
+   })
+   .on("click",".user-edit-submit",function(e){
+      checkUserEditForm();
+   })
+   .on("click",".user-password-submit",function(e){
+      checkUserPasswordForm();
+   })
+   .on("click",".location-add-submit",function(e){
+      checkLocationAddForm();
    })
 
 

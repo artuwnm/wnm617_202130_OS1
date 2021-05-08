@@ -63,7 +63,7 @@ const setMapBounds = (map_el,map_locs) => {
          navigator.geolocation.getCurrentPosition(p=>{
             let pos = {
                lat:p.coords.latitude,
-               lat:p.coords.longitude
+               lng:p.coords.longitude
             };
             map.setCenter(pos);
             map.setZoom(zoom);
@@ -91,7 +91,7 @@ const setMapBounds = (map_el,map_locs) => {
 
 let mapStyles = [
     {
-         "stylers": [
+        "stylers": [
     {
         "featureType": "all",
         "elementType": "labels.text.fill",
@@ -346,7 +346,7 @@ let mapStyles = [
                 "lightness": "-62"
             }
         ]
-    }
-]
+          }
+        ]
     }
 ];
