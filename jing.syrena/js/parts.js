@@ -25,7 +25,8 @@ const makeUserProfile = o => `
 const makeAnimalInfo = o => `
 <div class="animal-name">${o.name}</div>
 <div class="animal-type">${o.type}</div>
-<div class="animal-breed">${o.gender}</div>
+<div class="animal-gender">${o.gender}</div>
+<div class="animal-description">${o.description}</div>
 `;
 
 const makeAnimalPopup = o => `
@@ -36,7 +37,7 @@ const makeAnimalPopup = o => `
    <div class="flex-none" style="padding:1em">
       <div class="animal-name">${o.name}</div>
       <div class="animal-type">${o.type}</div>
-      <div class="animal-breed">${o.gender}</div>
+      <div class="animal-gender">${o.gender}</div>
    </div>
 </div>
 `;
@@ -59,10 +60,25 @@ const FormControlTextarea = ({namespace,name,displayname,type,placeholder,value}
 }
 
 
+const FormSelectOptions = (options,selected=1) => {
+   return options.reduce((r,o)=>{
+      return r+`<option value="${o.id}" ${o.id===selected?'selected':''}>${o.name}</option>`
+   },'');
+}
 
-const makeAnimalProfileUpdateForm = o => `
+const FormSelect = (options,id,selected=1) => {
+   return `<div class='form-select'>
+      <select id="${id}">
+         ${FormSelectOptions(options,selected)}
+      </select>
+   </div>`;
+}
+
+
+
+const makeAnimalProfileUpdateForm = (o,namespace="animal-edit") => `
 ${FormControlInput({
-   namespace:"animal-edit",
+   namespace:namespace,
    name:'name',
    displayname:'Name',
    type:'text',
@@ -70,7 +86,7 @@ ${FormControlInput({
    value:o.name
 })}
 ${FormControlInput({
-   namespace:"animal-edit",
+   namespace:namespace,
    name:'type',
    displayname:'Type',
    type:'text',
@@ -78,15 +94,15 @@ ${FormControlInput({
    value:o.type
 })}
 ${FormControlInput({
-   namespace:"animal-edit",
-   name:'breed',
-   displayname:'Breed',
+   namespace:namespace,
+   name:'gender',
+   displayname:'gender',
    type:'text',
-   placeholder:'Type The Animal Breed',
-   value:o.breed
+   placeholder:'Type The Animal gender',
+   value:o.gender
 })}
 ${FormControlTextarea({
-   namespace:"animal-edit",
+   namespace:namespace,
    name:'description',
    displayname:'Description',
    type:'text',
@@ -97,9 +113,9 @@ ${FormControlTextarea({
 
 
 
-const makeUserProfileUpdateForm = o => `
+const makeUserProfileUpdateForm = (o,namespace="user-edit") => `
 ${FormControlInput({
-   namespace:"user-edit",
+   namespace:namespace,
    name:'name',
    displayname:'Name',
    type:'text',
@@ -107,7 +123,7 @@ ${FormControlInput({
    value:o.name
 })}
 ${FormControlInput({
-   namespace:"user-edit",
+   namespace:namespace,
    name:'username',
    displayname:'Username',
    type:'text',
@@ -115,7 +131,7 @@ ${FormControlInput({
    value:o.username
 })}
 ${FormControlInput({
-   namespace:"user-edit",
+   namespace:namespace,
    name:'email',
    displayname:'Email',
    type:'text',
@@ -126,7 +142,7 @@ ${FormControlInput({
 
 const makeUserPasswordUpdateForm = o => `
 ${FormControlInput({
-   namespace:"user-password",
+   namespace:"user-edit",
    name:'old-password',
    displayname:'Old Password',
    type:'password',
@@ -134,7 +150,7 @@ ${FormControlInput({
    value:''
 })}
 ${FormControlInput({
-   namespace:"user-password",
+   namespace:"user-edit",
    name:'new-password',
    displayname:'New Password',
    type:'password',
@@ -142,7 +158,7 @@ ${FormControlInput({
    value:''
 })}
 ${FormControlInput({
-   namespace:"user-password",
+   namespace:"user-edit",
    name:'confirm-password',
    displayname:'Confirm Password',
    type:'password',
