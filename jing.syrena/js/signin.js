@@ -1,4 +1,3 @@
-
 const checkSigninForm = async () => {
    let username = $("#signin-username").val();
    let password = $("#signin-password").val();

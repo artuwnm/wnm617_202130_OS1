@@ -105,17 +105,21 @@
 
 
 
-
      <section data-role="page" id="recent-page">
       <div data-role="main">
          <div class="map"></div>
          <div class="floater bottom right" style="padding:1em">
             <a href="#choose-animal-page" class="circle-button js-add-from-recent">&plus;</a>
          </div>
+         <div class="floater top left" style="width:100%;padding:1em">
+            <form data-ajax="false" id="recent-search" class="hotdog hovering">
+               <input type="search" id="recent-search-value" data-role="none" placeholder="Search">
+            </form>
+         </div>
 <!-- 记得改css -->
-         <div class="modal" id="recent-drawer">
-            <div class="modal1-drawer modal-card top">
-               <div class="modal-body"></div>
+         <div class="modal1" id="recent-drawer">
+            <div class="modal1-drawer modal1-card top">
+               <div class="modal1-body"></div>
             </div>
          </div>
       </div>
@@ -124,25 +128,26 @@
 
 
 
-   <section data-role="page" id="list-page">
+<section data-role="page" id="list-page">
       <header data-role="header">
-         <h1>Cat List</h1>
          <ul>
-            <li class="flex-stretch"></li>
-            <li><a href="#" class="js-list-add-animal icon"
-               data-activate="#list-add-modal"><img src="img/icon/add.png"></a></li>
+            <li class="flex-stretch" style="padding-left:0.5em">
+               <form data-ajax="false" id="list-search" class="hotdog">
+                  <input type="search" id="list-search-value" data-role="none" placeholder="Search">
+               </form>
+            </li>
+            <li class="icon"><a href="#animal-add-page" style="font-size:1.5em"><img src="img/icon/add.png" alt=""></a></li>
          </ul>
+      </header>
+      <header data-role="header">
+         <ul class="filter-set"></ul>
       </header>
       <div data-role="main"><div class="overscroll">
          <div class="animallist"></div>
-      </div>
-   </div>
-   <footer data-role="footer" data-template="#footer-template"></footer>
+      </div></div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
 
-
-
-
-      <div class="modal1" id="list-add-modal">
+      <!-- <div class="modal1" id="list-add-modal">
          <div class="modal1-back" data-deactivate="#list-add-modal"></div>
          <form class="modal1-popup" data-ajax="false" id="list-add-form">
             <div class="modal1-head">Head</div>
@@ -167,7 +172,7 @@
                </div>
             </div>
          </form>
-      </div>
+      </div> -->
    </section>
 
  <!-- USER DATA SECTION -->
@@ -188,13 +193,14 @@
                   <div class="flex-stretch"></div>
                   <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
                </div>
-               <div class="modal-body"><div class="overscroll">
-                  <ul>
-                     <li><a href="#user-edit-page">Change Your Info</a></li>
-                     <li><a href="#user-password-page">Change Password</a></li>
-                     <li><a href="#" class="js-logout">Sign Out</a></li>
-                  </ul>
-               </div>
+               <div class="modal-body">
+                  <div class="overscroll">
+                     <ul>
+                        <li><a href="#user-edit-page">Change Your Info</a></li>
+                        <li><a href="#user-password-page">Change Password</a></li>
+                        <li><a href="#" class="js-logout">Sign Out</a></li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
@@ -234,6 +240,30 @@
       </div>
    </section>
 
+   <section data-role="page" id="user-upload-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="user-upload-submit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form id="user-upload-form" data-ajax="false" style="padding:1em">
+               <input type="hidden" class="upload-image-input" id="user-upload-image">
+               <label class="image-uploader full">
+                  <input type="file" data-role="none" id="user-upload-input">
+               </label>
+               <label for="user-upload-input" class="floater bottom left icon">
+                  <img src="img/icon/camera.png" alt="">
+               </label>
+            </form>
+         </div>
+      </div>
+   </section>
+
 
 
          
@@ -259,8 +289,8 @@
          <div class="animal-bottom">
             <div class="animal-bottom-section animal-map">
                <div class="map"></div>
-               <div class="floater bottom right" style="padding:1em">
-                  <a href="#choose-location-page" class="circle-button">&plus;</a>
+               <div class="floater bottom right icon" style="padding:1em">
+                  <a href="#choose-location-page" class="circle-button"><img src="img/icon/add.png" alt=""></a>
                </div>
             </div>
             <div class="animal-bottom-section animal-info"></div>

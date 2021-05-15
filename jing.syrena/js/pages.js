@@ -23,15 +23,15 @@ const RecentPage = async () => {
          $.mobile.navigate("#animal-profile-page");*/
 
          /* INFOWINDOW EXAMPLE */
-         /*map_el.data("infoWindow")
-            .open(map_el.data("map"),o)
-         map_el.data("infoWindow")
-            .setContent(makeAnimalPopup(valid_animals[i]))*/
+         // map_el.data("infoWindow")
+         //    .open(map_el.data("map"),o)
+         // map_el.data("infoWindow")
+         //    .setContent(makeAnimalPopup(valid_animals[i]))
 
          /* ACTIVATE EXAMPLE */
          $("#recent-drawer")
             .addClass("active")
-            .find(".modal-body")
+            .find(".modal1-body")
             .html(makeAnimalPopup(valid_animals[i]))
       })
    })
@@ -51,12 +51,15 @@ const ListPage = async () => {
 
    console.log(animals)
 
-   animal_template = animals.result.length?
-      makeAnimalList(animals.result):
-      `<div class="animallist-item"><div class="animallist-description">No animals yet. Try adding some.</div></div>`
+   
+   $(".filter-set").html(makeFilterList(animals.result))
 
-   $("#list-page .animallist").html(animal_template);
+   makeAnimalListSet(
+      animals.result,
+      "No animals yet. Try adding some."
+   );
 }
+
 
 
 
@@ -94,7 +97,17 @@ const UserPasswordPage = async () => {
          .html(makeUserPasswordUpdateForm(user.result[0]));
 }
 
+const UserUploadPage = async () => {
+   let user = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
 
+   $("#user-upload-image").val(user.result[0].img);
+   $(".image-uploader").css({
+      "background-image":`url(${user.result[0].img})`
+   });
+}
 
 
 

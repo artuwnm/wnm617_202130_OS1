@@ -215,6 +215,55 @@ li {
    color:white;
 }
 
+.form-select {
+   position: relative;
+}
+.form-select>select {
+   display:inline-block;
+   width:100%;
+   border-width:0;
+   background-color:var(--color-neutral-light);
+   padding:0.5em 2em 0.5em 1em;
+   border-radius:0.3em;
+   font:inherit;
+   outline:0;
+   position:relative;
+   overflow:hidden;
+   -webkit-appearance:none;
+}
+.form-select::after {
+   position:absolute;
+   top:50%;
+   right:0.5em;
+   content:'▼';
+   font-family:arial;
+   font-size:0.9em;
+   color:var(--color-neutral-dark);
+   pointer-events:none;
+   transform: translateY(-50%);
+}
+.hotdog {
+    display: inline-flex;
+    width: 100%;
+    border-width: 0;
+    background-color: var(--color-neutral-light);
+    border-radius: 2em;
+}
+.hotdog>input {
+    flex: 1;
+    background-color: transparent;
+    border-width: 0;
+    line-height: 2.5;
+    padding: 0 1em;
+    outline: 0;
+    font-size: inherit;
+}
+.hotdog.hovering {
+    background-color:var(--color-white);
+    box-shadow:1px 0 5px rgba(0,0,0,0.2)
+}
+
+
 /* list */
 /*.listImg { 
    width:150px;
@@ -382,9 +431,9 @@ border-radius: 40px;
 /*modal 1*/
 .modal1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 10%;
+    left: 10%;
+    width: 80%;
     height: 100%;
     opacity:0;
     pointer-events:none;
@@ -418,7 +467,7 @@ border-radius: 40px;
   overflow:hidden;
   transition:all 0.3s;
 }
-.modal1.active .modal-popup {
+.modal1.active .modal1-popup {
   transform: translate(-50%,-50%);
   pointer-events:initial;
 }
@@ -465,9 +514,18 @@ border-radius: 40px;
   color:var(--color-neutral-dark);
   padding:0.5em 1em;
 }
+.modal1-drawer.modal1-card {
+  padding:1em;
+  box-shadow:none;
+}
+.modal1-card .modal1-body {
+  box-shadow:0 0 5px rgba(0,0,0,0.3);
+  border-radius:1em;
+}
+
 .modal1-body {
-  flex: 1 1 100%;
-  padding:0.5em 1em;
+  /*flex: 1 1 100%;*/
+  padding:3em 3em;
   position:relative;
   overflow:hidden;
   background: rgba(255, 255, 255, 0.3);
@@ -601,6 +659,9 @@ border-radius: 40px;
 .animal-bottom-section.active {
   display:block;
 }
+.animal-info {
+  padding:1em;
+}
 
 
 
@@ -650,11 +711,46 @@ border-radius: 40px;
 
 
 .user-profile-image {
-  text-align: center;
-  padding: 2em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 100%;
+    background-color: var(--color-neutral-light);
 }
-.user-profile-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
+.user-profile-image>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    padding: 2em;
+}
+
+
+
+.image-uploader.full {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+.image-uploader.full input{
+  display:none;
+}
+
+
+
+.filter-set {
+  overflow:auto;
+}
+.filter {
+  font-weight:bold;
+  padding:0 0.5em;
 }
