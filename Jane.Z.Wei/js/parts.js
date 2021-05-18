@@ -14,6 +14,10 @@ const makeEmotionList = templater(o=>`
 const makeUserProfile = o => `
 <div class="user-profile-image">
    <img src="${o.img}" alt="">
+
+   <div class="floater bottom right">
+      <a href="#user-upload-page" class="icon"><img src="img/icon/pencil.svg" alt=""></a>
+   </div>
 </div>
 <div class="user-profile-description">
    <div class="user-profile-name">${o.name}</div>
@@ -25,6 +29,7 @@ const makeEmotionInfo = o => `
 <div class="emotion-name">${o.name}</div>
 <div class="emotion-type">${o.type}</div>
 <div class="emotion-breed">${o.breed}</div>
+<button class="form-button emotion-delete" data-id="${o.id}">Delete</button>
 `;
 
 
@@ -88,18 +93,26 @@ ${FormControlInput({
 })}
 ${FormControlInput({
    namespace:namespace,
+   name:'date_create',
+   displayname:'Date',
+   type:'date',
+   placeholder:'MM/DD/YYYY',
+   value:o.date_create
+})}
+${FormControlInput({
+   namespace:namespace,
    name:'type',
    displayname:'Type',
    type:'text',
    placeholder:'Type The Emotion Type',
    value:o.type
 })}
-${FormControlInput({
+${FormControlSlelct({
    namespace:namespace,
    name:'breed',
    displayname:'Breed',
    type:'text',
-   placeholder:'Type The Emotion Breed',
+   placeholder:'Selelct The Emotion Breed',
    value:o.breed
 })}
 ${FormControlTextarea({
@@ -107,7 +120,7 @@ ${FormControlTextarea({
    name:'description',
    displayname:'Description',
    type:'text',
-   placeholder:'Type The Emotion Description',
+   placeholder:'Type The Emotion Story',
    value:o.description
 })}
 `
@@ -116,12 +129,20 @@ ${FormControlTextarea({
 
 const makeUserProfileUpdateForm = (o,namespace="user-edit") => `
 ${FormControlInput({
-   namespace:namespace,
-   name:'name',
-   displayname:'Name',
-   type:'text',
-   placeholder:'Type Your Name',
-   value:o.name
+   namespace: namespace,
+   name: "firstname",
+   displayname: "First Name",
+   type: "text",
+   placeholder: "Type your first name",
+   value: o.firstname
+})}
+${FormControlInput({
+   namespace: namespace,
+   name: "lastname",
+   displayname: "Last Name",
+   type: "text",
+   placeholder: "Type your last name",
+   value: o.lastname
 })}
 ${FormControlInput({
    namespace:namespace,
@@ -167,3 +188,42 @@ ${FormControlInput({
    value:''
 })}
 `
+
+
+
+
+
+const makeEmotionListSet = (emotions,missing_text="") => {
+   emotion_template = emotions.length?
+      makeEmotionList(emotions):
+      `<div class="emotionlist-item"><div class="emotionlist-description">${missing_text}</div></div>`
+
+   $("#list-page .emotionlist").html(emotion_template);
+}
+
+const capitalize = s => s[0].toUpperCase()+s.substr(1);
+
+const filterList = (emotions,type) => {
+   let a = [...(new Set(emotions.map(o=>o[type])))];
+   return templater(o=>o?`<li class="filter" data-field="${type}" data-value="${o}">${capitalize(o)}</li>`:'')(a);
+}
+
+const makeFilterList = (emotions) => {
+   return `
+   <li class="filter" data-field="type" data-value="">All</li>
+   |
+   ${filterList(emotions,'type')}
+   `
+}
+const SubfilterList = (emotions,breed) => {
+   let a = [...(new Set(emotions.map(o=>o[breed])))];
+   return templater(o=>o?`<li class="filter" data-field="${breed}" data-value="${o}">${capitalize(o)}</li>`:'')(a);
+}
+
+const makeSubFilterList = (emotions) => {
+   return `
+   <li class="filter" data-field="breed" data-value=""></li>
+   
+   ${filterList(emotions,'breed')}
+   `
+}

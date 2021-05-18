@@ -51,11 +51,12 @@ const ListPage = async () => {
 
    console.log(emotions)
 
-   emotion_template = emotions.result.length?
-      makeEmotionList(emotions.result):
-      `<div class="emotionlist-item"><div class="emotionlist-description">No emotions yet. Try adding some.</div></div>`
+   $(".filter-set").html(makeFilterList(emotions.result))
 
-   $("#list-page .emotionlist").html(emotion_template);
+   makeEmotionListSet(
+      emotions.result,
+      "No emotions yet. Try adding some."
+   );
 }
 
 
@@ -92,6 +93,18 @@ const UserPasswordPage = async () => {
 
    $("#user-password-form")
          .html(makeUserPasswordUpdateForm(user.result[0]));
+}
+
+const UserUploadPage = async () => {
+   let user = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#user-upload-image").val(user.result[0].img);
+   $(".image-uploader").css({
+      "background-image":`url(${user.result[0].img})`
+   });
 }
 
 

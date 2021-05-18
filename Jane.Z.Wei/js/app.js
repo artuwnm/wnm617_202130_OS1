@@ -21,6 +21,7 @@ $(()=>{
          case "user-profile-page": UserProfilePage(); break;
          case "user-edit-page": UserEditPage(); break;
          case "user-password-page": UserPasswordPage(); break;
+         case "user-upload-page": UserUploadPage(); break;
          case "emotion-profile-page": EmotionProfilePage(); break;
          case "emotion-edit-page": EmotionEditPage(); break;
          case "emotion-add-page": EmotionAddPage(); break;
@@ -43,6 +44,29 @@ $(()=>{
       e.preventDefault();
       checkSignupSecondForm();
    })
+   .on("submit","#list-search",function(e){
+      e.preventDefault();
+      checkSearchForm();
+   })
+   .on("submit","#recent-search",function(e){
+      e.preventDefault();
+      checkRecentSearchForm();
+   })
+
+   .on("change",".image-uploader input",function(e){
+      checkUpload(this.files[0])
+      .then(d=>{
+         console.log(d)
+         $(".upload-image-input").val('uploads/'+d.result);
+         $(".image-uploader").css({
+            "background-image":`url(uploads/${d.result})`
+         });
+      })
+   })
+
+
+
+
 
 
    /* ANCHOR CLICKS */
@@ -82,12 +106,24 @@ $(()=>{
    .on("click",".user-edit-submit",function(e){
       checkUserEditForm();
    })
+   .on("click",".user-upload-submit",function(e){
+      checkUserUploadForm();
+   })
    .on("click",".user-password-submit",function(e){
       checkUserPasswordForm();
    })
    .on("click",".location-add-submit",function(e){
       checkLocationAddForm();
    })
+   .on("click",".emotion-delete",function(e){
+      checkEmotionDelete($(this).data('id'));
+   })
+   .on("click",".filter",function(e){
+      checkListFilter($(this).data());
+   })
+
+
+
 
 
 

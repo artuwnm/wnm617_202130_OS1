@@ -5,7 +5,7 @@
 }
 
 :root {
-   --color-neutral-light: #eaeeef;
+  --color-neutral-light: #eaeeef;
   --color-neutral-medium: #9aa2a4;
   --color-neutral-dark: #363c3e;
 
@@ -160,7 +160,7 @@ a:hover {
 
 .header a,
 [data-role="header"] a {
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 
@@ -239,7 +239,26 @@ a:hover {
    pointer-events:none;
    transform: translateY(-50%);
 }
-
+.hotdog {
+    display: inline-flex;
+    width: 100%;
+    border-width: 0;
+    background-color: var(--color-neutral-light);
+    border-radius: 2em;
+}
+.hotdog>input {
+    flex: 1;
+    background-color: transparent;
+    border-width: 0;
+    line-height: 2.5;
+    padding: 0 1em;
+    outline: 0;
+    font-size: inherit;
+}
+.hotdog.hovering {
+    background-color:var(--color-white);
+    box-shadow:1px 0 5px rgba(0,0,0,0.2)
+}
 
 
 
@@ -474,6 +493,9 @@ a:hover {
 .emotion-bottom-section.active {
   display:block;
 }
+.emotion-info {
+  padding:1em;
+}
 
 
 
@@ -525,11 +547,49 @@ a:hover {
 
 
 .user-profile-image {
-  text-align: center;
-  padding: 2em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 100%;
+    background-color: var(--color-neutral-light);
 }
-.user-profile-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
+.user-profile-image>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    padding: 2em;
+}
+
+
+
+.image-uploader.full {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+.image-uploader.full input{
+  display:none;
+}
+
+
+
+.filter-set {
+  overflow:auto;
+}
+.subfilter-set {
+  overflow:auto;
+}
+.filter {
+  font-weight:bold;
+  padding:0 0.5em;
 }

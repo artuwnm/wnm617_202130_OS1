@@ -135,3 +135,78 @@ const checkLocationAddForm = () => {
       window.history.go(+$("#location-redirect").val());
    })
 }
+
+
+
+
+
+
+const checkUserUploadForm = () => {
+   let upload = $("#user-upload-image").val();
+   if(upload=="") return;
+
+   query({
+      type:'update_user_image',
+      params:[upload,sessionStorage.userId]
+   }).then(d=>{
+      if(d.error) {
+         throw d.error;
+      }
+      window.history.go(-1);
+   })
+}
+
+
+
+
+
+
+const checkEmotionDelete = (id) => {
+   query({
+      type:'delete_emotion',
+      params:[id]
+   }).then(d=>{
+      if(d.error) {
+         throw d.error;
+      }
+      window.history.go(-1);
+   })
+}
+
+
+
+
+const checkSearchForm = async () => {
+   let search = $("#list-search-value").val();
+   
+   let emotions = await query({
+      type:'search_emotions',
+      params:[search,sessionStorage.userId]
+   });
+
+   makeEmotionListSet(
+      emotions.result,
+      "No results found."
+   );
+}
+const checkRecentSearchForm = async () => {
+   let search = $("#recent-search-value").val();
+   console.log(search)
+}
+
+
+
+// destructuring
+const checkListFilter = async ({field,value}) => {
+   let emotions = value=="" ?
+      await query({
+         type:'emotions_by_user_id',
+         params:[sessionStorage.userId]
+      }) :
+      await query({
+         type:'filter_emotions',
+         params:[field,value,sessionStorage.userId]
+      });
+
+   makeEmotionListSet(emotions.result,"No emotions found");
+}

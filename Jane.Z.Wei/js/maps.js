@@ -91,8 +91,6 @@ const setMapBounds = (map_el,map_locs) => {
 
 let mapStyles = [
     {
-        "stylers": [
-    {
         "featureType": "all",
         "elementType": "labels.text.fill",
         "stylers": [
@@ -346,7 +344,5 @@ let mapStyles = [
                 "lightness": "-62"
             }
         ]
-          }
-        ]
     }
-];
+]

@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>CogEmot</title>
+   <title>EmotCog</title>
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
@@ -116,6 +116,12 @@
             <a href="#choose-emotion-page" class="circle-button js-add-from-recent">&plus;</a>
          </div>
 
+         <div class="floater top left" style="width:100%;padding:1em">
+            <form data-ajax="false" id="recent-search" class="hotdog hovering">
+               <input type="search" id="recent-search-value" data-role="none" placeholder="Search">
+            </form>
+         </div>
+
          <div class="modal" id="recent-drawer">
             <div class="modal-drawer modal-card top">
                <div class="modal-body"></div>
@@ -133,11 +139,18 @@
 
    <section data-role="page" id="list-page">
       <header data-role="header">
-         <h1>Search</h1>
          <ul>
-            <li class="flex-stretch"></li>
-            <li><a href="#emotion-add-page">&plus;</a></li>
+            <li class="flex-stretch" style="padding-left:0.5em">
+               <form data-ajax="false" id="list-search" class="hotdog">
+                  <input type="search" id="list-search-value" data-role="none" placeholder="Search">
+               </form>
+            </li>
+            <li><a href="#emotion-add-page" style="font-size:1.5em">&plus;</a></li>
          </ul>
+      </header>
+      <header data-role="header">
+         <ul class="filter-set"></ul>
+         <ul class="subfilter-set"></ul>
       </header>
       <div data-role="main"><div class="overscroll">
          <div class="emotionlist"></div>
@@ -247,6 +260,32 @@
          </div>
       </div>
    </section>
+
+   <section data-role="page" id="user-upload-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="user-upload-submit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form id="user-upload-form" data-ajax="false" style="padding:1em">
+               <input type="hidden" class="upload-image-input" id="user-upload-image">
+               <label class="image-uploader full">
+                  <input type="file" data-role="none" id="user-upload-input">
+               </label>
+               <label for="user-upload-input" class="floater bottom left">
+                  <img src="img/icon/camera.svg" alt="" class="icon">
+               </label>
+            </form>
+         </div>
+      </div>
+   </section>
+
+
 
 
 
@@ -369,6 +408,29 @@
          <input type="hidden" id="location-lat">
          <input type="hidden" id="location-lng">
          <div class="map"></div>
+      </div>
+   </section>
+   <section data-role="page" id="emotion-upload-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="user-upload-submit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form id="user-upload-form" data-ajax="false" style="padding:1em">
+               <input type="hidden" class="upload-image-input" id="user-upload-image">
+               <label class="image-uploader full">
+                  <input type="file" data-role="none" id="user-upload-input">
+               </label>
+               <label for="user-upload-input" class="floater bottom left">
+                  <img src="img/icon/camera.svg" alt="" class="icon">
+               </label>
+            </form>
+         </div>
       </div>
    </section>
 
