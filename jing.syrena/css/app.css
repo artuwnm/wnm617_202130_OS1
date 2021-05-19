@@ -624,6 +624,7 @@ border-radius: 40px;
   height:40vh;
   background-position:center;
   background-size:cover;
+  position:relative;
 }
 .animal-bottom {
   flex:1 1 100%;

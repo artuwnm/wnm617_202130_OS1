@@ -1,4 +1,5 @@
 
+
 const RecentPage = async () => {
    let locations = await query({
       type:'recent_locations',
@@ -127,7 +128,7 @@ const AnimalProfilePage = async () => {
       }
 
       $("#animal-profile-page .animal-top")
-         .css({backgroundImage:`url(${animal.img})`})
+         .css({backgroundImage:`url('${animal.img}')`})
       $("#animal-profile-page .animal-info")
          .html(makeAnimalInfo(animal));
    });

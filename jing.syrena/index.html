@@ -5,6 +5,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Cat Tracker</title>
 
+   <link rel="apple-touch-icon" href="logo_icon.png">
+   <link rel="icon" href="logo_icon.png">
+
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="#52B28B">
+
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
 
@@ -109,7 +115,7 @@
       <div data-role="main">
          <div class="map"></div>
          <div class="floater bottom right" style="padding:1em">
-            <a href="#choose-animal-page" class="circle-button js-add-from-recent">&plus;</a>
+            <a href="#choose-animal-page" class="circle-button js-add-from-recent icon"><img src="img/icon/add.png" alt=""></a>
          </div>
          <div class="floater top left" style="width:100%;padding:1em">
             <form data-ajax="false" id="recent-search" class="hotdog hovering">
@@ -278,6 +284,12 @@
                   <li class="flex-stretch"></li>
                   <li class="flex-none do-touch"><a href="#animal-edit-page">Edit</a></li>
                </ul>
+            </div>
+            <div class="floater bottom right" style="font-size:1.5em">
+               <form class="icon" data-ajax="false" id="animal-update-image-form">
+                  <input type="file" id="animal-update-image-input" class="hidden" data-role="none">
+                  <label for="animal-update-image-input" style="margin:0" class="icon"><img src="img/icon/edit.png" alt=""></label>
+               </form>
             </div>
          </div>
          <div class="header animal-nav">
