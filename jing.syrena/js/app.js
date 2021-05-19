@@ -103,6 +103,10 @@ $(()=>{
       sessionStorage.animalId = $(this).data('id');
       $.mobile.navigate("#animal-profile-page")
    })
+   .on("click",".recent-drawer-back",function(e){
+      sessionStorage.animalId = $(this).data('id');
+      $.mobile.navigate("#recent-page")
+   })
    .on("click",".animal-nav a",function(e){
       let id = $(this).parent().index();
       

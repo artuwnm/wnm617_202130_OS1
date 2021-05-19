@@ -115,7 +115,7 @@
       <div data-role="main">
          <div class="map"></div>
          <div class="floater bottom right" style="padding:1em">
-            <a href="#choose-animal-page" class="circle-button js-add-from-recent icon"><img src="img/icon/add.png" alt=""></a>
+            <a href="#choose-animal-page" class="circle-button js-add-from-recent">&plus;</a>
          </div>
          <div class="floater top left" style="width:100%;padding:1em">
             <form data-ajax="false" id="recent-search" class="hotdog hovering">
@@ -123,9 +123,12 @@
             </form>
          </div>
 <!-- 记得改css -->
+
          <div class="modal1" id="recent-drawer">
             <div class="modal1-drawer modal1-card top">
-               <div class="modal1-body"></div>
+               <div class="modal1-body">
+                  
+               </div>
             </div>
          </div>
       </div>
@@ -152,33 +155,6 @@
          <div class="animallist"></div>
       </div></div>
       <footer data-role="footer" data-template="#footer-template"></footer>
-
-      <!-- <div class="modal1" id="list-add-modal">
-         <div class="modal1-back" data-deactivate="#list-add-modal"></div>
-         <form class="modal1-popup" data-ajax="false" id="list-add-form">
-            <div class="modal1-head">Head</div>
-            <div class="modal1-body">
-               <div class="form-control">
-                  <label for="list-add-name" class="form-label">Name</label>
-                  <input class="form-input" type="text" id="list-add-name" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-type" class="form-label">Type</label>
-                  <input class="form-input" type="text" id="list-add-type" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-gender" class="form-label">Gender</label>
-                  <input class="form-input" type="text" id="list-add-gender" data-role="none">
-               </div>
-            </div>
-            <div class="modal1-foot display-flex">
-               <div class="flex-stretch"></div>
-               <div class="flex-none">
-                  <a href="#" data-deactivate="#list-add-modal">Submit</a>
-               </div>
-            </div>
-         </form>
-      </div> -->
    </section>
 
  <!-- USER DATA SECTION -->
@@ -441,6 +417,7 @@
       </a></li>
    </ul>
    </script>
+
 
    <script type="text/template" id="animal-link-template">
    this is an animal link

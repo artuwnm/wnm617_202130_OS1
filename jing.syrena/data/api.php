@@ -114,6 +114,25 @@ function makeStatement($data) {
                `name` LIKE ? AND
                `user_id` = ?
             ",$p);
+
+      case "search_recent_animals":
+         $p = ["%$p[0]%",$p[1]];
+         return makeQuery($c,"SELECT *
+            FROM `track_202130_cats` a
+            RIGHT JOIN (
+               SELECT * FROM `track_202130_locations`
+               ORDER BY `date_create` DESC
+            ) l
+            ON a.id = l.animal_id
+            WHERE
+               a.name LIKE ? AND
+               a.user_id = ?
+
+            GROUP BY l.animal_id
+            ",$p);
+
+      
+
       case "filter_animals":
          return makeQuery($c,"SELECT *
             FROM `track_202130_cats`

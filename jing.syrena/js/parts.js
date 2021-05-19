@@ -34,14 +34,17 @@ const makeAnimalInfo = o => `
 `;
 
 const makeAnimalPopup = o => `
-<div class="display-flex animal-jump" data-id="${o.animal_id?o.animal_id:o.id}">
-   <div class="flex-none animal-image-thumb">
-      <img src="${o.img}">
-   </div>
-   <div class="flex-none" style="padding:1em">
-      <div class="animal-name">${o.name}</div>
-      <div class="animal-type">${o.type}</div>
-      <div class="animal-gender">${o.gender}</div>
+<div class="display-flex " data-deactivate="#recent-drawer">
+<a href="#" class="recent-drawer-back">&times;</a>
+   <div class="display-flex animal-jump" data-id="${o.animal_id?o.animal_id:o.id}">
+      <div class="flex-none animal-image-thumb">
+         <img src="${o.img}">
+      </div>
+      <div class="flex-none" style="padding:1em">
+         <div class="animal-name">${o.name}</div>
+         <div class="animal-type">${o.type}</div>
+         <div class="animal-gender">${o.gender}</div>
+      </div>
    </div>
 </div>
 `;
