@@ -40,3 +40,47 @@ const checkUserId = () => {
    }
 }
 
+
+
+//change background color in signin-page, signup-page, signup-second page
+// setInterval(
+// function () {
+//   var randomColor = Math.floor(Math.random()*12512512).toString(16);
+//   document.body.style.backgroundColor = "#"+randomColor;
+// },2000);
+var i = 0;
+function change() {
+  var doc = document.getElementById("signin-page");
+  var color = ["#E9B0B9", "#D9BAC5", "#D3D4E5", "#CBD7EC", "#B6CEED","#CBD7EC","#D3D4E5", "#D9BAC5"];
+  doc.style.backgroundColor = color[i];
+  i = (i + 1) % color.length;
+}
+setInterval(change, 2000);
+
+var n = 0;
+function change2() {
+  var doc = document.getElementById("signup-page");
+  var color = ["#E9B0B9", "#D9BAC5", "#D3D4E5", "#CBD7EC", "#B6CEED","#CBD7EC","#D3D4E5", "#D9BAC5"];
+  doc.style.backgroundColor = color[n];
+  n = (n + 1) % color.length;
+}
+setInterval(change2, 2000);
+
+var n = 0;
+function change2() {
+  var doc = document.getElementById("signup-page");
+  var color = ["#E9B0B9", "#D9BAC5", "#D3D4E5", "#CBD7EC", "#B6CEED","#CBD7EC","#D3D4E5", "#D9BAC5"];
+  doc.style.backgroundColor = color[n];
+  n = (n + 1) % color.length;
+}
+setInterval(change2, 2000);
+
+var m = 0;
+function change3() {
+  var doc = document.getElementById("signup-second-page");
+  var color = ["#E9B0B9", "#D9BAC5", "#D3D4E5", "#CBD7EC", "#B6CEED","#CBD7EC","#D3D4E5", "#D9BAC5"];
+  doc.style.backgroundColor = color[n];
+  m = (m + 1) % color.length;
+}
+setInterval(change3, 2000);
+

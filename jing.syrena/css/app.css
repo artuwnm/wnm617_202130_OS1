@@ -291,7 +291,7 @@ input {
 
 /*signin*/
 #signin-page {
-  background-image: url('../img/lanchpagemin.png');
+  /*background-image: url('../img/lanchpagemin.png');*/
   /*background-repeat: none;*/
   background-size: cover;
 }
