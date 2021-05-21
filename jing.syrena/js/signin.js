@@ -43,11 +43,6 @@ const checkUserId = () => {
 
 
 //change background color in signin-page, signup-page, signup-second page
-// setInterval(
-// function () {
-//   var randomColor = Math.floor(Math.random()*12512512).toString(16);
-//   document.body.style.backgroundColor = "#"+randomColor;
-// },2000);
 var i = 0;
 function change() {
   var doc = document.getElementById("signin-page");
