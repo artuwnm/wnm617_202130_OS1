@@ -66,14 +66,6 @@ function change2() {
 }
 setInterval(change2, 2000);
 
-var n = 0;
-function change2() {
-  var doc = document.getElementById("signup-page");
-  var color = ["#E9B0B9", "#D9BAC5", "#D3D4E5", "#CBD7EC", "#B6CEED","#CBD7EC","#D3D4E5", "#D9BAC5"];
-  doc.style.backgroundColor = color[n];
-  n = (n + 1) % color.length;
-}
-setInterval(change2, 2000);
 
 var m = 0;
 function change3() {

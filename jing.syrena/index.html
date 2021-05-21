@@ -33,11 +33,14 @@
 </head>
 <body>
 
-   <section data-role="page" id="signin-page" class="signin">
+   <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
          <div class="flex-none">
             <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+               <div class="form-control logotext" style="text-align:center">
+                  <h1 class="logoText">Cat Tracker</h1>
+               </div>
                <div class="form-control">
                   <label for="signin-username" class="form-label">Username</label>
                   <input class="form-input" type="text" id="signin-username" data-role="none">
@@ -49,7 +52,7 @@
                <div class="form-control">
                   <input type="submit" class="form-button" value="Sign In" data-role="none">
                </div>
-               <div class="form-control" style="text-align:center">
+               <div class="form-control signintext" style="text-align:center">
                   Don't have an account? <a href="#signup-page">Sign Up</a>
                </div>
             </form>
@@ -77,7 +80,7 @@
                <div class="form-control">
                   <input type="submit" class="form-button" value="Sign Up" data-role="none">
                </div>
-               <div class="form-control" style="text-align:center">
+               <div class="form-control signintext" style="text-align:center">
                   Already have an account? <a href="#signin-page">Sign In</a>
                </div>
             </form>
@@ -401,21 +404,22 @@
 
 
 
-   <script type="text/template" id="footer-template">
-   <ul class="title-icons">
-      <li><a href="#recent-page">
-         <span class="icon"><img src="img/icon/recent.png" alt=""></span>
-         <span class="title">Recent</span>
-      </a></li>
-      <li><a href="#list-page">
-         <span class="icon"><img src="img/icon/list.png" alt=""></span>
-         <span class="title">List</span>
-      </a></li>
-      <li><a href="#user-profile-page">
-         <span class="icon"><img src="img/icon/profile.png" alt=""></span>
-         <span class="title">Profile</span>
-      </a></li>
-   </ul>
+   <script type="text/template" id="footer-template" >
+         <ul class="title-icons">
+            <li><a href="#recent-page">
+               <span class="icon"><img src="img/icon/recent.png" alt=""></span>
+               <span class="title">Recent</span>
+               </i>
+            </a></li>
+            <li><a href="#list-page">
+               <span class="icon"><img src="img/icon/list.png" alt=""></span>
+               <span class="title">List</span>
+            </a></li>
+            <li><a href="#user-profile-page">
+               <span class="icon"><img src="img/icon/profile.png" alt=""></span>
+               <span class="title">Profile</span>
+            </a></li>
+         </ul>
    </script>
 
 
