@@ -128,10 +128,15 @@ const AnimalProfilePage = async () => {
       params:[sessionStorage.animalId]
    }).then(async (r)=>{
       console.log("ANIMAL LOCATIONS", r.result)
+
       let map_el = await makeMap("#animal-profile-page .map");
       makeMarkers(map_el,r.result)
    });
 }
+
+
+
+
 
 const AnimalEditPage = async () => {
    let animal = await query({
