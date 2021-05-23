@@ -5,31 +5,22 @@
 }
 
 :root {
-  --color-neutral-light: #eaeeef;
-  --color-neutral-medium: #9aa2a4;
-  --color-neutral-dark: #363c3e;
+   --font-sans:Helvetica, Arial, sans-serif;
+   --font-serif:Cambria, Georgia, serif;
 
-  --color-green-light: #9BBFAB;
-  --color-green-medium:#1A736A;
-  --color-green-dark:#09403A;
 
-  --color-red-light: #F2E4DC;
-  --color-red-medium:#F2887E;
-  --color-red-dark:#FF5A43;
+   --color-neutral-light:#ede9e9;
+   --color-neutral-medium:#999191;
+   --color-neutral-dark:#343030;
 
-  --color-header:#9BBFAB;
-  --color-footer:#1A736A;
+   --color-main-light:#e5f1f2;
+   --color-main-medium:#4ba0a8;
+   --color-main-dark:#0a4349;
 
-  --color-white: #fff;
-  --color-black: #000;
+   --color-white:#fff;
+   --color-black:#111;
 
-  --header-height:3rem;
-  --gap-size:1rem;
-  --container-width:1000px;
-
-  --font-serif:Georgia, "Times New Roman", serif;
-  --font-sans:Helvetica, arial, sans-serif;
-  --font-segoeui:Segoe UI;
+   --header-height:3rem;
 }
 
 body {
@@ -174,6 +165,14 @@ a:hover {
 
 
 
+[data-page-link].active {
+  background-color:var(--color-main-light);
+}
+
+
+
+
+
 /* FORM ELEMENTS */
 .form-control {
     margin: 1em 0;
@@ -182,6 +181,11 @@ a:hover {
     margin: 1em 0;
     font-size: 0.7em;
     color: var(--color-neutral-medium);
+}
+.form-input,
+.form-button,
+.form-select select {
+    webkit-appearance:none;
 }
 .form-input {
     width: 100%;
@@ -358,7 +362,7 @@ a:hover {
 
 .modal-head,
 .modal-foot {
-  background-color:var(--color-neutral-light);
+  background-color:var(--color-main-light);
   padding:0.5em 1em;
 }
 .modal-body {
@@ -410,7 +414,7 @@ a:hover {
 .floater.bottom { bottom: 0; }
 
 .floater .icon {
-  padding:1em;
+  padding:1rem;
   display:block;
 }
 
@@ -458,6 +462,7 @@ a:hover {
   height:40vh;
   background-position:center;
   background-size:cover;
+  position:relative;
 }
 .emotion-bottom {
   flex:1 1 100%;
@@ -512,6 +517,7 @@ a:hover {
   width:100px;
   height:100px;
   vertical-align: middle;
+  object-fit:cover;
 }
 .emotionlist-description {
   padding:1em;
@@ -552,7 +558,7 @@ a:hover {
     overflow: hidden;
     height: 0;
     padding-bottom: 100%;
-    background-color: var(--color-neutral-light);
+    background-color: var(--color-main-light);
 }
 .user-profile-image>img {
     width: 100%;
@@ -586,10 +592,37 @@ a:hover {
 .filter-set {
   overflow:auto;
 }
-.subfilter-set {
-  overflow:auto;
-}
 .filter {
   font-weight:bold;
   padding:0 0.5em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ICON SWAP */
+.icon-swap {
+  width:1em;
+  height:1em;
+  display:inline-block;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+.icon-swap.map-icon { background-image:url(../img/icon/map.svg); }
+.sploofactive .icon-swap.map-icon { background-image:url(../img/icon/list.svg); }
+.icon-swap.list { background-image:url(../img/icon/list.svg); }
+.icon-swap.pencil { background-image:url(../img/icon/pencil.svg); }
