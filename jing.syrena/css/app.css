@@ -32,7 +32,6 @@ body {
    margin:0;
    font-size:100%;
    font-family:var(--font-sans);
-   background-color: var(--color-main-light);
 }
 
 h1,
@@ -108,25 +107,13 @@ li {
    height: var(--header-height);
    line-height: var(--header-height);
    border-width:0;
-   /*background-color: rgb(251, 238, 230, 0.3);
-   backdrop-filter: blur(4px);
-   box-shadow:0 0 5px rgba(0,0,0,0.2);*/
-   position:relative;
-   /*overflow:hidden;*/
-}
-
-[data-role="footer"] {
-  flex: none;
-   height: var(--header-height);
-   line-height: var(--header-height);
-   border-width:0;
-   border-radius: 2em;
    background-color: rgb(251, 238, 230, 0.3);
    backdrop-filter: blur(4px);
    box-shadow:0 0 5px rgba(0,0,0,0.2);
    position:relative;
-
+   overflow:hidden;
 }
+
 .ui-header .ui-title {
    position:absolute;
    top:0;
@@ -169,12 +156,11 @@ li {
 }
 
 
-.header  {
+.header {
   width:100%;
    height: var(--header-height);
    line-height: var(--header-height);
 }
-
 
 
 .logoText {
@@ -198,15 +184,14 @@ li {
 .form-input {
     width: 100%;
     display: inline-block;
-    border: 1px solid #FFFFFF;
+    border: 3px dotted #FFFFFF;
     margin: 0;
     padding: 0.5em 1em;
     border-radius: 1em;
     outline: 0;
     font:inherit;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(4px);
-    box-shadow:1px 0 5px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
     color:var(--color-neutral-dark);
 }
 .form-button {
@@ -214,10 +199,8 @@ li {
     padding: 0.5em 1em;
     border-radius: 1em;
     border-width:0;
-    background-color:rgba(255,255,255,0.3);
+    background-color:/*var(--color-neutral-light)*/rgba(255,255,255,0.6);
     backdrop-filter: blur(4px);
-    box-shadow:1px 0 5px rgba(0,0,0,0.2);
-    border: 2px solid white;
     outline: 0;
     width: 50%;
     display: inline-block;
@@ -230,7 +213,6 @@ li {
    text-decoration:none;
    background-color:var(--color-neutral-medium);
    color:white;
-   backdrop-filter: blur(4px);
 }
 
 .form-select {
@@ -240,13 +222,9 @@ li {
    display:inline-block;
    width:100%;
    border-width:0;
-   /*background-color:var(--color-neutral-light);*/
-   background-color:rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-    box-shadow:1px 0 5px rgba(0,0,0,0.2);
-    border: 2px solid white;
+   background-color:var(--color-neutral-light);
    padding:0.5em 2em 0.5em 1em;
-   border-radius:2em;
+   border-radius:0.3em;
    font:inherit;
    outline:0;
    position:relative;
@@ -268,11 +246,8 @@ li {
     display: inline-flex;
     width: 100%;
     border-width: 0;
+    background-color: var(--color-neutral-light);
     border-radius: 2em;
-    border:1px white;
-    background-color: rgb(251, 238, 230, 0.3);
-    backdrop-filter: blur(4px);
-    border:2px solid white;
 }
 .hotdog>input {
     flex: 1;
@@ -282,22 +257,11 @@ li {
     padding: 0 1em;
     outline: 0;
     font-size: inherit;
-    border-radius: 2em;
-    background-color: rgb(251, 238, 230, 0.3);
 }
 .hotdog.hovering {
-    /*background-color:var(--color-white);*/
-    box-shadow:1px 0 5px rgba(0,0,0,0.2);
-    border-radius: 2em;
-    background-color: rgb(251, 238, 230, 0.3);
-    backdrop-filter: blur(4px);
-    border:2px solid white;
-
+    background-color:var(--color-white);
+    box-shadow:1px 0 5px rgba(0,0,0,0.2)
 }
-
-
-/*addAnimal Page*/
-
 
 
 /* list */
@@ -327,7 +291,7 @@ input {
 
 /*signin*/
 #signin-page {
-  background-image: url('../img/backgroundCat2.png');
+  background-image: url('../img/backgroundCat.png');
   background-repeat: none;
   background-size: cover;
 }
@@ -347,17 +311,6 @@ input {
    border-radius: 5%;
 }
 
-#choose-animal-page {
-  background-image: url('../img/X - 15.png');
-  background-repeat: none;
-  background-size: cover;
-}
-
-#animal-add-page {
-  background-image: url('../img/X - 16.png');
-  background-repeat: none;
-  background-size: cover;
-}
 /* MODAL */
 .modal {
     position: absolute;
@@ -633,21 +586,10 @@ border-radius: 40px;
   display:block;
 }
 
-.floater .icon2{
-  padding:0;
-}
-
-.floater2.right2 { right: 1em; }
-.floater2.left2 { left: 1em; }
-.floater2.top2 { top: 1em; }
-.floater2.bottom2 { bottom: 1em; }
-
-
 .circle-button {
   display:inline-block;
   vertical-align:middle;
-  background-color:rgb(251, 238, 230, 0.3);
-  backdrop-filter: blur(4px);
+  background-color:white;
   box-shadow:2px 2px 5px rgba(0,0,0,0.2);
   border-radius:50%;
   height:var(--header-height);
@@ -655,15 +597,6 @@ border-radius: 40px;
   width:var(--header-height);
   text-align:center;
   font-size:2em;
-  border:2px solid white;
-}
-
-.circle2-button {
-  background-color:rgb(251, 238, 230, 0.3);
-  backdrop-filter: blur(4px);
-  box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-  border-radius:50%;
-  border:2px solid white;
 }
 
 

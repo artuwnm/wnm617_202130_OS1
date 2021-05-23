@@ -143,12 +143,12 @@
 <section data-role="page" id="list-page">
       <header data-role="header">
          <ul>
-            <li class="flex-stretch" style="padding: 0.5em">
+            <li class="flex-stretch" style="padding-left:0.5em">
                <form data-ajax="false" id="list-search" class="hotdog">
                   <input type="search" id="list-search-value" data-role="none" placeholder="Search">
                </form>
             </li>
-            <li class="icon" style="padding: 0.5em"><a href="#animal-add-page" style="font-size:1em" class="circle-button">&plus;</a></li>
+            <li class="icon"><a href="#animal-add-page" style="font-size:1.5em"><img src="img/icon/add.png" alt=""></a></li>
          </ul>
       </header>
       <header data-role="header">
@@ -167,7 +167,7 @@
          <div class="profile"></div>
 
          <div class="floater top right">
-            <a href="#" class="icon circle-button" data-activate="#user-settings-modal">&plus; alt=""></a>
+            <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/add.png" alt=""></a>
          </div>
 
 
@@ -197,7 +197,7 @@
       <header data-role="header">
          <h1>Edit Your Info</h1>
          <ul>
-            <li><a href="#" data-rel="back" class="icon floater2 top2 left2 circle2-button"><img src="img/icon/back.png" alt=""></a></li>
+            <li><a href="#" data-rel="back">Cancel</a></li>
             <li class="flex-stretch"></li>
             <li><a href="#" class="user-edit-submit">Save</a></li>
          </ul>
@@ -257,17 +257,17 @@
      <section data-role="page" id="animal-profile-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="animal-top">
-            <div class="floater2 top2 left2 header no-touch">
+            <div class="floater top left header no-touch" style="background-image: linear-gradient(180deg, #ffffff96, #ffffff00);">
                <ul>
-                  <li class="flex-none do-touch"><a href="#" data-rel="back" class="icon circle2-button"><img src="img/icon/back.png" alt=""></a></li>
+                  <li class="flex-none do-touch"><a href="#" data-rel="back">Back</a></li>
                   <li class="flex-stretch"></li>
-                  <li class="flex-none do-touch"><a href="#animal-edit-page"class="icon circle2-button"><img src="img/icon/edit.png" alt=""></a></li>
+                  <li class="flex-none do-touch"><a href="#animal-edit-page">Edit</a></li>
                </ul>
             </div>
-            <div class="floater bottom right">
+            <div class="floater bottom right" style="font-size:1.5em">
                <form class="icon" data-ajax="false" id="animal-update-image-form">
                   <input type="file" id="animal-update-image-input" class="hidden" data-role="none">
-                  <label for="animal-update-image-input" style="margin:0" class="icon circle2-button"><img src="img/icon/camera.png" alt=""></label>
+                  <label for="animal-update-image-input" style="margin:0" class="icon"><img src="img/icon/edit.png" alt=""></label>
                </form>
             </div>
          </div>
@@ -281,7 +281,7 @@
             <div class="animal-bottom-section animal-map">
                <div class="map"></div>
                <div class="floater bottom right icon" style="padding:1em">
-                  <a href="#choose-location-page" class="circle-button">&plus;</a>
+                  <a href="#choose-location-page" class="circle-button"><img src="img/icon/add.png" alt=""></a>
                </div>
             </div>
             <div class="animal-bottom-section animal-info"></div>
@@ -293,10 +293,9 @@
       <header data-role="header">
          <h1>Edit Animal</h1>
          <ul>
-            <li><a href="#" data-rel="back" class="icon floater2 top2 left2 circle2-button"><img src="img/icon/back.png" alt=""></a></li>
+            <li><a href="#" data-rel="back">Cancel</a></li>
             <li class="flex-stretch"></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#" class="animal-edit-submit icon floater2 top2 left2 circle2-button"><img src="img/icon/save.png" alt=""></a></li>
+            <li><a href="#" class="animal-edit-submit">Save</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
@@ -310,10 +309,9 @@
       <header data-role="header">
          <h1>Add Animal</h1>
          <ul>
-            <li><a href="#" data-rel="back" class="icon floater2 top2 left2 circle2-button"><img src="img/icon/back.png" alt=""></a></li>
+            <li><a href="#" data-rel="back">Cancel</a></li>
             <li class="flex-stretch"></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#" class="animal-add-submit icon floater2 top2 left2 circle2-button"><img src="img/icon/save.png" alt=""></a></li>
+            <li><a href="#" class="animal-add-submit">Save</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
@@ -334,14 +332,15 @@
 
 
 
+
  <!-- CHOOSE LOCATION PAGES -->
    <section data-role="page" id="choose-animal-page">
       <header data-role="header">
          <h1>Choose Animal</h1>
          <ul>
-            <li><a href="#" data-rel="back" class="icon floater2 top2 left2 circle2-button"><img src="img/icon/back.png" alt=""></a></li>
+            <li><a href="#" data-rel="back">Cancel</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#choose-location-page" class="icon floater2 top2 left2 circle2-button"><img src="img/icon/next.png" alt=""></a></li>
+            <li><a href="#choose-location-page">Next</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
@@ -365,9 +364,9 @@
       <header data-role="header">
          <h1>Choose Location</h1>
          <ul>
-            <li><a href="#" data-rel="back" class="icon floater2 top2 left2 circle2-button"><img src="img/icon/back.png" alt=""></a></li>
+            <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#location-description-page"class="icon floater2 top2 left2 circle2-button"><img src="img/icon/next.png" alt=""></a></li>
+            <li><a href="#location-description-page">Next</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
@@ -381,9 +380,9 @@
       <header data-role="header">
          <h1>Describe Animal</h1>
          <ul>
-            <li><a href="#" data-rel="back" class="icon floater2 top2 left2 circle2-button"><img src="img/icon/back.png" alt=""></a></li>
+            <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="location-add-submit icon floater2 top2 left2 circle2-button"><img src="img/icon/next.png" alt=""></a></li>
+            <li><a href="#" class="location-add-submit">Save</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">

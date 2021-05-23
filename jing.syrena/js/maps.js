@@ -35,7 +35,7 @@ const makeMarkers = (map_el,map_locs) => {
          position: o,
          map: map,
          icon: {
-            url:"img/icon/marker.png",
+            url: o.icon,
             scaledSize: {
                width:40,
                height:40
@@ -111,7 +111,7 @@ let mapStyles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#e5f1f2"
+                "color": "#cce9eb"
             },
             {
                 "visibility": "on"
@@ -132,7 +132,7 @@ let mapStyles = [
         "elementType": "geometry.fill",
         "stylers": [
             {
-                 "color": "#E9B0B9"
+                 "color": "#f0d0d4"
             }
         ]
     }
