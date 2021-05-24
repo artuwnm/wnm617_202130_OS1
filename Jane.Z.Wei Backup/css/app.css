@@ -5,7 +5,7 @@
 }
 
 :root {
-  --color-neutral-light: #eaeeef;
+   --color-neutral-light: #eaeeef;
   --color-neutral-medium: #9aa2a4;
   --color-neutral-dark: #363c3e;
 
@@ -174,6 +174,14 @@ a:hover {
 
 
 
+[data-page-link].active {
+  background-color:var(--color-main-light);
+}
+
+
+
+
+
 /* FORM ELEMENTS */
 .form-control {
     margin: 1em 0;
@@ -182,6 +190,11 @@ a:hover {
     margin: 1em 0;
     font-size: 0.7em;
     color: var(--color-neutral-medium);
+}
+.form-input,
+.form-button,
+.form-select select {
+    webkit-appearance:none;
 }
 .form-input {
     width: 100%;
@@ -358,7 +371,7 @@ a:hover {
 
 .modal-head,
 .modal-foot {
-  background-color:var(--color-neutral-light);
+  background-color:var(--color-main-light);
   padding:0.5em 1em;
 }
 .modal-body {
@@ -410,7 +423,7 @@ a:hover {
 .floater.bottom { bottom: 0; }
 
 .floater .icon {
-  padding:1em;
+  padding:1rem;
   display:block;
 }
 
@@ -458,6 +471,7 @@ a:hover {
   height:40vh;
   background-position:center;
   background-size:cover;
+  position:relative;
 }
 .emotion-bottom {
   flex:1 1 100%;
@@ -512,6 +526,7 @@ a:hover {
   width:100px;
   height:100px;
   vertical-align: middle;
+  object-fit:cover;
 }
 .emotionlist-description {
   padding:1em;
@@ -552,7 +567,7 @@ a:hover {
     overflow: hidden;
     height: 0;
     padding-bottom: 100%;
-    background-color: var(--color-neutral-light);
+    background-color: var(--color-main-light);
 }
 .user-profile-image>img {
     width: 100%;
@@ -590,3 +605,33 @@ a:hover {
   font-weight:bold;
   padding:0 0.5em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ICON SWAP */
+.icon-swap {
+  width:1em;
+  height:1em;
+  display:inline-block;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+.icon-swap.map-icon { background-image:url(../img/icon/map.svg); }
+.sploofactive .icon-swap.map-icon { background-image:url(../img/icon/list.svg); }
+.icon-swap.list { background-image:url(../img/icon/list.svg); }
+.icon-swap.pencil { background-image:url(../img/icon/pencil.svg); }

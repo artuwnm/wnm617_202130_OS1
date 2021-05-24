@@ -70,7 +70,7 @@
     
     name: '{{company()}}',
     
-    type: '{{random("Happy","Surprised","Sad")}}',
+    type: '{{random(“Unknown","Happy","Surprised","Sad","bad","Fearful","Angry","Disgusted")}}',
     breed: function(tags) {
       var breeds = {
         Unknown:["Unknown"],

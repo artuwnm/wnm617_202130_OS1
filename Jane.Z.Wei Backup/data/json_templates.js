@@ -73,9 +73,14 @@
     type: '{{random("Happy","Surprised","Sad")}}',
     breed: function(tags) {
       var breeds = {
-        Happy:["playful","Content","Interested"],
+        Unknown:["Unknown"],
+        Happy:["Playful","Content","Interested","Proud","Accepted","Powerful","Peaceful","Trusting","Optimistic"],
         Surprised:["Startled","Confused","Amazed","Excited"],
-        Sad:["Lonely","Vulnerable","Despair"]
+        Sad:["Lonely","Vulnerable","Despair","Guilty","Depressed","Hurt"],
+        Bad:["Bored","Busy","Stressed","Tired"],
+        Fearful:["Scared","Anxious","Insecure","Weak","Rejected","Threatened"],
+        Angry:["Let down","Humilliated","Bitter","Mad","Aggressive","Frustrated","Distant","Critical"],
+        Disgusted:["Disapproving","Disappointed","Awful","Repelled"]
       };
       var chosen_type = breeds[this.type];
       var chosen_index = tags.integer(0,chosen_type.length-1);

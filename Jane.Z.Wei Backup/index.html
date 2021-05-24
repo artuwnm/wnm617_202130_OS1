@@ -3,7 +3,13 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>EmotCog</title>
+   <title>CogEmot</title>
+
+   <link rel="apple-touch-icon" href="logo_icon.png">
+   <link rel="icon" href="logo_icon.png">
+
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="#52B28B">
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
@@ -202,6 +208,13 @@
       <div data-role="main">
          <div class="profile"></div>
 
+         <div>
+            <i class="icon-swap map-icon"></i>
+            <div class="sploofactive">
+               <i class="icon-swap map-icon"></i>
+            </div>
+         </div>
+
          <div class="floater top right">
             <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a>
          </div>
@@ -303,6 +316,12 @@
                   <li class="flex-stretch"></li>
                   <li class="flex-none do-touch"><a href="#emotion-edit-page">Edit</a></li>
                </ul>
+            </div>
+            <div class="floater bottom right" style="font-size:1.5em">
+               <form class="icon" data-ajax="false" id="emotion-update-image-form">
+                  <input type="file" id="emotion-update-image-input" class="hidden" data-role="none">
+                  <label for="emotion-update-image-input" style="margin:0"><img src="img/icon/pencil.svg" alt=""></label>
+               </form>
             </div>
          </div>
          <div class="header emotion-nav">
@@ -438,15 +457,15 @@
 
    <script type="text/template" id="footer-template">
    <ul class="title-icons">
-      <li><a href="#recent-page">
+      <li data-page-link="recent-page"><a href="#recent-page">
          <span class="icon"><img src="img/icon/map.svg" alt=""></span>
          <span class="title">Recent</span>
       </a></li>
-      <li><a href="#list-page">
+      <li data-page-link="list-page"><a href="#list-page">
          <span class="icon"><img src="img/icon/list.svg" alt=""></span>
          <span class="title">List</span>
       </a></li>
-      <li><a href="#user-profile-page">
+      <li data-page-link="user-profile-page"><a href="#user-profile-page">
          <span class="icon"><img src="img/icon/profile.svg" alt=""></span>
          <span class="title">Profile</span>
       </a></li>

@@ -29,6 +29,7 @@ const makeEmotionInfo = o => `
 <div class="emotion-name">${o.name}</div>
 <div class="emotion-type">${o.type}</div>
 <div class="emotion-breed">${o.breed}</div>
+<div class="emotion-description"><p>${o.description}</p></div>
 <button class="form-button emotion-delete" data-id="${o.id}">Delete</button>
 `;
 
