@@ -20,9 +20,18 @@ const makeUserProfile = o => `
    </div>
 </div>
 <div class="user-profile-description">
-   <div class="user-profile-name">${o.name}</div>
-   <div class="user-profile-email">${o.email}</div>
+            
+               
+   <div class="user-profile-name">
+      <h3>NAME: <span>${o.name}</span></h3>
+   </div>
+            
+               
+   <div class="user-profile-email">
+      <h3>EMAIL:<span>${o.email}</span></h3>
+   </div>
 </div>
+
 `;
 
 const makeEmotionInfo = o => `

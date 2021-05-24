@@ -36,6 +36,9 @@ body {
    font-size:100%;
    font-family:var(--font-sans);
    background-image: url("../img/bg.svg");
+   text-transform: uppercase;
+   color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0px 0px 18.2712px rgba(49, 119, 255, 0.7), 0px 0px 70.7336px rgba(49, 119, 255, 0.5);
    
 }
 
@@ -268,6 +271,11 @@ a:hover {
     box-shadow: inset 0px 17.7895px 25.5438px -16.421px rgba(255, 255, 255, 0.5), inset 0px -5.92982px 4.10526px -6.38596px rgba(255, 255, 255, 0.75), inset 0px 3.19298px 5.01754px -1.82456px #FFFFFF, inset 0px -37.4035px 31.0175px -29.193px rgba(96, 68, 145, 0.3), inset 0px 44.7017px 45.614px -21.8947px rgba(202, 172, 255, 0.3), inset 0px 1.82456px 8.21052px rgba(154, 146, 210, 0.3), inset 0px 0.45614px 18.2456px rgba(227, 222, 255, 0.2);
     backdrop-filter: blur(45.614px);
 /* Note: backdrop-filter has minimal browser support */
+
+    color: rgba(255, 255, 255, 1.2);
+    /*opacity: 0.8;*/
+    text-shadow: 0px 0px 17.0303px rgba(63, 80, 123, 0.7), 0px 0px 65.9298px rgba(97, 105, 117, 0.5);
+    /*filter: blur(1.21645px);*/
     
     
 
@@ -343,16 +351,17 @@ a:hover {
     border-radius: 2em;
     height:var(--header-height);
   line-height:var(--header-height);
+  
     
 
 }
 .hotdog>input {
     flex: 1;
     background-color: transparent;
-   background: rgba(255, 255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(2px);
 /* Note: backdrop-filter has minimal browser support */
-  box-shadow: inset 0px 17.7895px 25.5438px -16.421px rgba(255, 255, 255, 0.5), inset 0px -5.92982px 4.10526px -6.38596px rgba(255, 255, 255, 0.75), inset 0px 3.19298px 5.01754px -1.82456px #FFFFFF, inset 0px -37.4035px 31.0175px -29.193px rgba(96, 68, 145, 0.3), inset 0px 44.7017px 45.614px -21.8947px rgba(202, 172, 255, 0.3), inset 0px 1.82456px 8.21052px rgba(154, 146, 210, 0.3), inset 0px 0.45614px 18.2456px rgba(227, 222, 255, 0.2);
+    box-shadow: inset 0px 17.7895px 25.5438px -16.421px rgba(255, 255, 255, 0.5), inset 0px -5.92982px 4.10526px -6.38596px rgba(255, 255, 255, 0.75), inset 0px 3.19298px 5.01754px -1.82456px #FFFFFF, inset 0px -37.4035px 31.0175px -29.193px rgba(96, 68, 145, 0.3), inset 0px 44.7017px 45.614px -21.8947px rgba(202, 172, 255, 0.3), inset 0px 1.82456px 8.21052px rgba(154, 146, 210, 0.3), inset 0px 0.45614px 18.2456px rgba(227, 222, 255, 0.2);
 
     border-radius: 2em;
     border-width: 0;
@@ -360,6 +369,7 @@ a:hover {
     padding: 0 1em;
     outline: 0;
     font-size: inherit;
+    
 
     
    
@@ -373,7 +383,7 @@ a:hover {
 
     border-radius: 2em;
     box-shadow:1px 0 5px rgba(0,0,0,0.2)
-    
+
 }
 
 
@@ -461,12 +471,18 @@ a:hover {
 
 
 .modal-drawer.modal-card {
-  padding:1em;
+  padding:4.5em;
   box-shadow:none;
 }
 .modal-card .modal-body {
-  box-shadow:0 0 5px rgba(0,0,0,0.3);
-  border-radius:1em;
+  /*box-shadow:0 0 5px rgba(0,0,0,0.3);
+  border-radius:1em;*/
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px 50.8326px 72.9904px -46.9224px rgba(255, 255, 255, 0.5), inset 0px 9.1238px 14.3374px -5.2136px #FFFFFF, inset 0px -106.879px 88.6312px -83.4176px rgba(96, 68, 145, 0.3), inset 0px 127.733px 130.34px -62.5632px rgba(202, 172, 255, 0.3), inset 0px 5.2136px 23.4612px rgba(154, 146, 210, 0.3), inset 0px 1.3034px 52.136px rgba(227, 222, 255, 0.2);
+  backdrop-filter: blur(50px);
+/* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 1em;
 }
 
 
@@ -474,17 +490,33 @@ a:hover {
 
 .modal-head,
 .modal-foot {
-  background-color:var(--color-main-light);
+  
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px 11.3675px 16.3225px -10.493px rgba(255, 255, 255, 0.5), inset 0px 2.04031px 3.2062px -1.16589px #FFFFFF, inset 0px -23.9008px 19.8202px -18.6543px rgba(96, 68, 145, 0.3), inset 0px 28.5644px 29.1473px -13.9907px rgba(202, 172, 255, 0.3), inset 0px 1.16589px 5.24652px rgba(154, 146, 210, 0.3), inset 0px 0.291473px 11.6589px rgba(227, 222, 255, 0.2);
+  backdrop-filter: blur(29.1473px);
+/* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 31.4791px 31.4791px 31.4791px 31.4791px;
+
+/* Note: backdrop-filter has minimal browser support */
+
+  /*background-color:var(--color-main-light);*/
   padding:0.5em 1em;
 }
 .modal-body {
-  background-color:var(--color-white);
+  
+  /*background-color:var(--color-white);*/
+  background: linear-gradient(0deg, rgba(240, 220, 255, 0.8), rgba(240, 220, 255, 0.8)), linear-gradient(180deg, #FFE8F0 0%, rgba(255, 232, 240, 0) 100%);
+  box-shadow: 0px 0px 11.202px rgba(255, 232, 240, 0.7), 0px 0px 39.638px rgba(255, 232, 240, 0.5), inset 0px 0px 5.17017px rgba(255, 232, 240, 0.5);
+  filter: blur(0.699545px);
+  border-radius: 31.4791px 31.4791px 31.4791px 31.4796px;
+
+
   flex: 1 1 100%;
   padding:0.5em 1em;
   position:relative;
   overflow:hidden;
 }
-
 
 
 
@@ -632,6 +664,7 @@ a:hover {
 
 
 .emotionlist {
+  padding-bottom: 3em;
 }
 .emotionlist-item {
   font-weight:normal;
@@ -698,7 +731,19 @@ filter: blur(0.60264px);
     overflow: hidden;
     height: 0;
     padding-bottom: 100%;
-    background-color: var(--color-main-light);
+    padding-top: 16px;
+    padding-right:16px;
+    padding-left: 16px;
+    /*background-color: var(--color-main-light);*/
+    /*position: absolute;*/
+    background: rgba(196, 196, 196, 0.01);
+    box-shadow: inset 0px 43.8861px 63.0159px -40.5103px rgba(255, 255, 255, 0.5), inset 0px 7.87699px 12.3781px -4.50114px #FFFFFF, inset 0px -92.2734px 76.5194px -72.0182px rgba(96, 68, 145, 0.3), inset 0px 110.278px 112.528px -54.0137px rgba(202, 172, 255, 0.3), inset 0px 4.50114px 20.2551px rgba(154, 146, 210, 0.3), inset 0px 1.12528px 45.0114px rgba(227, 222, 255, 0.2);
+    backdrop-filter: blur(112.528px);
+/* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 200px;
+
+
 }
 .user-profile-image>img {
     width: 100%;
@@ -727,9 +772,19 @@ filter: blur(0.60264px);
   display:none;
 }
 
+.user-profile-description {
+  position:relative;
+  text-align:center;
+  flex: 1 1 100%;
+  align-items: center;
+  /*display:none;*/
+
+}
 
 
-.filter-set {
+
+.filter-set .header {
+
   overflow:auto;
 }
 .filter {
