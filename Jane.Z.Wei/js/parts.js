@@ -15,8 +15,8 @@ const makeUserProfile = o => `
 <div class="user-profile-image">
    <img src="${o.img}" alt="">
 
-   <div class="floater bottom right">
-      <a href="#user-upload-page" class="icon"><img src="img/icon/pencil.svg" alt=""></a>
+   <div class="floater bottom center">
+      <a href="#user-upload-page" class="icon profile-img" ><img src="img/icon/pencil.svg" alt=""></a>
    </div>
 </div>
 <div class="user-profile-description">
@@ -34,12 +34,34 @@ const makeUserProfile = o => `
 
 `;
 
+
 const makeEmotionInfo = o => `
+<div>
+<label for="emotion-date_create" class="form-label">Date</label>
+<div class="emotion-name">${o.date_create}</div>
+</div>
+<div>
+<label for="emotion-name" class="form-label">Name</label>
 <div class="emotion-name">${o.name}</div>
+</div>
+
+<div>
+<label for="emotion-type" class="form-label">Type</label>
 <div class="emotion-type">${o.type}</div>
+</div>
+<div>
+<label for="emotion-name" class="form-label">Breed</label>
 <div class="emotion-breed">${o.breed}</div>
+</div>
+<div>
+<label for="emotion-description" class="form-label">What you feel</label>
 <div class="emotion-description"><p>${o.description}</p></div>
+</div>
+<div>
 <button class="form-button emotion-delete" data-id="${o.id}">Delete</button>
+</div>
+
+
 `;
 
 

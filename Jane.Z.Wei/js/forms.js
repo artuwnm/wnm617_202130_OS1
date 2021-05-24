@@ -189,12 +189,18 @@ const checkSearchForm = async () => {
       "No results found."
    );
 }
+
 const checkRecentSearchForm = async () => {
    let search = $("#recent-search-value").val();
    console.log(search)
+
+   let animals = await query({
+      type:'search_recent_emotions',
+      params:[search,sessionStorage.userId]
+   });
+
+   RecentPage(emotions);
 }
-
-
 
 // destructuring
 const checkListFilter = async ({field,value}) => {
